@@ -1,0 +1,1686 @@
+{
+  "source": "https://archive.ics.uci.edu/static/public/2/adult.zip",
+  "archive_sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+  "delta": 0.1,
+  "batch_size": 32,
+  "pilot_per_group": 16,
+  "truth": {
+    "?": {
+      "size": 963,
+      "positives": 74,
+      "epsilon": 38.52
+    },
+    "Federal-gov": {
+      "size": 472,
+      "positives": 190,
+      "epsilon": 18.88
+    },
+    "Local-gov": {
+      "size": 1043,
+      "positives": 310,
+      "epsilon": 41.72
+    },
+    "Never-worked": {
+      "size": 3,
+      "positives": 0,
+      "epsilon": 0.12
+    },
+    "Private": {
+      "size": 11210,
+      "positives": 2424,
+      "epsilon": 448.40000000000003
+    },
+    "Self-emp-inc": {
+      "size": 579,
+      "positives": 316,
+      "epsilon": 23.16
+    },
+    "Self-emp-not-inc": {
+      "size": 1321,
+      "positives": 353,
+      "epsilon": 52.84
+    },
+    "State-gov": {
+      "size": 683,
+      "positives": 177,
+      "epsilon": 27.32
+    },
+    "Without-pay": {
+      "size": 7,
+      "positives": 2,
+      "epsilon": 0.28
+    }
+  },
+  "method": "Grouped hypergeometric prior-posterior confidence sequence",
+  "scipy": "1.17.0",
+  "numpy": "2.4.1",
+  "summary": {
+    "mean_calls": 4581.733333333334,
+    "covered_trials": 30,
+    "trials": 30,
+    "mean_delta_from_no_proxy": 244.26666666666668,
+    "mean_delta_from_proxy_only": 243.2
+  },
+  "runs": [
+    {
+      "seed": 1000,
+      "calls": 4922,
+      "vs_no_proxy_calls": 448,
+      "vs_proxy_only_calls": 448,
+      "groups": {
+        "?": {
+          "lower": 57,
+          "upper": 133,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "lower": 173,
+          "upper": 208,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 266,
+          "upper": 344,
+          "calls": 720
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 2116,
+          "upper": 2976,
+          "calls": 1552
+        },
+        "Self-emp-inc": {
+          "lower": 300,
+          "upper": 339,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "lower": 323,
+          "upper": 426,
+          "calls": 784
+        },
+        "State-gov": {
+          "lower": 160,
+          "upper": 209,
+          "calls": 528
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1001,
+      "calls": 4506,
+      "vs_no_proxy_calls": 256,
+      "vs_proxy_only_calls": 224,
+      "groups": {
+        "?": {
+          "lower": 46,
+          "upper": 120,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "lower": 169,
+          "upper": 203,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 274,
+          "upper": 356,
+          "calls": 688
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 1812,
+          "upper": 2696,
+          "calls": 1168
+        },
+        "Self-emp-inc": {
+          "lower": 300,
+          "upper": 339,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "lower": 303,
+          "upper": 404,
+          "calls": 816
+        },
+        "State-gov": {
+          "lower": 146,
+          "upper": 200,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1002,
+      "calls": 4474,
+      "vs_no_proxy_calls": 192,
+      "vs_proxy_only_calls": 128,
+      "groups": {
+        "?": {
+          "lower": 24,
+          "upper": 101,
+          "calls": 336
+        },
+        "Federal-gov": {
+          "lower": 167,
+          "upper": 201,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 275,
+          "upper": 356,
+          "calls": 688
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 2191,
+          "upper": 3083,
+          "calls": 1392
+        },
+        "Self-emp-inc": {
+          "lower": 314,
+          "upper": 354,
+          "calls": 336
+        },
+        "Self-emp-not-inc": {
+          "lower": 317,
+          "upper": 417,
+          "calls": 784
+        },
+        "State-gov": {
+          "lower": 155,
+          "upper": 204,
+          "calls": 528
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1003,
+      "calls": 4410,
+      "vs_no_proxy_calls": 160,
+      "vs_proxy_only_calls": 128,
+      "groups": {
+        "?": {
+          "lower": 24,
+          "upper": 97,
+          "calls": 272
+        },
+        "Federal-gov": {
+          "lower": 171,
+          "upper": 206,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 264,
+          "upper": 347,
+          "calls": 656
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 1780,
+          "upper": 2660,
+          "calls": 1296
+        },
+        "Self-emp-inc": {
+          "lower": 296,
+          "upper": 342,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 312,
+          "upper": 411,
+          "calls": 784
+        },
+        "State-gov": {
+          "lower": 156,
+          "upper": 205,
+          "calls": 528
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1004,
+      "calls": 4762,
+      "vs_no_proxy_calls": 288,
+      "vs_proxy_only_calls": 256,
+      "groups": {
+        "?": {
+          "lower": 38,
+          "upper": 113,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "lower": 176,
+          "upper": 211,
+          "calls": 368
+        },
+        "Local-gov": {
+          "lower": 279,
+          "upper": 351,
+          "calls": 720
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 2085,
+          "upper": 2976,
+          "calls": 1520
+        },
+        "Self-emp-inc": {
+          "lower": 282,
+          "upper": 327,
+          "calls": 432
+        },
+        "Self-emp-not-inc": {
+          "lower": 303,
+          "upper": 404,
+          "calls": 816
+        },
+        "State-gov": {
+          "lower": 139,
+          "upper": 193,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1005,
+      "calls": 4122,
+      "vs_no_proxy_calls": -96,
+      "vs_proxy_only_calls": -128,
+      "groups": {
+        "?": {
+          "lower": 38,
+          "upper": 114,
+          "calls": 368
+        },
+        "Federal-gov": {
+          "lower": 178,
+          "upper": 211,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 267,
+          "upper": 349,
+          "calls": 688
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 2269,
+          "upper": 3143,
+          "calls": 848
+        },
+        "Self-emp-inc": {
+          "lower": 289,
+          "upper": 327,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "lower": 308,
+          "upper": 409,
+          "calls": 816
+        },
+        "State-gov": {
+          "lower": 162,
+          "upper": 212,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1006,
+      "calls": 4698,
+      "vs_no_proxy_calls": 192,
+      "vs_proxy_only_calls": 192,
+      "groups": {
+        "?": {
+          "lower": 53,
+          "upper": 125,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "lower": 170,
+          "upper": 205,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 282,
+          "upper": 361,
+          "calls": 688
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 1906,
+          "upper": 2781,
+          "calls": 1424
+        },
+        "Self-emp-inc": {
+          "lower": 291,
+          "upper": 330,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "lower": 313,
+          "upper": 410,
+          "calls": 784
+        },
+        "State-gov": {
+          "lower": 150,
+          "upper": 204,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1007,
+      "calls": 4602,
+      "vs_no_proxy_calls": 256,
+      "vs_proxy_only_calls": 224,
+      "groups": {
+        "?": {
+          "lower": 44,
+          "upper": 120,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "lower": 178,
+          "upper": 213,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 282,
+          "upper": 362,
+          "calls": 720
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 2098,
+          "upper": 2992,
+          "calls": 1488
+        },
+        "Self-emp-inc": {
+          "lower": 295,
+          "upper": 341,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 283,
+          "upper": 388,
+          "calls": 624
+        },
+        "State-gov": {
+          "lower": 153,
+          "upper": 197,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1008,
+      "calls": 4378,
+      "vs_no_proxy_calls": 32,
+      "vs_proxy_only_calls": 32,
+      "groups": {
+        "?": {
+          "lower": 31,
+          "upper": 108,
+          "calls": 368
+        },
+        "Federal-gov": {
+          "lower": 177,
+          "upper": 212,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 272,
+          "upper": 351,
+          "calls": 656
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 1999,
+          "upper": 2890,
+          "calls": 1200
+        },
+        "Self-emp-inc": {
+          "lower": 291,
+          "upper": 330,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "lower": 310,
+          "upper": 415,
+          "calls": 752
+        },
+        "State-gov": {
+          "lower": 147,
+          "upper": 199,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1009,
+      "calls": 4730,
+      "vs_no_proxy_calls": 352,
+      "vs_proxy_only_calls": 320,
+      "groups": {
+        "?": {
+          "lower": 46,
+          "upper": 120,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "lower": 172,
+          "upper": 207,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 265,
+          "upper": 339,
+          "calls": 720
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 1942,
+          "upper": 2836,
+          "calls": 1392
+        },
+        "Self-emp-inc": {
+          "lower": 293,
+          "upper": 337,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 296,
+          "upper": 401,
+          "calls": 784
+        },
+        "State-gov": {
+          "lower": 155,
+          "upper": 204,
+          "calls": 528
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1010,
+      "calls": 4506,
+      "vs_no_proxy_calls": 224,
+      "vs_proxy_only_calls": 256,
+      "groups": {
+        "?": {
+          "lower": 49,
+          "upper": 123,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "lower": 172,
+          "upper": 206,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 285,
+          "upper": 364,
+          "calls": 688
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 1870,
+          "upper": 2748,
+          "calls": 1264
+        },
+        "Self-emp-inc": {
+          "lower": 310,
+          "upper": 356,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 292,
+          "upper": 392,
+          "calls": 752
+        },
+        "State-gov": {
+          "lower": 146,
+          "upper": 200,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1011,
+      "calls": 4762,
+      "vs_no_proxy_calls": 512,
+      "vs_proxy_only_calls": 512,
+      "groups": {
+        "?": {
+          "lower": 36,
+          "upper": 111,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "lower": 174,
+          "upper": 205,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 265,
+          "upper": 347,
+          "calls": 688
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 2101,
+          "upper": 2984,
+          "calls": 1488
+        },
+        "Self-emp-inc": {
+          "lower": 302,
+          "upper": 348,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 287,
+          "upper": 390,
+          "calls": 784
+        },
+        "State-gov": {
+          "lower": 161,
+          "upper": 207,
+          "calls": 528
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1012,
+      "calls": 4538,
+      "vs_no_proxy_calls": 128,
+      "vs_proxy_only_calls": 96,
+      "groups": {
+        "?": {
+          "lower": 30,
+          "upper": 105,
+          "calls": 368
+        },
+        "Federal-gov": {
+          "lower": 173,
+          "upper": 208,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 284,
+          "upper": 363,
+          "calls": 720
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 2104,
+          "upper": 2985,
+          "calls": 1264
+        },
+        "Self-emp-inc": {
+          "lower": 290,
+          "upper": 336,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 320,
+          "upper": 421,
+          "calls": 816
+        },
+        "State-gov": {
+          "lower": 154,
+          "upper": 206,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1013,
+      "calls": 4666,
+      "vs_no_proxy_calls": 320,
+      "vs_proxy_only_calls": 320,
+      "groups": {
+        "?": {
+          "lower": 42,
+          "upper": 111,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "lower": 179,
+          "upper": 214,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 289,
+          "upper": 369,
+          "calls": 720
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 2131,
+          "upper": 3016,
+          "calls": 1488
+        },
+        "Self-emp-inc": {
+          "lower": 297,
+          "upper": 341,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 302,
+          "upper": 403,
+          "calls": 784
+        },
+        "State-gov": {
+          "lower": 127,
+          "upper": 179,
+          "calls": 400
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1014,
+      "calls": 4442,
+      "vs_no_proxy_calls": 128,
+      "vs_proxy_only_calls": 96,
+      "groups": {
+        "?": {
+          "lower": 51,
+          "upper": 128,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "lower": 177,
+          "upper": 212,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 263,
+          "upper": 342,
+          "calls": 656
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 1999,
+          "upper": 2871,
+          "calls": 1264
+        },
+        "Self-emp-inc": {
+          "lower": 295,
+          "upper": 341,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 279,
+          "upper": 381,
+          "calls": 752
+        },
+        "State-gov": {
+          "lower": 156,
+          "upper": 210,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1015,
+      "calls": 4250,
+      "vs_no_proxy_calls": 32,
+      "vs_proxy_only_calls": 64,
+      "groups": {
+        "?": {
+          "lower": 40,
+          "upper": 116,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "lower": 182,
+          "upper": 214,
+          "calls": 368
+        },
+        "Local-gov": {
+          "lower": 259,
+          "upper": 342,
+          "calls": 656
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 1769,
+          "upper": 2655,
+          "calls": 1072
+        },
+        "Self-emp-inc": {
+          "lower": 296,
+          "upper": 342,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 305,
+          "upper": 410,
+          "calls": 784
+        },
+        "State-gov": {
+          "lower": 149,
+          "upper": 202,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1016,
+      "calls": 4314,
+      "vs_no_proxy_calls": 0,
+      "vs_proxy_only_calls": 32,
+      "groups": {
+        "?": {
+          "lower": 59,
+          "upper": 133,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "lower": 172,
+          "upper": 207,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 262,
+          "upper": 342,
+          "calls": 688
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 2060,
+          "upper": 2953,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "lower": 303,
+          "upper": 348,
+          "calls": 432
+        },
+        "Self-emp-not-inc": {
+          "lower": 312,
+          "upper": 416,
+          "calls": 752
+        },
+        "State-gov": {
+          "lower": 147,
+          "upper": 200,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1017,
+      "calls": 4442,
+      "vs_no_proxy_calls": 96,
+      "vs_proxy_only_calls": 128,
+      "groups": {
+        "?": {
+          "lower": 55,
+          "upper": 126,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "lower": 170,
+          "upper": 205,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 270,
+          "upper": 348,
+          "calls": 720
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 1809,
+          "upper": 2677,
+          "calls": 1264
+        },
+        "Self-emp-inc": {
+          "lower": 291,
+          "upper": 337,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 273,
+          "upper": 377,
+          "calls": 624
+        },
+        "State-gov": {
+          "lower": 156,
+          "upper": 203,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1018,
+      "calls": 4538,
+      "vs_no_proxy_calls": 160,
+      "vs_proxy_only_calls": 192,
+      "groups": {
+        "?": {
+          "lower": 32,
+          "upper": 108,
+          "calls": 368
+        },
+        "Federal-gov": {
+          "lower": 186,
+          "upper": 221,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 269,
+          "upper": 342,
+          "calls": 720
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 1786,
+          "upper": 2682,
+          "calls": 1296
+        },
+        "Self-emp-inc": {
+          "lower": 291,
+          "upper": 337,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 316,
+          "upper": 418,
+          "calls": 784
+        },
+        "State-gov": {
+          "lower": 142,
+          "upper": 196,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1019,
+      "calls": 4730,
+      "vs_no_proxy_calls": 288,
+      "vs_proxy_only_calls": 256,
+      "groups": {
+        "?": {
+          "lower": 51,
+          "upper": 128,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "lower": 173,
+          "upper": 208,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 274,
+          "upper": 357,
+          "calls": 688
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 1999,
+          "upper": 2891,
+          "calls": 1456
+        },
+        "Self-emp-inc": {
+          "lower": 285,
+          "upper": 331,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 289,
+          "upper": 390,
+          "calls": 784
+        },
+        "State-gov": {
+          "lower": 159,
+          "upper": 212,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1020,
+      "calls": 4570,
+      "vs_no_proxy_calls": 288,
+      "vs_proxy_only_calls": 288,
+      "groups": {
+        "?": {
+          "lower": 30,
+          "upper": 105,
+          "calls": 368
+        },
+        "Federal-gov": {
+          "lower": 175,
+          "upper": 210,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 269,
+          "upper": 350,
+          "calls": 688
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 1970,
+          "upper": 2862,
+          "calls": 1328
+        },
+        "Self-emp-inc": {
+          "lower": 310,
+          "upper": 348,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "lower": 299,
+          "upper": 404,
+          "calls": 784
+        },
+        "State-gov": {
+          "lower": 149,
+          "upper": 202,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1021,
+      "calls": 4730,
+      "vs_no_proxy_calls": 512,
+      "vs_proxy_only_calls": 544,
+      "groups": {
+        "?": {
+          "lower": 38,
+          "upper": 111,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "lower": 170,
+          "upper": 205,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 282,
+          "upper": 362,
+          "calls": 720
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 1936,
+          "upper": 2826,
+          "calls": 1424
+        },
+        "Self-emp-inc": {
+          "lower": 300,
+          "upper": 339,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "lower": 310,
+          "upper": 410,
+          "calls": 784
+        },
+        "State-gov": {
+          "lower": 146,
+          "upper": 200,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1022,
+      "calls": 4570,
+      "vs_no_proxy_calls": 224,
+      "vs_proxy_only_calls": 320,
+      "groups": {
+        "?": {
+          "lower": 42,
+          "upper": 119,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "lower": 175,
+          "upper": 210,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 255,
+          "upper": 337,
+          "calls": 656
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 1908,
+          "upper": 2793,
+          "calls": 1392
+        },
+        "Self-emp-inc": {
+          "lower": 290,
+          "upper": 336,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 291,
+          "upper": 395,
+          "calls": 784
+        },
+        "State-gov": {
+          "lower": 150,
+          "upper": 204,
+          "calls": 464
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1023,
+      "calls": 4730,
+      "vs_no_proxy_calls": 352,
+      "vs_proxy_only_calls": 352,
+      "groups": {
+        "?": {
+          "lower": 53,
+          "upper": 128,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "lower": 172,
+          "upper": 205,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 276,
+          "upper": 357,
+          "calls": 688
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 1843,
+          "upper": 2732,
+          "calls": 1424
+        },
+        "Self-emp-inc": {
+          "lower": 290,
+          "upper": 336,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 343,
+          "upper": 448,
+          "calls": 816
+        },
+        "State-gov": {
+          "lower": 157,
+          "upper": 207,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1024,
+      "calls": 4570,
+      "vs_no_proxy_calls": 384,
+      "vs_proxy_only_calls": 384,
+      "groups": {
+        "?": {
+          "lower": 43,
+          "upper": 119,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "lower": 179,
+          "upper": 212,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 261,
+          "upper": 344,
+          "calls": 688
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 1720,
+          "upper": 2594,
+          "calls": 1328
+        },
+        "Self-emp-inc": {
+          "lower": 298,
+          "upper": 338,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 287,
+          "upper": 392,
+          "calls": 752
+        },
+        "State-gov": {
+          "lower": 164,
+          "upper": 214,
+          "calls": 528
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1025,
+      "calls": 4570,
+      "vs_no_proxy_calls": 256,
+      "vs_proxy_only_calls": 256,
+      "groups": {
+        "?": {
+          "lower": 32,
+          "upper": 105,
+          "calls": 368
+        },
+        "Federal-gov": {
+          "lower": 174,
+          "upper": 209,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 246,
+          "upper": 319,
+          "calls": 624
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 2041,
+          "upper": 2921,
+          "calls": 1488
+        },
+        "Self-emp-inc": {
+          "lower": 293,
+          "upper": 336,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 308,
+          "upper": 409,
+          "calls": 816
+        },
+        "State-gov": {
+          "lower": 160,
+          "upper": 209,
+          "calls": 400
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1026,
+      "calls": 4634,
+      "vs_no_proxy_calls": 224,
+      "vs_proxy_only_calls": 192,
+      "groups": {
+        "?": {
+          "lower": 55,
+          "upper": 126,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "lower": 171,
+          "upper": 206,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 265,
+          "upper": 347,
+          "calls": 656
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 2030,
+          "upper": 2919,
+          "calls": 1360
+        },
+        "Self-emp-inc": {
+          "lower": 298,
+          "upper": 335,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "lower": 290,
+          "upper": 393,
+          "calls": 752
+        },
+        "State-gov": {
+          "lower": 146,
+          "upper": 200,
+          "calls": 496
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1027,
+      "calls": 4826,
+      "vs_no_proxy_calls": 384,
+      "vs_proxy_only_calls": 416,
+      "groups": {
+        "?": {
+          "lower": 55,
+          "upper": 126,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "lower": 178,
+          "upper": 213,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 263,
+          "upper": 341,
+          "calls": 720
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 2078,
+          "upper": 2967,
+          "calls": 1456
+        },
+        "Self-emp-inc": {
+          "lower": 291,
+          "upper": 337,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 292,
+          "upper": 394,
+          "calls": 784
+        },
+        "State-gov": {
+          "lower": 155,
+          "upper": 204,
+          "calls": 528
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1028,
+      "calls": 4730,
+      "vs_no_proxy_calls": 416,
+      "vs_proxy_only_calls": 384,
+      "groups": {
+        "?": {
+          "lower": 51,
+          "upper": 128,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "lower": 170,
+          "upper": 203,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 291,
+          "upper": 367,
+          "calls": 656
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 2226,
+          "upper": 3097,
+          "calls": 1456
+        },
+        "Self-emp-inc": {
+          "lower": 296,
+          "upper": 342,
+          "calls": 464
+        },
+        "Self-emp-not-inc": {
+          "lower": 314,
+          "upper": 414,
+          "calls": 816
+        },
+        "State-gov": {
+          "lower": 147,
+          "upper": 196,
+          "calls": 528
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    },
+    {
+      "seed": 1029,
+      "calls": 4730,
+      "vs_no_proxy_calls": 320,
+      "vs_proxy_only_calls": 384,
+      "groups": {
+        "?": {
+          "lower": 55,
+          "upper": 128,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "lower": 175,
+          "upper": 210,
+          "calls": 400
+        },
+        "Local-gov": {
+          "lower": 261,
+          "upper": 343,
+          "calls": 656
+        },
+        "Never-worked": {
+          "lower": 0,
+          "upper": 0,
+          "calls": 3
+        },
+        "Private": {
+          "lower": 1988,
+          "upper": 2882,
+          "calls": 1424
+        },
+        "Self-emp-inc": {
+          "lower": 312,
+          "upper": 350,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "lower": 324,
+          "upper": 428,
+          "calls": 752
+        },
+        "State-gov": {
+          "lower": 156,
+          "upper": 205,
+          "calls": 528
+        },
+        "Without-pay": {
+          "lower": 2,
+          "upper": 2,
+          "calls": 7
+        }
+      },
+      "covered": true
+    }
+  ]
+}

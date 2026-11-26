@@ -1,0 +1,46 @@
+\documentclass[sigconf, nonacm]{acmart}
+\usepackage{pvldb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{pifont}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\renewcommand\vldbdoi{XX.XX/XXX.XX}
+\renewcommand\vldbpages{XXX-XXX}
+\renewcommand\vldbavailabilityurl{}
+\graphicspath{{../../figures/}}
+\emergencystretch=1.5em
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+\newcommand{\pmark}{$\triangle$}
+
+\begin{document}
+\title{StratQ: Anytime-Valid Grouped Query Contracts for Expensive Predicates}
+\author{Author information pending}
+
+\begin{abstract}
+Analytical SQL queries over text, images, and structured records increasingly evaluate expensive neural or language-model predicates inside \texttt{GROUP BY} count, \texttt{HAVING}, and top-$k$ operators.
+Evaluating the reference model on every row dominates query latency, yet existing proxy-assisted and approximate query engines typically protect only an overall aggregate, assume fixed sample sizes or large-sample asymptotics, or omit decision certification under early stopping.
+We present \textsc{StratQ}, a query execution engine and statistical contract for fixed-snapshot grouped queries with expensive binary predicates.
+Under uniform sampling without replacement within each adaptively selected group, \textsc{StratQ} couples remaining-population centering with a predictable, analytically cross-validated Ridge control variate that reverts to a zero-range baseline unless its leave-one-out cost surrogate improves by at least 5\%.
+All group intervals are computed via directed binary64 outward rounding and share a single $(1-\delta)$ simultaneous coverage event across all groups and data-dependent reveal times, directly certifying \texttt{COUNT} tolerances, \texttt{HAVING} thresholds, and top-$k$ membership while permitting explicit abstention under budget caps.
+Implemented over DuckDB and Apache Arrow and evaluated across six workload families (including live GPU DistilBERT-SST2 and ResNet34-224 inference and 10M-row Parquet snapshots) and eleven database/modern operator adaptations plus an independent grouped hypergeometric CS, \textsc{StratQ} delivers $3.61\times$--$4.78\times$ ratio-of-medians query-level GPU speedups after proxy scoring, certifies top-2 membership on Yelp with $3.0\%$ of rows ($6.5\times$ fewer calls than raw stratified WoR), observes $30/30$ all-group coverage over 15 skewed Zipf configurations (two seeds each) versus $0/30$ for a global-count surrogate's group plugs and $16/30$ for an optional-stopping CLT diagnostic, and records an 85.6\,MB query-stage traced-allocation peak at 10M rows.
+\end{abstract}
+
+\maketitle
+\vldbtopmatter
+
+\input{stratq_problem}
+\input{stratq_method}
+\input{stratq_system}
+\input{stratq_evaluation}
+\input{stratq_discussion}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{stratq_refs}
+\end{document}

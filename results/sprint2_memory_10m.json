@@ -1,0 +1,51 @@
+{
+  "generated_at_utc": "2026-11-25T14:43:57.297160+00:00",
+  "code_sha256": {
+    "src/stratq/bounds.py": "6647d0779f8b276e80b470b2e0af07e3bedfe00ddeb1d9f802e6ade59157e1cb",
+    "src/stratq/engine.py": "5ac6dca9d26e2f56ff11d0938141cc8621aba68ba107b8c2442c7775a3acb356",
+    "src/stratq/modern_baselines.py": "c9213a4577fffa7ea94c2a0d13290958a4962f8eeca66962e8515cf21e9edba9"
+  },
+  "rows": 10000000,
+  "stages": [
+    {
+      "stage": "generate",
+      "rows": 10000000,
+      "wall_ms": 1642.978400002903,
+      "tracemalloc_peak_bytes": 11431009,
+      "peak_working_set_bytes": 212525056,
+      "rss_bytes": 202735616,
+      "generated_bytes": 55973539
+    },
+    {
+      "stage": "verify",
+      "rows": 10000000,
+      "wall_ms": 61.102499999833526,
+      "tracemalloc_peak_bytes": 7570,
+      "peak_working_set_bytes": 236290048,
+      "rss_bytes": 186437632,
+      "sql_groups": 20
+    },
+    {
+      "stage": "profile",
+      "rows": 10000000,
+      "wall_ms": 104526.6186000008,
+      "tracemalloc_peak_bytes": 1285294651,
+      "peak_working_set_bytes": 2979352576,
+      "rss_bytes": 682049536,
+      "profile_ms": 103502.51969999954,
+      "groups": 20
+    },
+    {
+      "stage": "query",
+      "rows": 10000000,
+      "wall_ms": 187849.93440000108,
+      "tracemalloc_peak_bytes": 85583716,
+      "peak_working_set_bytes": 2979790848,
+      "rss_bytes": 680058880,
+      "calls": 32512,
+      "query_ms": 37857.27989999941,
+      "rss_after_profile_bytes": 680738816,
+      "rss_query_delta_bytes": 21688320
+    }
+  ]
+}

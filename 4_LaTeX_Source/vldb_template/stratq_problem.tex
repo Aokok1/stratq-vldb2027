@@ -1,0 +1,106 @@
+\section{Introduction}
+\label{sec:intro}
+
+Modern data-management workloads routinely pair relational grouping with expensive machine-learning or large-language-model (LLM) predicates~\cite{kang2019blazeit,patel2025lotus,liu2025palimpzest,shankar2025docetl}.
+Consider a content-moderation or product-analytics query over a fixed Parquet snapshot:
+\begin{quote}\small\ttfamily
+SELECT category, COUNT(*) AS pos\_cnt FROM items\\
+WHERE REF\_MODEL(content) = 1 GROUP BY category\\
+HAVING pos\_cnt >= 2178 \quad\textnormal{(or ORDER BY pos\_cnt DESC LIMIT 2)}
+\end{quote}
+When \texttt{REF\_MODEL} is a Transformer or vision network executing on a GPU, running an exhaustive pass over tens of thousands of rows takes tens of seconds to minutes.
+Analysts therefore rely on cheap proxies---such as TF-IDF classifiers, thumbnail regressors, or structured metadata---and adaptive sampling to avoid evaluating the reference model on every tuple~\cite{kang2017noscope,kang2020supg,kang2021abae,zeighami2026bargain}.
+
+Despite rapid progress in approximate query processing (AQP) and semantic query engines, a critical gap remains between \emph{approximate execution} and \emph{certifiable grouped SQL semantics}.
+Specifically, three failure modes arise when existing systems are applied to grouped analytical queries with expensive predicates:
+\begin{enumerate}
+  \item \textbf{Silent per-group collapse under global guarantees.} Systems such as SUPG~\cite{kang2020supg} and BARGAIN~\cite{zeighami2026bargain} control an \emph{overall} accuracy, precision, or recall target. Such a contract does not imply a per-group count guarantee under skewed sizes or heterogeneous prevalences. In our 100K-row Zipf stress suite (\S\ref{sec:eval-systems}), a global-count surrogate's proportional group intervals cover all groups in $0/30$ trials and cover $0\%$ of tail groups; this is not a failure of BARGAIN's original global guarantee.
+  \item \textbf{Coverage breakdown under optional stopping and small groups.} Classical grouped AQP~\cite{acharya2000congress,park2018verdict,walenz2019lws} and database-agnostic simultaneous-error engines such as PilotDB~\cite{zhu2025pilotdb} rely on fixed-look allocations or central limit theorem (CLT) asymptotics. PilotDB excludes aggregates used as \texttt{GROUP BY} keys (e.g., \texttt{GROUP BY COUNT(*)}), not ordinary \texttt{COUNT} outputs. Reusing its fixed-look CLT intervals at data-dependent looks does not guarantee nominal coverage and can be anti-conservative: in our optional-stopping diagnostic, the asymptotic comparator drops to $16/30$ all-group coverage overall and $0/6$ at $G=100$.
+  \item \textbf{Range-penalty degradation under weak proxies and uncertified floating-point endpoints.} Using a cheap proxy as a control variate~\cite{kang2019blazeit,angelopoulos2023ppi,zhou2026celeus} reduces variance when the proxy is accurate, but finite-sample empirical-Bernstein and betting bounds also scale with the prediction range $R_s = 1 + f_{\max} - f_{\min}$. When a proxy is weak or noisy, an unguarded control variate can increase reference calls relative to sampling without a proxy. Moreover, real-arithmetic confidence sequences can silently lose validity in IEEE-754 binary64 arithmetic at census ties or tight endpoints.
+\end{enumerate}
+
+\paragraph{Positioning against concurrent 2025--2026 work}
+Recent statistical and database papers occupy several individual pieces of this space, and we delimit our scope explicitly rather than claiming isolated statistical components as new.
+Waudby-Smith and Ramdas~\cite{wor2020,waudby2024betting} establish finite-population without-replacement (WoR) empirical-Bernstein betting confidence sequences (CS).
+Spertus et al.~\cite{spertus2026sequential} combine predictable cross-stratum selection, WoR remaining-population means, and simultaneous lower confidence bounds.
+Hait~\cite{hait2026target} develops adaptive cross-group allocation and multi-target anytime certification under i.i.d.\ within-stratum observations.
+CELEUS~\cite{zhou2026celeus} constructs finite-pool WoR anytime intervals with fixed surrogate completion and e-process inversion; as we show in Proposition~\ref{prop:celeus-equiv}, its uniform-WoR fixed-proxy signal shares the exact same finite-population identity as a fixed-predictor specialization of our observation.
+Meanwhile, PilotDB~\cite{zhu2025pilotdb} formalizes simultaneous multi-group relative error in SQL (asymptotically, fixed-look), and BARGAIN~\cite{zeighami2026bargain} applies anytime-valid inference to global LLM cascades.
+
+\paragraph{Core thesis and contributions}
+\textsc{StratQ} does not claim a new concentration inequality, nor does it claim that a proxy always accelerates every query.
+Instead, its contribution is an \emph{end-to-end, database-facing grouped query contract and execution engine} that unifies predictable batch-refitted residual control variates, uniform within-group WoR sampling, cross-group adaptive routing, and directed binary64 outward rounding under a single filtration and $(1-\delta)$ joint coverage event.
+To our knowledge across 2020--2026 literature in WoR confidence sequences, prediction-powered inference, stratified sequential inference, and semantic query systems, no prior system combines all of these guarantees into a single SQL execution contract for \texttt{COUNT}, \texttt{HAVING}, and \texttt{TOP-$k$} with explicit abstention (Table~\ref{tab:contract-matrix}).
+We make four concrete contributions:
+\begin{itemize}
+  \item \textbf{Certified grouped query contract (\S\ref{sec:contract}).} We formalize fixed-snapshot grouped \texttt{COUNT}, \texttt{HAVING}, and \texttt{TOP-$k$} semantics over known group keys and binary reference outputs, including empty-positive-count groups, explicit budget-cap abstention, and deterministic tie-breaking at census.
+  \item \textbf{Predictable Safe-LOO control variates and outward-rounded CS (\S\ref{sec:method}).} We prove simultaneous anytime validity under cross-group adaptive routing and batch-refitted predictors (Theorem~\ref{thm:coverage}), design an analytic Ridge leave-one-out (LOO) range--variance gate that reverts to a zero-range baseline unless its predicted betting cost improves by at least 5\%, and establish a directed binary64 outward-rounding implementation whose empty-intersection restarts are provably restricted to the complement of the coverage event (Theorem~\ref{thm:fp}).
+  \item \textbf{DuckDB and Apache Arrow execution engine (\S\ref{sec:system}).} We build a reusable columnar profiling and zero-copy Arrow transfer pipeline with directed feature-sum envelopes, three query-specific routing policies, and microsecond-scale scalar directed-rounding arithmetic ($36.6\times$ faster than naive NumPy array-dispatched enclosures).
+  \item \textbf{Comprehensive real-GPU and systems evaluation (\S\ref{sec:eval}).} Across six workload families---including live GPU DistilBERT-SST2 (20K Yelp reviews) and ResNet34-224 (10K CIFAR-10 images), UCI Adult, SMS Spam, Fashion-MNIST, and synthetic Parquet scale/stress---and eleven database/modern operator adaptations plus an independent grouped hypergeometric CS, we separate reference calls, certification rates, cold/warm latency amortization, and isolated-subprocess memory attribution, while transparently reporting weak-proxy and low-within-group-variance boundary regimes.
+\end{itemize}
+
+\begin{table*}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{Contract comparison between \textsc{StratQ} and related database/statistical approaches (2019--2026). This is a capability matrix, not a benchmark of full system replicas. \cmark\ denotes support in the stated main contract, \pmark\ partial/variant/asymptotic overlap, and \xmark\ unsupported. ``Batch-refit CV'' means predictable row-level residual control-variate refitting; ``route'' means cross-group routing; ``SQL cert.'' means certified grouped \texttt{HAVING}/\texttt{TOP-$k$}.}
+\label{tab:contract-matrix}
+\begin{tabular}{@{}lccccccc@{}}
+\toprule
+System / Method & Fixed-pop. WoR & Finite anytime & Batch-refit CV & Cross-group route & Per-group count CI & SQL decision cert. & DB execution \\
+\midrule
+BlazeIt~\cite{kang2019blazeit} (PVLDB'19) & \xmark & \cmark & \pmark & \xmark & \xmark & \pmark & \cmark \\
+ABae~\cite{kang2021abae} (PVLDB'21) & \cmark & \xmark & \xmark & \pmark & \pmark & \xmark & \pmark \\
+LOTUS~\cite{patel2025lotus} (PVLDB'25) & \xmark & \xmark & \xmark & \pmark & \pmark & \pmark & \cmark \\
+PilotDB~\cite{zhu2025pilotdb} (SIGMOD'25) & \pmark & \xmark\ (CLT) & \xmark & \pmark & \pmark & \xmark & \cmark \\
+BARGAIN~\cite{zeighami2026bargain} (PACMMOD'25) & \pmark & \cmark & \xmark & \xmark & \xmark\ (global) & \xmark & \xmark \\
+Spertus et al.~\cite{spertus2026sequential} (arXiv'26) & \cmark & \cmark & \xmark & \cmark & \pmark\ (LCB) & \xmark & \xmark \\
+Hait~\cite{hait2026target} (arXiv'26) & \xmark\ (i.i.d.) & \cmark & \xmark & \cmark & \pmark & \xmark & \xmark \\
+CELEUS~\cite{zhou2026celeus} (arXiv'26) & \cmark & \cmark & \xmark\ (fixed) & \xmark\ (single) & \xmark & \xmark & \xmark \\
+\midrule
+\textbf{\textsc{StratQ} (this work)} & \cmark & \cmark\ (+FP64) & \cmark & \cmark & \cmark & \cmark\ (+abstain) & \cmark\ (DuckDB+Arrow) \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\section{Query Contract and Semantics}
+\label{sec:contract}
+
+We formalize the fixed-snapshot SQL query semantics enforced by the \textsc{StratQ} execution API.
+
+\paragraph{Fixed snapshot and group universe}
+A query operates over a static relational table snapshot $T$ containing $N$ rows with known, inexpensive grouping keys $g(i) \in \mathcal{G}$ (where $|\mathcal{G}| = G \ge 1$) and cheap feature vectors $\phi_i \in [0, 1]^d$ (typically an intercept $1$, a normalized proxy score, and optional relational covariates from Parquet columns).
+Each row $i \in \{1,\dots,N\}$ carries an unknown, deterministic binary reference predicate value $y_i \in \{0, 1\}$ produced by an expensive callback $\mathcal{O}(i)$ (e.g., a GPU neural classifier or LLM judge).
+Let $I_g = \{i \in \{1,\dots,N\} : g(i) = g\}$ denote the nonempty row-index set of group $g$, with known cardinality $N_g = |I_g| \ge 1$ and $\sum_{g \in \mathcal{G}} N_g = N$.
+The unknown target for group $g$ is the exact reference-positive count and positive rate:
+\begin{equation}
+  K_g = \sum_{i \in I_g} y_i \in \{0, 1, \dots, N_g\}, \qquad \mu_g = \frac{K_g}{N_g} \in [0, 1].
+\end{equation}
+The reported universe $\mathcal{G}$ includes every nonempty input group, including groups with $K_g = 0$, matching SQL \texttt{SUM(CAST(REF\_MODEL(x) AS INT)) GROUP BY g} semantics.
+
+\paragraph{Joint anytime coverage contract}
+The analyst specifies a query-level failure probability $\delta \in (0, 1)$ and an optional reference-call budget cap $B_{\max} \le N$.
+At every global reveal step $t \in \{0, 1, \dots, N\}$ at which the engine evaluates the reference model on one more row, \textsc{StratQ} maintains count intervals $[L_g(t), U_g(t)] \subseteq [0, N_g]$ for all $g \in \mathcal{G}$.
+The engine guarantees the single simultaneous coverage event:
+\begin{align}
+  \mathcal{E} &:= \bigl\{\forall\, t \in \{0,\dots,N\},\; \forall\, g \in \mathcal{G}:\; L_g(t) \le K_g \le U_g(t)\bigr\}, \nonumber\\
+  \Pr(\mathcal{E}) &\ge 1 - \delta.
+  \label{eq:joint-event}
+\end{align}
+Because $\mathcal{E}$ holds uniformly over all reveal times $t$ and all groups $g$, the query engine may inspect intervals after every batch, adaptively redirect oracle calls to unresolved groups, and terminate at any data-dependent stopping time $\tau \le B_{\max}$ without invalidating coverage or spending extra failure budget per look.
+
+\paragraph{Three certified SQL query modes}
+All three analytical query operators inherit their correctness directly from the single event $\mathcal{E}$:
+\begin{itemize}
+  \item \textbf{Grouped \texttt{COUNT} with per-group tolerances.} The analyst supplies per-group absolute tolerances $\epsilon_g \ge 0$ (e.g., $\epsilon_g = 0.04 N_g$). The engine returns $[L_g(\tau), U_g(\tau)]$ and midpoint $\hat{K}_g = \tfrac{1}{2}(L_g(\tau)+U_g(\tau))$, stopping once $\tfrac{1}{2}(U_g(\tau)-L_g(\tau)) \le \epsilon_g$ for every $g \in \mathcal{G}$ or when $\tau = B_{\max}$. On $\mathcal{E}$, $|\hat{K}_g - K_g| \le \tfrac{1}{2}(U_g(\tau)-L_g(\tau))$ simultaneously for all $g$; if stopped early by $B_{\max}$, the engine reports realized half-widths honestly alongside a \texttt{converged=false} flag.
+  \item \textbf{Grouped \texttt{HAVING} ($K_g \ge \tau_{\text{cnt}}$).} Given threshold $\tau_{\text{cnt}}$, \textsc{StratQ} partitions $\mathcal{G}$ into accepted groups $\{g : L_g(\tau) \ge \tau_{\text{cnt}}\}$, rejected groups $\{g : U_g(\tau) < \tau_{\text{cnt}}\}$, and explicitly \emph{unresolved} (abstained) groups whose interval still straddles $\tau_{\text{cnt}}$. On $\mathcal{E}$, every accepted and rejected label is exact; under a tight budget $B_{\max}$, borderline groups abstain rather than guessing.
+  \item \textbf{Grouped \texttt{TOP-$k$} ($0 < k < G$).} A candidate $k$-element subset $A \subset \mathcal{G}$ is certified if and only if
+  \begin{equation}
+    \min_{g \in A} L_g(\tau) \;>\; \max_{h \notin A} U_h(\tau).
+    \label{eq:topk-cert}
+  \end{equation}
+  On $\mathcal{E}$, strict separation guarantees exact top-$k$ set membership. When exact ties occur ($K_{(k)} = K_{(k+1)}$), strict separation is impossible prior to census; \textsc{StratQ} refuses premature certification, abstains under insufficient budget, and resolves exact ties deterministically by secondary group-key order only once the tied boundary groups reach full census ($t_g = N_g$).
+\end{itemize}
+
+\paragraph{Contract boundaries}
+Equation~\eqref{eq:joint-event} governs fidelity to the deterministic reference model $\mathcal{O}$ on the fixed snapshot $T$, independent of $\mathcal{O}$'s external accuracy on human ground truth. Each query receives its own risk budget $\delta$; cross-query risk reuse, streaming table mutations, and unknown group keys lie outside the current contract and are discussed in \S\ref{sec:limitations}.

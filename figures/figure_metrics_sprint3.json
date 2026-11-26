@@ -1,0 +1,66 @@
+{
+  "source_sha256": {
+    "sprint2_gpu_workloads": "2be6c08b5891f8f7b8597ce959a2b7eb0f220f06b8266acb20b10782f45c1592",
+    "sprint2_systems": "a68cfafb3992ffc2c0f86d5dfe178cf399034c52835dd81f89544c6a320d9966",
+    "sprint1_safe_gating_ablation": "713296c594942c5fc8e45d543860703206c11f3df9a7108f3430a5a4fba86999",
+    "adult_fixed_budget": "5436e53285c1d329c9970d7ce2daa8ab565a5d1b7012319a5093c9c582757010",
+    "adult_blazeit": "474beccbd75dd738fc33d70c9cbec6a83882a86411ade0308c4f37046c20be98",
+    "adult_senate": "f400adb82bf3bbafc56fdb860ea73ab0fd4005694168860ab01f9fac79723ac7",
+    "adult_online_aggregation": "42086a91533f64a4c54101ac0bd1ef0791bc0c3c88b7bd07a03f37dee48a3f30",
+    "adult_lws": "e79c907157f57d716baec6799e495bdeac6236af5865258447dfbb653d456fe5",
+    "adult_verdict": "12723c878c0c0e208eb3ee80a93a67080b65e6a57ef88d642bcd226c38a8f0b7",
+    "sprint2_memory_10m": "e906cc8152b76560199d4468fb5d620b321b8b039226670d6cca6a5d3a309c56"
+  },
+  "metrics": {
+    "fig2": {
+      "yelp_speedup_fresh": 3.60721395237506,
+      "yelp_speedup_reuse": 3.671976064989304,
+      "cifar_speedup_fresh": 4.578313764549888,
+      "cifar_speedup_reuse": 4.784980936412766
+    },
+    "fig3": {
+      "aucs": [
+        0.95,
+        0.85,
+        0.75,
+        0.65,
+        0.55,
+        0.5
+      ],
+      "group_grid": [
+        5,
+        10,
+        20,
+        50,
+        100
+      ]
+    },
+    "fig4": {
+      "safe_pct": [
+        -61.25797629899728,
+        -14.005876591576882,
+        -1.6684045881126153,
+        -0.9007968587596671,
+        0.9344932525898519
+      ],
+      "adult_4096_widths": {
+        "StratQ (Anytime)": 5.29,
+        "VerdictDB* (Asymp.)": 3.88,
+        "Senate* (Fixed)": 4.19,
+        "LWS* (Asymp.)": 4.45,
+        "BlazeIt* (Fixed)": 11.92,
+        "ABae-insp.* (Fixed)": 12.62,
+        "OLA Scan* (Fixed)": 44.52
+      }
+    },
+    "fig5": {
+      "ten_m_profile_s": 8.469789599999785,
+      "ten_m_reused_s": 2.831839599999512,
+      "measured_queries": 5,
+      "modeled_q10_speedup": 3.065078887717597,
+      "query_immediate_rss_delta_mb": 21.68832,
+      "query_final_rss_delta_mb": -0.679936,
+      "query_tracemalloc_peak_mb": 85.583716
+    }
+  }
+}

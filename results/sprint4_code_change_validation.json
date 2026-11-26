@@ -1,0 +1,14 @@
+{
+  "generated_at_utc": "2026-11-25T17:19:57.387996+00:00",
+  "old_bounds_sha256": "6647d0779f8b276e80b470b2e0af07e3bedfe00ddeb1d9f802e6ade59157e1cb",
+  "new_bounds_sha256": "fec001e41e4a169e9ecacffbf0655c3afb7ae66a48e4abea8e7c6964a9d0291f",
+  "replay": "Adult existing Parquet; COUNT 3 modes plus HAVING tau=2178 and TOP-2; seeds 1000-1002",
+  "calls_equal": true,
+  "decisions_equal": true,
+  "new_intervals_are_outward_of_old": true,
+  "max_lower_endpoint_downward_shift": 2.864908310584724e-11,
+  "max_upper_endpoint_upward_shift": 2.6830093702301383e-11,
+  "log_thresholds_identical_for_alpha_0_1_over_G_1_100": true,
+  "frozen_measurements_regenerated": false,
+  "note": "Current code fully encloses normalized labels; existing frozen JSON retain their original code hashes. Calls and decisions were unchanged in this replay; endpoint changes are outward ULP-scale widening."
+}

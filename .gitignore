@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Fetched inputs — reproduce with `python artifact_tools.py fetch-data`
+data/
+models/
+*.part
+
+# LaTeX build by-products (stratq.log and stratq.bbl are tracked deliberately:
+# the claim audit reads them, so the shipped PDF can be checked without TeX)
+*.aux
+*.fls
+*.fdb_latexmk
+*.out
+*.synctex.gz
+*.toc
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

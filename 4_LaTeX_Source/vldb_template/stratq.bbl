@@ -1,0 +1,1084 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{62}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Acharya, Gibbons, and Poosala}{Acharya
+  et~al\mbox{.}}{2000}]%
+        {acharya2000congress}
+\bibfield{author}{\bibinfo{person}{Swarup Acharya}, \bibinfo{person}{Phillip~B.
+  Gibbons}, {and} \bibinfo{person}{Viswanath Poosala}.}
+  \bibinfo{year}{2000}\natexlab{}.
+\newblock \showarticletitle{Congressional Samples for Approximate Answering of
+  Group-By Queries}. In \bibinfo{booktitle}{\emph{Proceedings of the 2000 ACM
+  SIGMOD International Conference on Management of Data}}.
+  \bibinfo{publisher}{ACM}, \bibinfo{pages}{487--498}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/342009.335450}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Agarwal, Mozafari, Panda, Milner, Madden, and
+  Stoica}{Agarwal et~al\mbox{.}}{2013}]%
+        {agarwal2013blinkdb}
+\bibfield{author}{\bibinfo{person}{Sameer Agarwal}, \bibinfo{person}{Barzan
+  Mozafari}, \bibinfo{person}{Aurojit Panda}, \bibinfo{person}{Henry Milner},
+  \bibinfo{person}{Samuel~R. Madden}, {and} \bibinfo{person}{Ion Stoica}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{{BlinkDB}: Queries with Bounded Errors and Bounded
+  Response Times on Very Large Data}. In \bibinfo{booktitle}{\emph{Proceedings
+  of the 8th ACM European Conference on Computer Systems}}.
+  \bibinfo{publisher}{ACM}, \bibinfo{pages}{29--42}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/2465351.2465355}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Angelopoulos, Bates, Fannjiang, Jordan, and
+  Zrnic}{Angelopoulos et~al\mbox{.}}{2023}]%
+        {angelopoulos2023ppi}
+\bibfield{author}{\bibinfo{person}{Anastasios~N. Angelopoulos},
+  \bibinfo{person}{Stephen Bates}, \bibinfo{person}{Clara Fannjiang},
+  \bibinfo{person}{Michael~I. Jordan}, {and} \bibinfo{person}{Tijana Zrnic}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Prediction-powered inference}.
+\newblock \bibinfo{journal}{\emph{Science}} \bibinfo{volume}{382},
+  \bibinfo{number}{6671} (\bibinfo{year}{2023}), \bibinfo{pages}{669--674}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1126/science.adi6000}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Angelopoulos, Duchi, and Zrnic}{Angelopoulos
+  et~al\mbox{.}}{2026}]%
+        {angelopoulos2026ppipp}
+\bibfield{author}{\bibinfo{person}{Anastasios~N. Angelopoulos},
+  \bibinfo{person}{John~C. Duchi}, {and} \bibinfo{person}{Tijana Zrnic}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{{PPI++}: Efficient Prediction-Powered Inference}.
+\newblock \bibinfo{journal}{\emph{The Annals of Applied Statistics}}
+  \bibinfo{volume}{20}, \bibinfo{number}{3} (\bibinfo{year}{2026}),
+  \bibinfo{pages}{2235--2252}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1214/26-AOAS2215}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{{Apache Software Foundation}}{{Apache Software
+  Foundation}}{2026}]%
+        {apachearrow}
+\bibfield{author}{\bibinfo{person}{{Apache Software Foundation}}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{{Apache Arrow}: A Cross-Language Development Platform
+  for In-Memory Data}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://arrow.apache.org/}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{Software project and columnar format specification; accessed
+  2026-11-25.}
+
+
+\bibitem[\protect\citeauthoryear{Arai, Das, Gunopulos, and Koudas}{Arai
+  et~al\mbox{.}}{2009}]%
+        {arai2009anytimetopk}
+\bibfield{author}{\bibinfo{person}{Benjamin Arai}, \bibinfo{person}{Gautam
+  Das}, \bibinfo{person}{Dimitrios Gunopulos}, {and} \bibinfo{person}{Nick
+  Koudas}.} \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{Anytime Measures for Top-k Algorithms on Exact and
+  Fuzzy Data Sets}.
+\newblock \bibinfo{journal}{\emph{The VLDB Journal}} \bibinfo{volume}{18},
+  \bibinfo{number}{2} (\bibinfo{year}{2009}), \bibinfo{pages}{407--427}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1007/s00778-008-0127-9}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Arnold, Gavrilopoulos, Schulz, and
+  Ziegel}{Arnold et~al\mbox{.}}{2026}]%
+        {arnold2026smcs}
+\bibfield{author}{\bibinfo{person}{Sebastian Arnold}, \bibinfo{person}{Georgios
+  Gavrilopoulos}, \bibinfo{person}{Benedikt Schulz}, {and}
+  \bibinfo{person}{Johanna Ziegel}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{Sequential Model Confidence Sets}.
+\newblock \bibinfo{journal}{\emph{Journal of the Royal Statistical Society
+  Series B: Statistical Methodology}} \bibinfo{volume}{88}, \bibinfo{number}{5}
+  (\bibinfo{year}{2026}), \bibinfo{pages}{1662--1681}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1093/jrsssb/qkag066}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Breidt and Opsomer}{Breidt and
+  Opsomer}{2017}]%
+        {breidt2017modelassisted}
+\bibfield{author}{\bibinfo{person}{F.~Jay Breidt} {and}
+  \bibinfo{person}{Jean~D. Opsomer}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Model-Assisted Survey Estimation with Modern
+  Prediction Techniques}.
+\newblock \bibinfo{journal}{\emph{Statist. Sci.}} \bibinfo{volume}{32},
+  \bibinfo{number}{2} (\bibinfo{year}{2017}), \bibinfo{pages}{190--205}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1214/16-STS589}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Csillag, Struchiner, and Goedert}{Csillag
+  et~al\mbox{.}}{2025}]%
+        {csillag2025evalues}
+\bibfield{author}{\bibinfo{person}{Daniel Csillag},
+  \bibinfo{person}{Claudio~Jose Struchiner}, {and}
+  \bibinfo{person}{Guilherme~Tegoni Goedert}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Prediction-Powered E-Values}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 42nd International Conference on
+  Machine Learning}} \emph{(\bibinfo{series}{Proceedings of Machine Learning
+  Research})}, Vol.~\bibinfo{volume}{267}. \bibinfo{publisher}{PMLR},
+  \bibinfo{pages}{11493--11514}.
+\newblock
+\urldef\tempurl%
+\url{https://proceedings.mlr.press/v267/csillag25a.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Dai, Wang, Wan, Dai, Yang, Nova, Yin,
+  Phothilimthana, Sutton, and Schuurmans}{Dai et~al\mbox{.}}{2024}]%
+        {dai2024uqe}
+\bibfield{author}{\bibinfo{person}{Hanjun Dai}, \bibinfo{person}{Bethany~Yixin
+  Wang}, \bibinfo{person}{Xingchen Wan}, \bibinfo{person}{Bo Dai},
+  \bibinfo{person}{Sherry Yang}, \bibinfo{person}{Azade Nova},
+  \bibinfo{person}{Pengcheng Yin}, \bibinfo{person}{Phitchaya~Mangpo
+  Phothilimthana}, \bibinfo{person}{Charles Sutton}, {and}
+  \bibinfo{person}{Dale Schuurmans}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{{UQE}: A Query Engine for Unstructured Databases}.
+  In \bibinfo{booktitle}{\emph{Advances in Neural Information Processing
+  Systems}}, Vol.~\bibinfo{volume}{37}. \bibinfo{publisher}{Curran Associates,
+  Inc.}, \bibinfo{pages}{29807--29838}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.52202/079017-0938}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Ding, Huang, Chaudhuri, Chakrabarti, and
+  Wang}{Ding et~al\mbox{.}}{2016}]%
+        {sample2016}
+\bibfield{author}{\bibinfo{person}{Bolin Ding}, \bibinfo{person}{Silu Huang},
+  \bibinfo{person}{Surajit Chaudhuri}, \bibinfo{person}{Kaushik Chakrabarti},
+  {and} \bibinfo{person}{Chi Wang}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Sample + Seek: Approximating Aggregates with
+  Distribution Precision Guarantee}. In \bibinfo{booktitle}{\emph{Proceedings
+  of the 2016 International Conference on Management of Data}}.
+  \bibinfo{publisher}{ACM}, \bibinfo{pages}{679--694}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/2882903.2915249}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Dou, Lian, and Li}{Dou et~al\mbox{.}}{2026}]%
+        {dou2026conformalcascade}
+\bibfield{author}{\bibinfo{person}{Yifan Dou}, \bibinfo{person}{Shikan Lian},
+  {and} \bibinfo{person}{Shibo Li}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Conformal Cascade: Distribution-Free Accuracy
+  Guarantees for Multi-Tier {LLM} Inference}.
+\newblock
+\newblock
+\showeprint[arxiv]{2607.25018}
+\urldef\tempurl%
+\url{https://arxiv.org/abs/2607.25018}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{arXiv preprint; v3 2026-07-31.}
+
+
+\bibitem[\protect\citeauthoryear{Fisch, Maynez, Hofer, Dhingra, Globerson, and
+  Cohen}{Fisch et~al\mbox{.}}{2024}]%
+        {fisch2024stratppi}
+\bibfield{author}{\bibinfo{person}{Adam Fisch}, \bibinfo{person}{Joshua
+  Maynez}, \bibinfo{person}{R.~Alex Hofer}, \bibinfo{person}{Bhuwan Dhingra},
+  \bibinfo{person}{Amir Globerson}, {and} \bibinfo{person}{William~W. Cohen}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Stratified Prediction-Powered Inference for
+  Effective Hybrid Evaluation of Language Models}. In
+  \bibinfo{booktitle}{\emph{Advances in Neural Information Processing
+  Systems}}, Vol.~\bibinfo{volume}{37}. \bibinfo{publisher}{Curran Associates,
+  Inc.}, \bibinfo{pages}{111489--111514}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.52202/079017-3541}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Goiri, Bianchini, Nagarakatte, and
+  Nguyen}{Goiri et~al\mbox{.}}{2015}]%
+        {goiri2015approxhadoop}
+\bibfield{author}{\bibinfo{person}{\'{I}\~{n}igo Goiri},
+  \bibinfo{person}{Ricardo Bianchini}, \bibinfo{person}{Santosh Nagarakatte},
+  {and} \bibinfo{person}{Thu~Duc Nguyen}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{{ApproxHadoop}: Bringing Approximations to
+  MapReduce Frameworks}. In \bibinfo{booktitle}{\emph{Proceedings of the
+  Twentieth International Conference on Architectural Support for Programming
+  Languages and Operating Systems}}. \bibinfo{publisher}{ACM},
+  \bibinfo{pages}{383--397}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/2694344.2694351}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Gu, Li, Dai, Huang, Xue, Li, Zheng, Cai,
+  Huang, and Chen}{Gu et~al\mbox{.}}{2023}]%
+        {shadow2023}
+\bibfield{author}{\bibinfo{person}{Rong Gu}, \bibinfo{person}{Han Li},
+  \bibinfo{person}{Haipeng Dai}, \bibinfo{person}{Wenjie Huang},
+  \bibinfo{person}{Jie Xue}, \bibinfo{person}{Meng Li}, \bibinfo{person}{Jiaqi
+  Zheng}, \bibinfo{person}{Haoran Cai}, \bibinfo{person}{Yihua Huang}, {and}
+  \bibinfo{person}{Guihai Chen}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{{ShadowAQP}: Efficient Approximate Group-by and
+  Join Query via Attribute-Oriented Sample Size Allocation and Data
+  Generation}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{16}, \bibinfo{number}{13} (\bibinfo{year}{2023}),
+  \bibinfo{pages}{4216--4229}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3625054.3625059}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Gu, Sun, Gang, and Xia}{Gu
+  et~al\mbox{.}}{2026}]%
+        {gu2026serpant}
+\bibfield{author}{\bibinfo{person}{Runzhe Gu}, \bibinfo{person}{Wenguang Sun},
+  \bibinfo{person}{Bowen Gang}, {and} \bibinfo{person}{Xintao Xia}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{Anytime-Valid Inference for Online Ranking of Large
+  Language Models}. In \bibinfo{booktitle}{\emph{Proceedings of the 43rd
+  International Conference on Machine Learning}}
+  \emph{(\bibinfo{series}{Proceedings of Machine Learning Research})},
+  Vol.~\bibinfo{volume}{306}. \bibinfo{publisher}{PMLR},
+  \bibinfo{pages}{37229--37260}.
+\newblock
+\urldef\tempurl%
+\url{https://proceedings.mlr.press/v306/gu26l.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Haas and Hellerstein}{Haas and
+  Hellerstein}{1999}]%
+        {haas1999ripple}
+\bibfield{author}{\bibinfo{person}{Peter~J. Haas} {and}
+  \bibinfo{person}{Joseph~M. Hellerstein}.} \bibinfo{year}{1999}\natexlab{}.
+\newblock \showarticletitle{Ripple Joins for Online Aggregation}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 1999 ACM SIGMOD International
+  Conference on Management of Data}}. \bibinfo{publisher}{ACM},
+  \bibinfo{pages}{287--298}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/304182.304208}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Hait}{Hait}{2026}]%
+        {hait2026target}
+\bibfield{author}{\bibinfo{person}{Subir Hait}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Target-Aware Sequential Inference: Pooled versus
+  Stratified Anytime-Valid Designs}.
+\newblock
+\newblock
+\showeprint[arxiv]{2609.37873}
+\urldef\tempurl%
+\url{https://arxiv.org/abs/2609.37873}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{arXiv preprint; v2 2026-10-08.}
+
+
+\bibitem[\protect\citeauthoryear{Hellerstein, Haas, and Wang}{Hellerstein
+  et~al\mbox{.}}{1997}]%
+        {hellerstein1997online}
+\bibfield{author}{\bibinfo{person}{Joseph~M. Hellerstein},
+  \bibinfo{person}{Peter~J. Haas}, {and} \bibinfo{person}{Helen~J. Wang}.}
+  \bibinfo{year}{1997}\natexlab{}.
+\newblock \showarticletitle{Online Aggregation}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 1997 ACM SIGMOD International
+  Conference on Management of Data}}. \bibinfo{publisher}{ACM},
+  \bibinfo{pages}{171--182}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/253260.253291}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Howard, Ramdas, McAuliffe, and Sekhon}{Howard
+  et~al\mbox{.}}{2021}]%
+        {howard2021cs}
+\bibfield{author}{\bibinfo{person}{Steven~R. Howard}, \bibinfo{person}{Aaditya
+  Ramdas}, \bibinfo{person}{Jon McAuliffe}, {and} \bibinfo{person}{Jasjeet
+  Sekhon}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Time-Uniform, Nonparametric, Nonasymptotic
+  Confidence Sequences}.
+\newblock \bibinfo{journal}{\emph{The Annals of Statistics}}
+  \bibinfo{volume}{49}, \bibinfo{number}{2} (\bibinfo{year}{2021}),
+  \bibinfo{pages}{1055--1080}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1214/20-AOS1991}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Jo and Trummer}{Jo and Trummer}{2024}]%
+        {jo2024thalamusdb}
+\bibfield{author}{\bibinfo{person}{Saehan Jo} {and} \bibinfo{person}{Immanuel
+  Trummer}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{{ThalamusDB}: Approximate Query Processing on
+  Multi-Modal Data}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the ACM on Management of
+  Data}} \bibinfo{volume}{2}, \bibinfo{number}{3} (\bibinfo{year}{2024}),
+  \bibinfo{pages}{1--26}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3654989}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Jourdan, Delahaye-Duriez, and
+  R\'{e}da}{Jourdan et~al\mbox{.}}{2026}]%
+        {jourdan2026apgai}
+\bibfield{author}{\bibinfo{person}{Marc Jourdan}, \bibinfo{person}{Andr\'{e}e
+  Delahaye-Duriez}, {and} \bibinfo{person}{Cl\'{e}mence R\'{e}da}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{An Anytime Algorithm for Good Arm Identification}.
+\newblock \bibinfo{journal}{\emph{Journal of Machine Learning Research}}
+  \bibinfo{volume}{27}, \bibinfo{number}{19} (\bibinfo{year}{2026}),
+  \bibinfo{pages}{1--90}.
+\newblock
+\urldef\tempurl%
+\url{https://jmlr.org/papers/v27/24-0680.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Jun and Nowak}{Jun and Nowak}{2016}]%
+        {jun2016atlucb}
+\bibfield{author}{\bibinfo{person}{Kwang-Sung Jun} {and}
+  \bibinfo{person}{Robert Nowak}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Anytime Exploration for Multi-armed Bandits Using
+  Confidence Information}. In \bibinfo{booktitle}{\emph{Proceedings of the 33rd
+  International Conference on Machine Learning}}
+  \emph{(\bibinfo{series}{Proceedings of Machine Learning Research})},
+  Vol.~\bibinfo{volume}{48}. \bibinfo{publisher}{PMLR},
+  \bibinfo{pages}{974--982}.
+\newblock
+\urldef\tempurl%
+\url{https://proceedings.mlr.press/v48/jun16.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Kandula, Shanbhag, Vitorovi\'{c}, Olma,
+  Grandl, Chaudhuri, and Ding}{Kandula et~al\mbox{.}}{2016}]%
+        {kandula2016quickr}
+\bibfield{author}{\bibinfo{person}{Srikanth Kandula}, \bibinfo{person}{Anil
+  Shanbhag}, \bibinfo{person}{Aleksandar Vitorovi\'{c}},
+  \bibinfo{person}{Matthaios Olma}, \bibinfo{person}{Robert Grandl},
+  \bibinfo{person}{Surajit Chaudhuri}, {and} \bibinfo{person}{Bolin Ding}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{Quickr}: Lazily Approximating Complex AdHoc
+  Queries in BigData Clusters}. In \bibinfo{booktitle}{\emph{Proceedings of the
+  2016 International Conference on Management of Data}}.
+  \bibinfo{publisher}{ACM}, \bibinfo{pages}{631--646}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/2882903.2882940}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Kang, Bailis, and Zaharia}{Kang
+  et~al\mbox{.}}{2019}]%
+        {kang2019blazeit}
+\bibfield{author}{\bibinfo{person}{Daniel Kang}, \bibinfo{person}{Peter
+  Bailis}, {and} \bibinfo{person}{Matei Zaharia}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{{BlazeIt}: Optimizing Declarative Aggregation and
+  Limit Queries for Neural Network-Based Video Analytics}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{13}, \bibinfo{number}{4} (\bibinfo{year}{2019}),
+  \bibinfo{pages}{533--546}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3372716.3372725}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Kang, Emmons, Abuzaid, Bailis, and
+  Zaharia}{Kang et~al\mbox{.}}{2017}]%
+        {kang2017noscope}
+\bibfield{author}{\bibinfo{person}{Daniel Kang}, \bibinfo{person}{John Emmons},
+  \bibinfo{person}{Firas Abuzaid}, \bibinfo{person}{Peter Bailis}, {and}
+  \bibinfo{person}{Matei Zaharia}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{{NoScope}: Optimizing Neural Network Queries over
+  Video at Scale}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{10}, \bibinfo{number}{11} (\bibinfo{year}{2017}),
+  \bibinfo{pages}{1586--1597}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3137628.3137664}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Kang, Gan, Bailis, Hashimoto, and
+  Zaharia}{Kang et~al\mbox{.}}{2020}]%
+        {kang2020supg}
+\bibfield{author}{\bibinfo{person}{Daniel Kang}, \bibinfo{person}{Edward Gan},
+  \bibinfo{person}{Peter Bailis}, \bibinfo{person}{Tatsunori Hashimoto}, {and}
+  \bibinfo{person}{Matei Zaharia}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Approximate Selection with Guarantees Using
+  Proxies}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{13}, \bibinfo{number}{12} (\bibinfo{year}{2020}),
+  \bibinfo{pages}{1990--2003}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3407790.3407804}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Kang, Guibas, Bailis, Hashimoto, Sun, and
+  Zaharia}{Kang et~al\mbox{.}}{2021}]%
+        {kang2021abae}
+\bibfield{author}{\bibinfo{person}{Daniel Kang}, \bibinfo{person}{John Guibas},
+  \bibinfo{person}{Peter Bailis}, \bibinfo{person}{Tatsunori Hashimoto},
+  \bibinfo{person}{Yi Sun}, {and} \bibinfo{person}{Matei Zaharia}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Accelerating Approximate Aggregation Queries with
+  Expensive Predicates}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{14}, \bibinfo{number}{11} (\bibinfo{year}{2021}),
+  \bibinfo{pages}{2341--2354}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3476249.3476285}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Kang, Guibas, Bailis, Hashimoto, and
+  Zaharia}{Kang et~al\mbox{.}}{2022}]%
+        {kang2022tasti}
+\bibfield{author}{\bibinfo{person}{Daniel Kang}, \bibinfo{person}{John Guibas},
+  \bibinfo{person}{Peter Bailis}, \bibinfo{person}{Tatsunori Hashimoto}, {and}
+  \bibinfo{person}{Matei Zaharia}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{{TASTI}: Semantic Indexes for Machine
+  Learning-based Queries over Unstructured Data}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2022 International Conference on
+  Management of Data}}. \bibinfo{publisher}{ACM}, \bibinfo{pages}{1934--1947}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3514221.3517897}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Khosravi and Huo}{Khosravi and Huo}{2026}]%
+        {khosravi2026rankcs}
+\bibfield{author}{\bibinfo{person}{Hamed Khosravi} {and}
+  \bibinfo{person}{Xiaoming Huo}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Rank Confidence Sequences: Anytime-Valid
+  Leaderboards}.
+\newblock
+\newblock
+\showeprint[arxiv]{2609.32211}
+\urldef\tempurl%
+\url{https://arxiv.org/abs/2609.32211}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{arXiv preprint; v1 2026-09-26.}
+
+
+\bibitem[\protect\citeauthoryear{Kilian, Cortinovis, and Caron}{Kilian
+  et~al\mbox{.}}{2025}]%
+        {kilian2025anytime}
+\bibfield{author}{\bibinfo{person}{Valentin Kilian}, \bibinfo{person}{Stefano
+  Cortinovis}, {and} \bibinfo{person}{Fran\c{c}ois Caron}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Anytime-valid, Bayes-assisted, Prediction-Powered
+  Inference}. In \bibinfo{booktitle}{\emph{Advances in Neural Information
+  Processing Systems}}, Vol.~\bibinfo{volume}{38}. \bibinfo{pages}{1035--1053}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.52202/085713-0033}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Li, Wu, Yi, and Zhao}{Li
+  et~al\mbox{.}}{2016}]%
+        {li2016wander}
+\bibfield{author}{\bibinfo{person}{Feifei Li}, \bibinfo{person}{Bin Wu},
+  \bibinfo{person}{Ke Yi}, {and} \bibinfo{person}{Zhuoyue Zhao}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{Wander Join}: Online Aggregation via Random
+  Walks}. In \bibinfo{booktitle}{\emph{Proceedings of the 2016 International
+  Conference on Management of Data}}. \bibinfo{publisher}{ACM},
+  \bibinfo{pages}{615--629}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/2882903.2915235}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Liu, Russo, Cafarella, Cao, Chen, Chen,
+  Franklin, Kraska, Madden, Shahout, and Vitagliano}{Liu et~al\mbox{.}}{2025}]%
+        {liu2025palimpzest}
+\bibfield{author}{\bibinfo{person}{Chunwei Liu}, \bibinfo{person}{Matthew~D.
+  Russo}, \bibinfo{person}{Michael Cafarella}, \bibinfo{person}{Lei Cao},
+  \bibinfo{person}{Peter~Baile Chen}, \bibinfo{person}{Zui Chen},
+  \bibinfo{person}{Michael Franklin}, \bibinfo{person}{Tim Kraska},
+  \bibinfo{person}{Samuel Madden}, \bibinfo{person}{Rana Shahout}, {and}
+  \bibinfo{person}{Gerardo Vitagliano}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{{Palimpzest}: Optimizing {AI}-Powered Analytics
+  with Declarative Query Processing}. In \bibinfo{booktitle}{\emph{Conference
+  on Innovative Data Systems Research}}.
+\newblock
+\urldef\tempurl%
+\url{https://cidrdb.org/cidr2025/papers.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Lu, Chowdhery, Kandula, and Chaudhuri}{Lu
+  et~al\mbox{.}}{2018}]%
+        {lu2018pp}
+\bibfield{author}{\bibinfo{person}{Yao Lu}, \bibinfo{person}{Aakanksha
+  Chowdhery}, \bibinfo{person}{Srikanth Kandula}, {and}
+  \bibinfo{person}{Surajit Chaudhuri}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Accelerating Machine Learning Inference with
+  Probabilistic Predicates}. In \bibinfo{booktitle}{\emph{Proceedings of the
+  2018 International Conference on Management of Data}}.
+  \bibinfo{publisher}{ACM}, \bibinfo{pages}{1493--1508}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3183713.3183751}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Orabona and Jun}{Orabona and Jun}{2024}]%
+        {orabona2024portfolio}
+\bibfield{author}{\bibinfo{person}{Francesco Orabona} {and}
+  \bibinfo{person}{Kwang-Sung Jun}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Tight Concentrations and Confidence Sequences From
+  the Regret of Universal Portfolio}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Information Theory}}
+  \bibinfo{volume}{70}, \bibinfo{number}{1} (\bibinfo{year}{2024}),
+  \bibinfo{pages}{436--455}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/TIT.2023.3330187}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Park, Mozafari, Sorenson, and Wang}{Park
+  et~al\mbox{.}}{2018}]%
+        {park2018verdict}
+\bibfield{author}{\bibinfo{person}{Yongjoo Park}, \bibinfo{person}{Barzan
+  Mozafari}, \bibinfo{person}{Joseph Sorenson}, {and} \bibinfo{person}{Junhao
+  Wang}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{VerdictDB}: Universalizing Approximate Query
+  Processing}. In \bibinfo{booktitle}{\emph{Proceedings of the 2018
+  International Conference on Management of Data}}. \bibinfo{publisher}{ACM},
+  \bibinfo{pages}{1461--1476}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3183713.3196905}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Patel, Jha, Pan, Gupta, Asawa, Guestrin, and
+  Zaharia}{Patel et~al\mbox{.}}{2025}]%
+        {patel2025lotus}
+\bibfield{author}{\bibinfo{person}{Liana Patel}, \bibinfo{person}{Siddharth
+  Jha}, \bibinfo{person}{Melissa Pan}, \bibinfo{person}{Harshit Gupta},
+  \bibinfo{person}{Parth Asawa}, \bibinfo{person}{Carlos Guestrin}, {and}
+  \bibinfo{person}{Matei Zaharia}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Semantic Operators and Their Optimization: Enabling
+  {LLM}-Based Data Processing with Accuracy Guarantees in {LOTUS}}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{18}, \bibinfo{number}{11} (\bibinfo{year}{2025}),
+  \bibinfo{pages}{4171--4184}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3749646.3749685}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Peng, Zhang, Wang, and Pei}{Peng
+  et~al\mbox{.}}{2018}]%
+        {peng2018aqpplus}
+\bibfield{author}{\bibinfo{person}{Jinglin Peng}, \bibinfo{person}{Dongxiang
+  Zhang}, \bibinfo{person}{Jiannan Wang}, {and} \bibinfo{person}{Jian Pei}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{AQP++}: Connecting Approximate Query Processing
+  with Aggregate Precomputation for Interactive Analytics}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2018 International Conference on
+  Management of Data}}. \bibinfo{publisher}{ACM}, \bibinfo{pages}{1477--1492}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3183713.3183747}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Raasveldt and M\"{u}hleisen}{Raasveldt and
+  M\"{u}hleisen}{2019}]%
+        {raasveldt2019duckdb}
+\bibfield{author}{\bibinfo{person}{Mark Raasveldt} {and}
+  \bibinfo{person}{Hannes M\"{u}hleisen}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{{DuckDB}: An Embeddable Analytical Database}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2019 International Conference on
+  Management of Data}}. \bibinfo{publisher}{ACM}, \bibinfo{pages}{1981--1984}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3299869.3320212}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Ramdas, Gr\"{u}nwald, Vovk, and Shafer}{Ramdas
+  et~al\mbox{.}}{2023}]%
+        {ramdas2023savi}
+\bibfield{author}{\bibinfo{person}{Aaditya Ramdas}, \bibinfo{person}{Peter
+  Gr\"{u}nwald}, \bibinfo{person}{Vladimir Vovk}, {and} \bibinfo{person}{Glenn
+  Shafer}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Game-Theoretic Statistics and Safe Anytime-Valid
+  Inference}.
+\newblock \bibinfo{journal}{\emph{Statist. Sci.}} \bibinfo{volume}{38},
+  \bibinfo{number}{4} (\bibinfo{year}{2023}), \bibinfo{pages}{576--601}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1214/23-STS894}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Russo, Hashimoto, Kang, Sun, and
+  Zaharia}{Russo et~al\mbox{.}}{2023}]%
+        {russo2023inquest}
+\bibfield{author}{\bibinfo{person}{Matthew Russo}, \bibinfo{person}{Tatsunori
+  Hashimoto}, \bibinfo{person}{Daniel Kang}, \bibinfo{person}{Yi Sun}, {and}
+  \bibinfo{person}{Matei Zaharia}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Accelerating Aggregation Queries on Unstructured
+  Streams of Data}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{16}, \bibinfo{number}{11} (\bibinfo{year}{2023}),
+  \bibinfo{pages}{2897--2910}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3611479.3611496}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{S\"{a}rndal, Swensson, and
+  Wretman}{S\"{a}rndal et~al\mbox{.}}{1992}]%
+        {sarndal1992model}
+\bibfield{author}{\bibinfo{person}{Carl-Erik S\"{a}rndal},
+  \bibinfo{person}{Bengt Swensson}, {and} \bibinfo{person}{Jan~Hakan Wretman}.}
+  \bibinfo{year}{1992}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Model Assisted Survey Sampling}}.
+\newblock \bibinfo{publisher}{Springer}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1007/978-1-4612-4378-6}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Sfyraki and Wang}{Sfyraki and Wang}{2026}]%
+        {sfyraki2026active}
+\bibfield{author}{\bibinfo{person}{Maria-Eleni Sfyraki} {and}
+  \bibinfo{person}{Jun-Kun Wang}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{Revisiting Active Sequential Prediction-Powered
+  Mean Estimation}. In \bibinfo{booktitle}{\emph{The Fourteenth International
+  Conference on Learning Representations}}.
+\newblock
+\urldef\tempurl%
+\url{https://openreview.net/forum?id=Iw0tMeLed8}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Shankar, Chambers, Shah, Parameswaran, and
+  Wu}{Shankar et~al\mbox{.}}{2025}]%
+        {shankar2025docetl}
+\bibfield{author}{\bibinfo{person}{Shreya Shankar}, \bibinfo{person}{Tristan
+  Chambers}, \bibinfo{person}{Tarak Shah}, \bibinfo{person}{Aditya~G.
+  Parameswaran}, {and} \bibinfo{person}{Eugene Wu}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{{DocETL}: Agentic Query Rewriting and Evaluation
+  for Complex Document Processing}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{18}, \bibinfo{number}{9} (\bibinfo{year}{2025}),
+  \bibinfo{pages}{3035--3048}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3746405.3746426}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Shekhar and Ramdas}{Shekhar and
+  Ramdas}{2026}]%
+        {shekhar2026rates}
+\bibfield{author}{\bibinfo{person}{Shubhanshu Shekhar} {and}
+  \bibinfo{person}{Aaditya Ramdas}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Tighter Confidence Intervals under Without
+  Replacement Sampling via Empirical Rate Functions}.
+\newblock
+\newblock
+\showeprint[arxiv]{2603.14423}
+\urldef\tempurl%
+\url{https://arxiv.org/abs/2603.14423}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{arXiv preprint; v1 2026-03-15.}
+
+
+\bibitem[\protect\citeauthoryear{Sheoran, Chockchowwat, Chheda, Wang, Verma,
+  and Park}{Sheoran et~al\mbox{.}}{2023}]%
+        {sheoran2023deepola}
+\bibfield{author}{\bibinfo{person}{Nikhil Sheoran}, \bibinfo{person}{Supawit
+  Chockchowwat}, \bibinfo{person}{Arav Chheda}, \bibinfo{person}{Suwen Wang},
+  \bibinfo{person}{Riya Verma}, {and} \bibinfo{person}{Yongjoo Park}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{A Step Toward Deep Online Aggregation}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the ACM on Management of
+  Data}} \bibinfo{volume}{1}, \bibinfo{number}{2} (\bibinfo{year}{2023}),
+  \bibinfo{pages}{1--28}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3589269}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Spertus, Sridhar, and Stark}{Spertus
+  et~al\mbox{.}}{2026}]%
+        {spertus2026sequential}
+\bibfield{author}{\bibinfo{person}{Jacob~V. Spertus}, \bibinfo{person}{Mayuri
+  Sridhar}, {and} \bibinfo{person}{Philip~B. Stark}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Sequential Stratified Inference for the Mean}.
+\newblock
+\newblock
+\showeprint[arxiv]{2409.06680}
+\urldef\tempurl%
+\url{https://arxiv.org/abs/2409.06680v5}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{arXiv preprint; v1 2024-09-10, latest v5 2026-08-25; submitted to
+  Annals of Applied Statistics.}
+
+
+\bibitem[\protect\citeauthoryear{Tao, Blanco, Peng, and Zhou}{Tao
+  et~al\mbox{.}}{2019}]%
+        {tao2019threshold}
+\bibfield{author}{\bibinfo{person}{Chao Tao}, \bibinfo{person}{Sa\'{u}l
+  Blanco}, \bibinfo{person}{Jian Peng}, {and} \bibinfo{person}{Yuan Zhou}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Thresholding Bandit with Optimal Aggregate Regret}.
+  In \bibinfo{booktitle}{\emph{Advances in Neural Information Processing
+  Systems}}, Vol.~\bibinfo{volume}{32}. \bibinfo{publisher}{Curran Associates,
+  Inc.}, \bibinfo{pages}{11664--11673}.
+\newblock
+\urldef\tempurl%
+\url{https://proceedings.neurips.cc/paper_files/paper/2019/hash/9a0684d9dad4967ddd09594511de2c52-Abstract.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Turner and Gr\"{u}nwald}{Turner and
+  Gr\"{u}nwald}{2023}]%
+        {turner2023stratified}
+\bibfield{author}{\bibinfo{person}{Rosanne Turner} {and} \bibinfo{person}{Peter
+  Gr\"{u}nwald}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Safe Sequential Testing and Effect Estimation in
+  Stratified Count Data}. In \bibinfo{booktitle}{\emph{Proceedings of the 26th
+  International Conference on Artificial Intelligence and Statistics}}
+  \emph{(\bibinfo{series}{Proceedings of Machine Learning Research})},
+  Vol.~\bibinfo{volume}{206}. \bibinfo{publisher}{PMLR},
+  \bibinfo{pages}{4880--4893}.
+\newblock
+\urldef\tempurl%
+\url{https://proceedings.mlr.press/v206/turner23a.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Walenz, Sintos, Roy, and Yang}{Walenz
+  et~al\mbox{.}}{2019}]%
+        {walenz2019lws}
+\bibfield{author}{\bibinfo{person}{Brett Walenz}, \bibinfo{person}{Stavros
+  Sintos}, \bibinfo{person}{Sudeepa Roy}, {and} \bibinfo{person}{Jun Yang}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Learning to Sample: Counting with Complex Queries}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{13}, \bibinfo{number}{3} (\bibinfo{year}{2019}),
+  \bibinfo{pages}{390--402}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3368289.3368302}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Waudby-Smith and Ramdas}{Waudby-Smith and
+  Ramdas}{2020}]%
+        {wor2020}
+\bibfield{author}{\bibinfo{person}{Ian Waudby-Smith} {and}
+  \bibinfo{person}{Aaditya Ramdas}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Confidence Sequences for Sampling without
+  Replacement}. In \bibinfo{booktitle}{\emph{Advances in Neural Information
+  Processing Systems}}, Vol.~\bibinfo{volume}{33}. \bibinfo{publisher}{Curran
+  Associates, Inc.}, \bibinfo{pages}{20204--20214}.
+\newblock
+\urldef\tempurl%
+\url{https://proceedings.neurips.cc/paper/2020/hash/e96c7de8f6390b1e6c71556e4e0a4959-Abstract.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Waudby-Smith and Ramdas}{Waudby-Smith and
+  Ramdas}{2024}]%
+        {waudby2024betting}
+\bibfield{author}{\bibinfo{person}{Ian Waudby-Smith} {and}
+  \bibinfo{person}{Aaditya Ramdas}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Estimating Means of Bounded Random Variables by
+  Betting}.
+\newblock \bibinfo{journal}{\emph{Journal of the Royal Statistical Society
+  Series B: Statistical Methodology}} \bibinfo{volume}{86}, \bibinfo{number}{1}
+  (\bibinfo{year}{2024}), \bibinfo{pages}{1--27}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1093/jrsssb/qkad009}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Waudby-Smith, Stark, and Ramdas}{Waudby-Smith
+  et~al\mbox{.}}{2021}]%
+        {waudby2021rilacs}
+\bibfield{author}{\bibinfo{person}{Ian Waudby-Smith},
+  \bibinfo{person}{Philip~B. Stark}, {and} \bibinfo{person}{Aaditya Ramdas}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{{RiLACS}: Risk Limiting Audits via Confidence
+  Sequences}. In \bibinfo{booktitle}{\emph{E-Vote-ID 2021: Electronic Voting}}
+  \emph{(\bibinfo{series}{Lecture Notes in Computer Science})},
+  Vol.~\bibinfo{volume}{12900}. \bibinfo{publisher}{Springer},
+  \bibinfo{pages}{124--139}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1007/978-3-030-86942-7_9}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Wen, Le~Quoc, Bhatotia, Chen, and Lee}{Wen
+  et~al\mbox{.}}{2018}]%
+        {wen2018approxiot}
+\bibfield{author}{\bibinfo{person}{Zhenyu Wen}, \bibinfo{person}{Do Le~Quoc},
+  \bibinfo{person}{Pramod Bhatotia}, \bibinfo{person}{Ruichuan Chen}, {and}
+  \bibinfo{person}{Myungjin Lee}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{ApproxIoT}: Approximate Analytics for Edge
+  Computing}. In \bibinfo{booktitle}{\emph{2018 IEEE 38th International
+  Conference on Distributed Computing Systems}}. \bibinfo{publisher}{IEEE},
+  \bibinfo{pages}{411--421}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICDCS.2018.00048}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Wu, Nair, and Cand\`{e}s}{Wu
+  et~al\mbox{.}}{2026}]%
+        {wu2026faq}
+\bibfield{author}{\bibinfo{person}{Skyler Wu}, \bibinfo{person}{Yash Nair},
+  {and} \bibinfo{person}{Emmanuel~J. Cand\`{e}s}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Efficient Evaluation of {LLM} Performance with
+  Statistical Guarantees}.
+\newblock
+\newblock
+\showeprint[arxiv]{2601.20251}
+\urldef\tempurl%
+\url{https://arxiv.org/abs/2601.20251v4}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{arXiv preprint; v1 2026-01-28, latest v4 2026-10-29.}
+
+
+\bibitem[\protect\citeauthoryear{Xu and Sun}{Xu and Sun}{2026}]%
+        {xu2026fppi}
+\bibfield{author}{\bibinfo{person}{Shirong Xu} {and} \bibinfo{person}{Will~Wei
+  Sun}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Do More Predictions Improve Statistical Inference?
+  Filtered Prediction-Powered Inference}.
+\newblock
+\newblock
+\showeprint[arxiv]{2602.10464}
+\urldef\tempurl%
+\url{https://arxiv.org/abs/2602.10464}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{arXiv preprint; v1 2026-02-11.}
+
+
+\bibitem[\protect\citeauthoryear{Yang, Wang, Huang, Lu, Li, and Wang}{Yang
+  et~al\mbox{.}}{2022}]%
+        {yang2022core}
+\bibfield{author}{\bibinfo{person}{Zhihui Yang}, \bibinfo{person}{Zuozhi Wang},
+  \bibinfo{person}{Yicong Huang}, \bibinfo{person}{Yao Lu},
+  \bibinfo{person}{Chen Li}, {and} \bibinfo{person}{X.~Sean Wang}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Optimizing Machine Learning Inference Queries with
+  Correlative Proxy Models}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{15}, \bibinfo{number}{10} (\bibinfo{year}{2022}),
+  \bibinfo{pages}{2032--2044}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3547305.3547310}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Zeighami, Shankar, and Parameswaran}{Zeighami
+  et~al\mbox{.}}{2025}]%
+        {zeighami2026bargain}
+\bibfield{author}{\bibinfo{person}{Sepanta Zeighami}, \bibinfo{person}{Shreya
+  Shankar}, {and} \bibinfo{person}{Aditya Parameswaran}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Cut Costs, Not Accuracy: {LLM}-Powered Data
+  Processing with Guarantees}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the ACM on Management of
+  Data}} \bibinfo{volume}{3}, \bibinfo{number}{6} (\bibinfo{year}{2025}),
+  \bibinfo{pages}{1--26}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3769776}
+\showDOI{\tempurl}
+\newblock
+\shownote{Formal PACMMOD publication 2025; arXiv preprint 2025-09.}
+
+
+\bibitem[\protect\citeauthoryear{Zhou, Ye, Chen, Li, and Liu}{Zhou
+  et~al\mbox{.}}{2026}]%
+        {zhou2026celeus}
+\bibfield{author}{\bibinfo{person}{Zhijian Zhou}, \bibinfo{person}{Zesheng Ye},
+  \bibinfo{person}{Zhaorun Chen}, \bibinfo{person}{Bo Li}, {and}
+  \bibinfo{person}{Feng Liu}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{{CELEUS}: Certifiable and Efficient {LLM} Evaluation
+  via E-Processes}.
+\newblock
+\newblock
+\showeprint[arxiv]{2606.20820}
+\urldef\tempurl%
+\url{https://arxiv.org/abs/2606.20820}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{arXiv preprint; v3 2026-11-07.}
+
+
+\bibitem[\protect\citeauthoryear{Zhu, Jin, Baziotis, Zhang, Mendis, and
+  Kang}{Zhu et~al\mbox{.}}{2025}]%
+        {zhu2025pilotdb}
+\bibfield{author}{\bibinfo{person}{Yuxuan Zhu}, \bibinfo{person}{Tengjun Jin},
+  \bibinfo{person}{Stefanos Baziotis}, \bibinfo{person}{Chengsong Zhang},
+  \bibinfo{person}{Charith Mendis}, {and} \bibinfo{person}{Daniel Kang}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{{PilotDB}: Database-Agnostic Online Approximate
+  Query Processing with A Priori Error Guarantees}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the ACM on Management of
+  Data}} \bibinfo{volume}{3}, \bibinfo{number}{3} (\bibinfo{year}{2025}),
+  \bibinfo{pages}{1--28}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3725335}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Zrnic and Cand\`{e}s}{Zrnic and
+  Cand\`{e}s}{2024a}]%
+        {zrnic2024active}
+\bibfield{author}{\bibinfo{person}{Tijana Zrnic} {and}
+  \bibinfo{person}{Emmanuel Cand\`{e}s}.} \bibinfo{year}{2024}\natexlab{a}.
+\newblock \showarticletitle{Active Statistical Inference}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 41st International Conference on
+  Machine Learning}} \emph{(\bibinfo{series}{Proceedings of Machine Learning
+  Research})}, Vol.~\bibinfo{volume}{235}. \bibinfo{publisher}{PMLR},
+  \bibinfo{pages}{62993--63010}.
+\newblock
+\urldef\tempurl%
+\url{https://proceedings.mlr.press/v235/zrnic24a.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Zrnic and Cand\`{e}s}{Zrnic and
+  Cand\`{e}s}{2024b}]%
+        {zrnic2024crossppi}
+\bibfield{author}{\bibinfo{person}{Tijana Zrnic} {and}
+  \bibinfo{person}{Emmanuel~J. Cand\`{e}s}.} \bibinfo{year}{2024}\natexlab{b}.
+\newblock \showarticletitle{Cross-Prediction-Powered Inference}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the National Academy of
+  Sciences}} \bibinfo{volume}{121}, \bibinfo{number}{15}
+  (\bibinfo{year}{2024}), \bibinfo{pages}{e2322083121}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1073/pnas.2322083121}
+\showDOI{\tempurl}
+
+
+\end{thebibliography}

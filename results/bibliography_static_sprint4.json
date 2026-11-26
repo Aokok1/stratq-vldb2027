@@ -1,0 +1,33 @@
+{
+  "generated_at_utc": "2026-11-26T01:57:49.492948+00:00",
+  "bib_sha256": "bd200278492309ddfcf25a6589d6331134e017208b419b98488d4ee65a8ef108",
+  "audit_sha256": "1f8398c1465ebd1d1ad749775e527f9356563343b2249e8da9280cd538c7d353",
+  "active_entries": 62,
+  "cited_keys": 62,
+  "preprint_keys": [
+    "dou2026conformalcascade",
+    "hait2026target",
+    "khosravi2026rankcs",
+    "shekhar2026rates",
+    "spertus2026sequential",
+    "wu2026faq",
+    "xu2026fppi",
+    "zhou2026celeus"
+  ],
+  "checks": {
+    "62_active_entries": true,
+    "62_unique_cited_keys": true,
+    "no_undefined_citation": true,
+    "no_uncited_entry": true,
+    "all_keys_in_online_audit": true,
+    "tao_pages_11664_11673": true,
+    "jourdan_formal_jmlr": true,
+    "sfyraki_formal_iclr": true,
+    "eight_preprints_remain_misc": true,
+    "spertus_not_marked_accepted": true,
+    "no_pending_review_markers": true,
+    "proof_lower_endpoint_uses_log_upper_bound": true,
+    "forbidden_context_phrases_absent": true
+  },
+  "passed": true
+}

@@ -1,0 +1,22 @@
+# Grouped count implementation audit
+
+The proof in [PROOF_PACKAGE.md](PROOF_PACKAGE.md) treats labels and the group partition as fixed. For a chosen group, the next row is uniform over the unrevealed rows. In the batch implementation, the predictor uses prior observations, and the remaining-row statistics and betting terms advance in reveal order. The union bound covers the advertised per-query risk budget across groups and times.
+
+## Reproduced edge cases
+
+- Binary64 evaluates `(7 / 25) * 25` as `7.000000000000001`. Unequal-size groups with the same true count can therefore sort differently at census. The engine now restores deterministic count endpoints from the observed integer sum and the number of remaining rows. The threshold decision and reported interval use the same count scale.
+- Grouped count operators now reject sampled values outside `{0, 1}`, including NaN, and reject a reference callback whose result shape differs from the sampled row-index shape.
+- The confidence sequence now has an opt-in outward binary64 path (`safe_rounding=True`, the engine default). `A_t` rounds down, `B_t` has lower/upper enclosures, `V_t` rounds up, score and deterministic ranges are enclosed, and final inversion endpoints round outward. `psi` uses a directed positive series plus a geometric tail; the log threshold uses an 80-digit Decimal logarithm with adjacent Decimal endpoints before outward binary64 conversion. The previous “full statistical endpoint error bound remains open” item is resolved for this path, subject to the caller contract documented in `PROOF_PACKAGE.md`.
+- Normalized labels are propagated as full outward intervals. This closes the proof-chain gap left by selecting only the lower endpoint; it is not a claim that every individual path must cover the truth. Binary Adult replay retained all calls/decisions and widened endpoints only outward (maximum about $2.9\times10^{-11}$ count units).
+- Empty-intersection handling was audited separately. A deterministic restart requires conservative disjointness of the previous and deterministic intervals, which proves that the exact previous interval excluded the true mean. Other three-way collisions use a convex hull of conservative components. Therefore a restart cannot be triggered by floating-point error on the joint coverage event.
+- Proxy selection defaults to analytic Ridge LOO residuals on `{0, 0.1, 0.25, 0.5, 0.75, 1}`. Fewer than 12 observations, fewer than three effective residual degrees of freedom, a range above one, or less than a 5% predicted betting-cost improvement forces the zero-range intercept baseline. `legacy` retains the old selector for ablation.
+- HAVING and TOP-k now pass history-adaptive effective targets derived from the current interval-to-boundary distance and an explicit operator fallback. Safe mode no longer substitutes a fixed 0.05 when `target_eps` is absent.
+
+## Verification
+
+- `tests/test_safe_gating_and_fp.py` independently replays 1,200 random binary paths (N ≤ 9, one to four features, shifted and unshifted label scales) with 50-digit `decimal.Decimal`. Every revealed endpoint is checked for containment; the run covers more than 5,000 individual steps and also checks the downward `A_t` invariant.
+- Sprint 4 adds 600 log-threshold checks against 140-digit Decimal, a deterministic non-binary Decimal replay, and 300 random non-binary paths (more than 1,500 reveal steps). These test enclosure of the real-arithmetic CS, not truth coverage on every path.
+- The same test file compares analytic LOO residuals with explicit leave-one-out refits, checks future-label invariance and batch-history predictability, exercises small-population coverage over 640 paths, and verifies that restart events lie outside exact coverage. The psi enclosure is compared with Decimal on 101 betting values. A separate regression checks that both the profile sum interval and the backward-compatible mean-times-total interval contain an exact Decimal feature sum.
+- Q2's risk allocation now reserves `G*(n_grid+1)` cells because the explicit zero threshold can add one candidate. The configured gating mode is passed through Q2 as well.
+- The fourteen safety tests pass. The complete suite and matched Adult/SMS/Fashion ablation are recorded in `SPRINT1_REPORT.md`; those results are empirical checks, not substitutes for the proof assumptions.
+- Existing deterministic COUNT census endpoints and top-k tie behavior remain covered by `test_certificates.py`.

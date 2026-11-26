@@ -1,0 +1,953 @@
+{
+  "generated_at_utc": "2026-11-25T13:35:51.434554+00:00",
+  "smoke": true,
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.8.0+cu129",
+  "cuda": "12.9",
+  "code_sha256": {
+    "src/stratq/bounds.py": "cbc5b8de3bac7e32532a866df2c5532bc42fd75a8f8dabe8ea7d501a253b7cbb",
+    "src/stratq/engine.py": "5ac6dca9d26e2f56ff11d0938141cc8621aba68ba107b8c2442c7775a3acb356",
+    "src/stratq/modern_baselines.py": "c9213a4577fffa7ea94c2a0d13290958a4962f8eeca66962e8515cf21e9edba9"
+  },
+  "workloads": [
+    {
+      "workload": "Yelp-DistilBERT-SST2",
+      "n_eval": 2000,
+      "n_train_proxy": 1000,
+      "proxy_eval_split": "disjoint row prefixes of the official Yelp test parquet",
+      "groups": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "sizes": {
+        "1": 447,
+        "2": 404,
+        "3": 372,
+        "4": 406,
+        "5": 371
+      },
+      "truth": {
+        "1": 26,
+        "2": 83,
+        "3": 194,
+        "4": 340,
+        "5": 336
+      },
+      "model_sha256": "7c3919835e442510166d267fe7cbe847e0c51cd26d9ba07b89a57b952b49b8aa",
+      "dataset_sha256": "bf06d5969bff93ecd4a6d4b330643761ce108b42e9b8a894cf82c9df02a08540",
+      "proxy_train_ms": 313.43940000078874,
+      "proxy_scan_ms": 283.3902999991551,
+      "exact_initial": {
+        "batch_size": 128,
+        "calls": 2000,
+        "batches": 16,
+        "inference_ms": 4583.246999996845,
+        "wall_ms": 4584.403200000452
+      },
+      "peak_gpu_bytes": 1389753856,
+      "count_runs": [
+        {
+          "method": "StratQ-safe_loo",
+          "seed": 6001,
+          "calls": 1620,
+          "wall_ms": 6446.705499998643,
+          "inference_ms": 3697.183900003438,
+          "batches": 30,
+          "mean_normalized_half_width": 0.026745741739408135,
+          "covered_groups": 5,
+          "total_groups": 5,
+          "all_covered": true,
+          "tail_groups": [
+            "5"
+          ],
+          "tail_covered": 1,
+          "per_group_covered": {
+            "1": true,
+            "2": true,
+            "3": true,
+            "4": true,
+            "5": true
+          }
+        },
+        {
+          "method": "Spertus-WoR",
+          "seed": 6001,
+          "calls": 1556,
+          "wall_ms": 5976.815500000157,
+          "inference_ms": 3464.5754999983183,
+          "batches": 29,
+          "mean_normalized_half_width": 0.02868472952242885,
+          "covered_groups": 5,
+          "total_groups": 5,
+          "all_covered": true,
+          "tail_groups": [
+            "5"
+          ],
+          "tail_covered": 1,
+          "per_group_covered": {
+            "1": true,
+            "2": true,
+            "3": true,
+            "4": true,
+            "5": true
+          }
+        },
+        {
+          "method": "CELEUS-FixedProxy",
+          "seed": 6001,
+          "calls": 1812,
+          "wall_ms": 4408.9518999990105,
+          "inference_ms": 4350.483400001394,
+          "batches": 33,
+          "mean_normalized_half_width": 0.020830442679575616,
+          "covered_groups": 5,
+          "total_groups": 5,
+          "all_covered": true,
+          "tail_groups": [
+            "5"
+          ],
+          "tail_covered": 1,
+          "per_group_covered": {
+            "1": true,
+            "2": true,
+            "3": true,
+            "4": true,
+            "5": true
+          }
+        },
+        {
+          "method": "Calibrated-FixedProxy",
+          "seed": 6001,
+          "calls": 1556,
+          "wall_ms": 6107.89719999957,
+          "inference_ms": 3534.088199992766,
+          "batches": 29,
+          "mean_normalized_half_width": 0.029139077517628665,
+          "covered_groups": 5,
+          "total_groups": 5,
+          "all_covered": true,
+          "tail_groups": [
+            "5"
+          ],
+          "tail_covered": 1,
+          "per_group_covered": {
+            "1": true,
+            "2": true,
+            "3": true,
+            "4": true,
+            "5": true
+          }
+        },
+        {
+          "method": "BARGAIN-Global",
+          "seed": 6001,
+          "calls": 648,
+          "wall_ms": 2485.8657000004314,
+          "inference_ms": 1444.5274000008794,
+          "batches": 11,
+          "mean_normalized_half_width": 0.038019634203352706,
+          "covered_groups": 1,
+          "total_groups": 5,
+          "all_covered": false,
+          "tail_groups": [
+            "5"
+          ],
+          "tail_covered": 0,
+          "per_group_covered": {
+            "1": false,
+            "2": false,
+            "3": true,
+            "4": false,
+            "5": false
+          }
+        }
+      ],
+      "decision_runs": [
+        {
+          "query": "HAVING",
+          "method": "StratQ-safe_loo",
+          "seed": 6001,
+          "tau": 194,
+          "calls": 660,
+          "accepted": [
+            "3",
+            "4",
+            "5"
+          ],
+          "rejected": [
+            "1",
+            "2"
+          ],
+          "uncertain": [],
+          "decision_correct": true
+        },
+        {
+          "query": "TOP-2",
+          "method": "StratQ-safe_loo",
+          "seed": 6001,
+          "calls": 552,
+          "selected": [
+            "5",
+            "4"
+          ],
+          "certified": true,
+          "decision_correct": true
+        },
+        {
+          "query": "HAVING",
+          "method": "Spertus-WoR",
+          "seed": 6001,
+          "tau": 194,
+          "calls": 1556,
+          "accepted": [
+            "3",
+            "4",
+            "5"
+          ],
+          "rejected": [
+            "1",
+            "2"
+          ],
+          "uncertain": [],
+          "decision_correct": true
+        },
+        {
+          "query": "TOP-2",
+          "method": "Spertus-WoR",
+          "seed": 6001,
+          "calls": 1556,
+          "selected": [
+            "5",
+            "4"
+          ],
+          "certified": true,
+          "decision_correct": true
+        },
+        {
+          "query": "HAVING",
+          "method": "CELEUS-FixedProxy",
+          "seed": 6001,
+          "tau": 194,
+          "calls": 1812,
+          "accepted": [
+            "3",
+            "4",
+            "5"
+          ],
+          "rejected": [
+            "1",
+            "2"
+          ],
+          "uncertain": [],
+          "decision_correct": true
+        },
+        {
+          "query": "TOP-2",
+          "method": "CELEUS-FixedProxy",
+          "seed": 6001,
+          "calls": 1812,
+          "selected": [
+            "4",
+            "5"
+          ],
+          "certified": true,
+          "decision_correct": true
+        },
+        {
+          "query": "HAVING",
+          "method": "Calibrated-FixedProxy",
+          "seed": 6001,
+          "tau": 194,
+          "calls": 1556,
+          "accepted": [
+            "3",
+            "4",
+            "5"
+          ],
+          "rejected": [
+            "1",
+            "2"
+          ],
+          "uncertain": [],
+          "decision_correct": true
+        },
+        {
+          "query": "TOP-2",
+          "method": "Calibrated-FixedProxy",
+          "seed": 6001,
+          "calls": 1556,
+          "selected": [
+            "5",
+            "4"
+          ],
+          "certified": true,
+          "decision_correct": true
+        },
+        {
+          "query": "HAVING",
+          "method": "BARGAIN-Global",
+          "seed": 6001,
+          "tau": 194,
+          "calls": 648,
+          "accepted": [
+            "1",
+            "2",
+            "4"
+          ],
+          "rejected": [],
+          "uncertain": [
+            "3",
+            "5"
+          ],
+          "decision_correct": false
+        },
+        {
+          "query": "TOP-2",
+          "method": "BARGAIN-Global",
+          "seed": 6001,
+          "calls": 648,
+          "selected": [
+            "1",
+            "4"
+          ],
+          "certified": false,
+          "decision_correct": false
+        }
+      ],
+      "latency": {
+        "exact_runs": [
+          {
+            "replicate": 0,
+            "batch_size": 64,
+            "calls": 2000,
+            "batches": 32,
+            "inference_ms": 4896.151600003577,
+            "wall_ms": 4898.079900000084
+          },
+          {
+            "replicate": 1,
+            "batch_size": 64,
+            "calls": 2000,
+            "batches": 32,
+            "inference_ms": 4928.862099995968,
+            "wall_ms": 4930.73910000021
+          },
+          {
+            "replicate": 0,
+            "batch_size": 128,
+            "calls": 2000,
+            "batches": 16,
+            "inference_ms": 4860.250899999301,
+            "wall_ms": 4861.2905999998475
+          },
+          {
+            "replicate": 1,
+            "batch_size": 128,
+            "calls": 2000,
+            "batches": 16,
+            "inference_ms": 4847.738999997091,
+            "wall_ms": 4848.753199999919
+          },
+          {
+            "replicate": 0,
+            "batch_size": 256,
+            "calls": 2000,
+            "batches": 8,
+            "inference_ms": 4828.980000000229,
+            "wall_ms": 4829.622499999459
+          },
+          {
+            "replicate": 1,
+            "batch_size": 256,
+            "calls": 2000,
+            "batches": 8,
+            "inference_ms": 4812.785699999949,
+            "wall_ms": 4813.382399999682
+          }
+        ],
+        "best_exact_batch": 256,
+        "fresh_runs": [
+          {
+            "replicate": 0,
+            "profile_ms": 48.79790000086359,
+            "query_ms": 6944.138400000156,
+            "wall_ms": 6992.93630000102,
+            "calls": 1748
+          },
+          {
+            "replicate": 1,
+            "profile_ms": 54.67520000092918,
+            "query_ms": 6560.353099999702,
+            "wall_ms": 6615.028300000631,
+            "calls": 1620
+          }
+        ],
+        "reused_runs": [
+          {
+            "replicate": 0,
+            "profile_ms": 0.0,
+            "query_ms": 7045.022000000245,
+            "calls": 1748
+          },
+          {
+            "replicate": 1,
+            "profile_ms": 0.0,
+            "query_ms": 6360.248999999385,
+            "calls": 1620
+          }
+        ],
+        "median_fresh_ms": 6803.9823000008255,
+        "median_reused_query_ms": 6702.635499999815,
+        "median_exact_ms": 4821.502449999571,
+        "breakeven_vs_fresh": 1,
+        "breakeven_vs_exact": null
+      }
+    },
+    {
+      "workload": "CIFAR10-ResNet34-GPU",
+      "n_eval": 1000,
+      "n_train_reference": 2000,
+      "groups": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "sizes": {
+        "0": 103,
+        "1": 89,
+        "2": 100,
+        "3": 103,
+        "4": 90,
+        "5": 86,
+        "6": 112,
+        "7": 102,
+        "8": 106,
+        "9": 109
+      },
+      "truth": {
+        "0": 22,
+        "1": 2,
+        "2": 82,
+        "3": 85,
+        "4": 71,
+        "5": 80,
+        "6": 101,
+        "7": 79,
+        "8": 4,
+        "9": 5
+      },
+      "reference_train_epoch_ms": [
+        1460.2804999994987
+      ],
+      "model_sha256": "994b56b957fb0bd4b149671e3f55f8e54b1b74faa3c4314c749c96c1398e27d1",
+      "backbone_sha256": "b627a593bcbe140c234610266fe4f8ae95ea42fc881d091c9b6052e6b1d0590f",
+      "dataset_sha256": "6d958be074577803d12ecdefd02955f39262c83c16fe9348329d7fe0b5c001ce",
+      "proxy_train_ms": 8.069499999692198,
+      "exact_initial": {
+        "batch_size": 256,
+        "calls": 1000,
+        "batches": 4,
+        "inference_ms": 61.41280000156257,
+        "wall_ms": 61.62430000040331
+      },
+      "peak_gpu_bytes": 1389753856,
+      "count_runs": [
+        {
+          "method": "StratQ-safe_loo",
+          "seed": 7001,
+          "calls": 1000,
+          "wall_ms": 1951.0573000006843,
+          "inference_ms": 262.73179999952845,
+          "batches": 30,
+          "mean_normalized_half_width": 0.0,
+          "covered_groups": 10,
+          "total_groups": 10,
+          "all_covered": true,
+          "tail_groups": [
+            "5",
+            "1"
+          ],
+          "tail_covered": 2,
+          "per_group_covered": {
+            "0": true,
+            "1": true,
+            "2": true,
+            "3": true,
+            "4": true,
+            "5": true,
+            "6": true,
+            "7": true,
+            "8": true,
+            "9": true
+          }
+        },
+        {
+          "method": "Spertus-WoR",
+          "seed": 7001,
+          "calls": 1000,
+          "wall_ms": 1828.7240999998176,
+          "inference_ms": 257.2033000014926,
+          "batches": 30,
+          "mean_normalized_half_width": 0.0,
+          "covered_groups": 10,
+          "total_groups": 10,
+          "all_covered": true,
+          "tail_groups": [
+            "5",
+            "1"
+          ],
+          "tail_covered": 2,
+          "per_group_covered": {
+            "0": true,
+            "1": true,
+            "2": true,
+            "3": true,
+            "4": true,
+            "5": true,
+            "6": true,
+            "7": true,
+            "8": true,
+            "9": true
+          }
+        },
+        {
+          "method": "CELEUS-FixedProxy",
+          "seed": 7001,
+          "calls": 1000,
+          "wall_ms": 277.9334999995626,
+          "inference_ms": 245.66890000096464,
+          "batches": 30,
+          "mean_normalized_half_width": 0.0,
+          "covered_groups": 10,
+          "total_groups": 10,
+          "all_covered": true,
+          "tail_groups": [
+            "5",
+            "1"
+          ],
+          "tail_covered": 2,
+          "per_group_covered": {
+            "0": true,
+            "1": true,
+            "2": true,
+            "3": true,
+            "4": true,
+            "5": true,
+            "6": true,
+            "7": true,
+            "8": true,
+            "9": true
+          }
+        },
+        {
+          "method": "Calibrated-FixedProxy",
+          "seed": 7001,
+          "calls": 1000,
+          "wall_ms": 1824.420299999474,
+          "inference_ms": 177.90380000406003,
+          "batches": 30,
+          "mean_normalized_half_width": 0.0,
+          "covered_groups": 10,
+          "total_groups": 10,
+          "all_covered": true,
+          "tail_groups": [
+            "5",
+            "1"
+          ],
+          "tail_covered": 2,
+          "per_group_covered": {
+            "0": true,
+            "1": true,
+            "2": true,
+            "3": true,
+            "4": true,
+            "5": true,
+            "6": true,
+            "7": true,
+            "8": true,
+            "9": true
+          }
+        },
+        {
+          "method": "BARGAIN-Global",
+          "seed": 7001,
+          "calls": 520,
+          "wall_ms": 961.7588999990403,
+          "inference_ms": 114.34510000071896,
+          "batches": 9,
+          "mean_normalized_half_width": 0.038886917145870004,
+          "covered_groups": 0,
+          "total_groups": 10,
+          "all_covered": false,
+          "tail_groups": [
+            "5",
+            "1"
+          ],
+          "tail_covered": 0,
+          "per_group_covered": {
+            "0": false,
+            "1": false,
+            "2": false,
+            "3": false,
+            "4": false,
+            "5": false,
+            "6": false,
+            "7": false,
+            "8": false,
+            "9": false
+          }
+        }
+      ],
+      "decision_runs": [
+        {
+          "query": "HAVING",
+          "method": "StratQ-safe_loo",
+          "seed": 7001,
+          "tau": 75,
+          "calls": 810,
+          "accepted": [
+            "2",
+            "3",
+            "5",
+            "6",
+            "7"
+          ],
+          "rejected": [
+            "0",
+            "1",
+            "4",
+            "8",
+            "9"
+          ],
+          "uncertain": [],
+          "decision_correct": true
+        },
+        {
+          "query": "TOP-2",
+          "method": "StratQ-safe_loo",
+          "seed": 7001,
+          "calls": 745,
+          "selected": [
+            "6",
+            "3"
+          ],
+          "certified": true,
+          "decision_correct": true
+        },
+        {
+          "query": "HAVING",
+          "method": "Spertus-WoR",
+          "seed": 7001,
+          "tau": 75,
+          "calls": 1000,
+          "accepted": [
+            "2",
+            "3",
+            "5",
+            "6",
+            "7"
+          ],
+          "rejected": [
+            "0",
+            "1",
+            "4",
+            "8",
+            "9"
+          ],
+          "uncertain": [],
+          "decision_correct": true
+        },
+        {
+          "query": "TOP-2",
+          "method": "Spertus-WoR",
+          "seed": 7001,
+          "calls": 1000,
+          "selected": [
+            "6",
+            "3"
+          ],
+          "certified": true,
+          "decision_correct": true
+        },
+        {
+          "query": "HAVING",
+          "method": "CELEUS-FixedProxy",
+          "seed": 7001,
+          "tau": 75,
+          "calls": 1000,
+          "accepted": [
+            "2",
+            "3",
+            "5",
+            "6",
+            "7"
+          ],
+          "rejected": [
+            "0",
+            "1",
+            "4",
+            "8",
+            "9"
+          ],
+          "uncertain": [],
+          "decision_correct": true
+        },
+        {
+          "query": "TOP-2",
+          "method": "CELEUS-FixedProxy",
+          "seed": 7001,
+          "calls": 1000,
+          "selected": [
+            "6",
+            "3"
+          ],
+          "certified": true,
+          "decision_correct": true
+        },
+        {
+          "query": "HAVING",
+          "method": "Calibrated-FixedProxy",
+          "seed": 7001,
+          "tau": 75,
+          "calls": 1000,
+          "accepted": [
+            "2",
+            "3",
+            "5",
+            "6",
+            "7"
+          ],
+          "rejected": [
+            "0",
+            "1",
+            "4",
+            "8",
+            "9"
+          ],
+          "uncertain": [],
+          "decision_correct": true
+        },
+        {
+          "query": "TOP-2",
+          "method": "Calibrated-FixedProxy",
+          "seed": 7001,
+          "calls": 1000,
+          "selected": [
+            "6",
+            "3"
+          ],
+          "certified": true,
+          "decision_correct": true
+        },
+        {
+          "query": "HAVING",
+          "method": "BARGAIN-Global",
+          "seed": 7001,
+          "tau": 75,
+          "calls": 520,
+          "accepted": [],
+          "rejected": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "uncertain": [],
+          "decision_correct": false
+        },
+        {
+          "query": "TOP-2",
+          "method": "BARGAIN-Global",
+          "seed": 7001,
+          "calls": 520,
+          "selected": [
+            "6",
+            "9"
+          ],
+          "certified": false,
+          "decision_correct": false
+        }
+      ],
+      "latency": {
+        "exact_runs": [
+          {
+            "replicate": 0,
+            "batch_size": 64,
+            "calls": 1000,
+            "batches": 16,
+            "inference_ms": 121.72770000324817,
+            "wall_ms": 122.26270000064687
+          },
+          {
+            "replicate": 1,
+            "batch_size": 64,
+            "calls": 1000,
+            "batches": 16,
+            "inference_ms": 96.97989999767742,
+            "wall_ms": 97.41890000077547
+          },
+          {
+            "replicate": 0,
+            "batch_size": 128,
+            "calls": 1000,
+            "batches": 8,
+            "inference_ms": 66.25160000294272,
+            "wall_ms": 66.54960000014398
+          },
+          {
+            "replicate": 1,
+            "batch_size": 128,
+            "calls": 1000,
+            "batches": 8,
+            "inference_ms": 58.00799999815354,
+            "wall_ms": 58.32340000051772
+          },
+          {
+            "replicate": 0,
+            "batch_size": 256,
+            "calls": 1000,
+            "batches": 4,
+            "inference_ms": 44.26190000049246,
+            "wall_ms": 44.43679999894812
+          },
+          {
+            "replicate": 1,
+            "batch_size": 256,
+            "calls": 1000,
+            "batches": 4,
+            "inference_ms": 40.924000000813976,
+            "wall_ms": 41.11169999850972
+          }
+        ],
+        "best_exact_batch": 256,
+        "fresh_runs": [
+          {
+            "replicate": 0,
+            "profile_ms": 56.87459999899147,
+            "query_ms": 1776.3235999991593,
+            "wall_ms": 1833.1981999981508,
+            "calls": 1000
+          },
+          {
+            "replicate": 1,
+            "profile_ms": 55.11029999979655,
+            "query_ms": 1863.041800001156,
+            "wall_ms": 1918.1521000009525,
+            "calls": 1000
+          }
+        ],
+        "reused_runs": [
+          {
+            "replicate": 0,
+            "profile_ms": 0.0,
+            "query_ms": 1871.7577000006713,
+            "calls": 1000
+          },
+          {
+            "replicate": 1,
+            "profile_ms": 0.0,
+            "query_ms": 2015.8649000004516,
+            "calls": 1000
+          }
+        ],
+        "median_fresh_ms": 1875.6751499995516,
+        "median_reused_query_ms": 1943.8113000005615,
+        "median_exact_ms": 42.77424999872892,
+        "breakeven_vs_fresh": null,
+        "breakeven_vs_exact": null
+      }
+    }
+  ],
+  "summary": {
+    "Yelp-DistilBERT-SST2": {
+      "BARGAIN-Global": {
+        "trials": 1,
+        "mean_calls": 648.0,
+        "all_covered_trials": 0,
+        "mean_half_width": 0.038019634203352706,
+        "mean_wall_ms": 2485.8657000004314
+      },
+      "CELEUS-FixedProxy": {
+        "trials": 1,
+        "mean_calls": 1812.0,
+        "all_covered_trials": 1,
+        "mean_half_width": 0.020830442679575616,
+        "mean_wall_ms": 4408.9518999990105
+      },
+      "Calibrated-FixedProxy": {
+        "trials": 1,
+        "mean_calls": 1556.0,
+        "all_covered_trials": 1,
+        "mean_half_width": 0.029139077517628665,
+        "mean_wall_ms": 6107.89719999957
+      },
+      "Spertus-WoR": {
+        "trials": 1,
+        "mean_calls": 1556.0,
+        "all_covered_trials": 1,
+        "mean_half_width": 0.02868472952242885,
+        "mean_wall_ms": 5976.815500000157
+      },
+      "StratQ-safe_loo": {
+        "trials": 1,
+        "mean_calls": 1620.0,
+        "all_covered_trials": 1,
+        "mean_half_width": 0.026745741739408135,
+        "mean_wall_ms": 6446.705499998643
+      }
+    },
+    "CIFAR10-ResNet34-GPU": {
+      "BARGAIN-Global": {
+        "trials": 1,
+        "mean_calls": 520.0,
+        "all_covered_trials": 0,
+        "mean_half_width": 0.038886917145870004,
+        "mean_wall_ms": 961.7588999990403
+      },
+      "CELEUS-FixedProxy": {
+        "trials": 1,
+        "mean_calls": 1000.0,
+        "all_covered_trials": 1,
+        "mean_half_width": 0.0,
+        "mean_wall_ms": 277.9334999995626
+      },
+      "Calibrated-FixedProxy": {
+        "trials": 1,
+        "mean_calls": 1000.0,
+        "all_covered_trials": 1,
+        "mean_half_width": 0.0,
+        "mean_wall_ms": 1824.420299999474
+      },
+      "Spertus-WoR": {
+        "trials": 1,
+        "mean_calls": 1000.0,
+        "all_covered_trials": 1,
+        "mean_half_width": 0.0,
+        "mean_wall_ms": 1828.7240999998176
+      },
+      "StratQ-safe_loo": {
+        "trials": 1,
+        "mean_calls": 1000.0,
+        "all_covered_trials": 1,
+        "mean_half_width": 0.0,
+        "mean_wall_ms": 1951.0573000006843
+      }
+    }
+  }
+}

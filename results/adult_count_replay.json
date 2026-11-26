@@ -1,0 +1,5769 @@
+{
+  "source": "https://archive.ics.uci.edu/static/public/2/adult.zip",
+  "doi": "10.24432/C5XW20",
+  "license": "CC-BY-4.0",
+  "archive_sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+  "mode": "label_replay",
+  "train_rows": 32561,
+  "test_rows": 16281,
+  "delta": 0.1,
+  "batch_size": 32,
+  "pilot_per_group": 16,
+  "versions": {
+    "python": "3.12.6",
+    "numpy": "2.4.1",
+    "duckdb": "2.0.1",
+    "pyarrow": "21.0.0"
+  },
+  "truth": {
+    "?": {
+      "size": 963,
+      "positives": 74,
+      "epsilon": 38.52
+    },
+    "Federal-gov": {
+      "size": 472,
+      "positives": 190,
+      "epsilon": 18.88
+    },
+    "Local-gov": {
+      "size": 1043,
+      "positives": 310,
+      "epsilon": 41.72
+    },
+    "Never-worked": {
+      "size": 3,
+      "positives": 0,
+      "epsilon": 0.12
+    },
+    "Private": {
+      "size": 11210,
+      "positives": 2424,
+      "epsilon": 448.40000000000003
+    },
+    "Self-emp-inc": {
+      "size": 579,
+      "positives": 316,
+      "epsilon": 23.16
+    },
+    "Self-emp-not-inc": {
+      "size": 1321,
+      "positives": 353,
+      "epsilon": 52.84
+    },
+    "State-gov": {
+      "size": 683,
+      "positives": 177,
+      "epsilon": 27.32
+    },
+    "Without-pay": {
+      "size": 7,
+      "positives": 2,
+      "epsilon": 0.28
+    }
+  },
+  "summary": {
+    "no_proxy": {
+      "mean_calls": 4337.466666666666,
+      "covered_trials": 30,
+      "target_met_trials": 30,
+      "mean_paired_call_delta": 0.0,
+      "paired_delta_range": [
+        0,
+        0
+      ]
+    },
+    "proxy_covariates": {
+      "mean_calls": 4351.333333333333,
+      "covered_trials": 30,
+      "target_met_trials": 30,
+      "mean_paired_call_delta": 13.866666666666667,
+      "paired_delta_range": [
+        -96,
+        160
+      ]
+    },
+    "proxy_only": {
+      "mean_calls": 4338.533333333334,
+      "covered_trials": 30,
+      "target_met_trials": 30,
+      "mean_paired_call_delta": 1.0666666666666667,
+      "paired_delta_range": [
+        -96,
+        64
+      ]
+    }
+  },
+  "runs": [
+    {
+      "mode": "no_proxy",
+      "seed": 1000,
+      "calls": 4474,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 86.16942411555836,
+          "lower": 49.68206950599538,
+          "upper": 122.65677872512133,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 190.29417280720813,
+          "lower": 174.0,
+          "upper": 206.58834561441626,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 303.83187197425764,
+          "lower": 262.13292273503436,
+          "upper": 345.5308212134809,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2502.180533570861,
+          "lower": 2055.284337192498,
+          "upper": 2949.076729949225,
+          "calls": 1136
+        },
+        "Self-emp-inc": {
+          "estimate": 321.9022790325075,
+          "lower": 299.42200394363215,
+          "upper": 344.38255412138284,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 367.115637279798,
+          "lower": 315.75163482842635,
+          "upper": 418.47963973116975,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 184.28499010073173,
+          "lower": 158.2916665081051,
+          "upper": 210.2783136933584,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1000,
+      "calls": 4474,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 84.33107164859916,
+          "lower": 46.389813868897406,
+          "upper": 122.2723294283009,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 190.60113156982828,
+          "lower": 174.0,
+          "upper": 207.20226313965654,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 303.7402977902808,
+          "lower": 262.0766677983602,
+          "upper": 345.4039277822014,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2507.471537458136,
+          "lower": 2061.460183245022,
+          "upper": 2953.482891671251,
+          "calls": 1136
+        },
+        "Self-emp-inc": {
+          "estimate": 321.4076622068272,
+          "lower": 299.82982565747983,
+          "upper": 342.98549875617454,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 364.98190566778993,
+          "lower": 313.5559743525903,
+          "upper": 416.40783698298964,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 185.2540284081181,
+          "lower": 159.36033757191444,
+          "upper": 211.14771924432176,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1000,
+      "calls": 4442,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 84.31387494662958,
+          "lower": 46.308269191639795,
+          "upper": 122.31948070161936,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 190.4838602072202,
+          "lower": 174.0,
+          "upper": 206.96772041444038,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 303.7402977902808,
+          "lower": 262.0766677983602,
+          "upper": 345.4039277822014,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2507.471537458136,
+          "lower": 2061.460183245022,
+          "upper": 2953.482891671251,
+          "calls": 1136
+        },
+        "Self-emp-inc": {
+          "estimate": 322.0199773786447,
+          "lower": 299.67219377687616,
+          "upper": 344.36776098041315,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 363.4469428164571,
+          "lower": 310.6412986227482,
+          "upper": 416.2525870101661,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 185.2540284081181,
+          "lower": 159.36033757191444,
+          "upper": 211.14771924432176,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1001,
+      "calls": 4250,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 75.693832011691,
+          "lower": 37.93243070634583,
+          "upper": 113.45523331703617,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 186.8560025703103,
+          "lower": 171.0,
+          "upper": 202.7120051406206,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 310.8291258729647,
+          "lower": 270.86655111189083,
+          "upper": 350.79170063403853,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2139.6334817723878,
+          "lower": 1699.160991508144,
+          "upper": 2580.1059720366316,
+          "calls": 976
+        },
+        "Self-emp-inc": {
+          "estimate": 320.0646418963463,
+          "lower": 297.4529158319595,
+          "upper": 342.67636796073305,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 349.45664078771347,
+          "lower": 296.8703220125804,
+          "upper": 402.0429595628466,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 175.82823198663786,
+          "lower": 150.51974500139428,
+          "upper": 201.13671897188138,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1001,
+      "calls": 4282,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 73.65224898702067,
+          "lower": 37.7891231173233,
+          "upper": 109.51537485671805,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 187.32702831240758,
+          "lower": 171.0,
+          "upper": 203.65405662481518,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 311.7436953185722,
+          "lower": 271.9535924000092,
+          "upper": 351.53379823713516,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2145.806122059891,
+          "lower": 1702.7558248106006,
+          "upper": 2588.856419309181,
+          "calls": 976
+        },
+        "Self-emp-inc": {
+          "estimate": 319.47434986206355,
+          "lower": 297.86744592741536,
+          "upper": 341.08125379671185,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 350.7915641551193,
+          "lower": 298.1370551613062,
+          "upper": 403.44607314893256,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 175.3578360408747,
+          "lower": 150.1810200718523,
+          "upper": 200.5346520098971,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1001,
+      "calls": 4282,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 74.6518103376967,
+          "lower": 39.04674212731013,
+          "upper": 110.25687854808326,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 187.32690066259485,
+          "lower": 171.0,
+          "upper": 203.6538013251897,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 310.9926139955412,
+          "lower": 270.98332567628114,
+          "upper": 351.0019023148013,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2145.806122059891,
+          "lower": 1702.7558248106006,
+          "upper": 2588.856419309181,
+          "calls": 976
+        },
+        "Self-emp-inc": {
+          "estimate": 319.3807600899544,
+          "lower": 297.103345863733,
+          "upper": 341.65817431617575,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 350.49021553207007,
+          "lower": 297.6609193600463,
+          "upper": 403.3195117040937,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 175.15648958075005,
+          "lower": 149.95771913905568,
+          "upper": 200.3552600224444,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1002,
+      "calls": 4282,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 51.470147204171695,
+          "lower": 13.0,
+          "upper": 89.9402944083434,
+          "calls": 272
+        },
+        "Federal-gov": {
+          "estimate": 186.90645580391453,
+          "lower": 171.0,
+          "upper": 202.81291160782908,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 316.5793917132543,
+          "lower": 276.72500572138205,
+          "upper": 356.43377770512666,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2698.370395805879,
+          "lower": 2254.4519507422606,
+          "upper": 3142.2888408694976,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 325.1358076182241,
+          "lower": 302.392473214664,
+          "upper": 347.8791420217842,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 370.1984204883113,
+          "lower": 319.04944610366147,
+          "upper": 421.3473948729611,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 180.14590906887693,
+          "lower": 155.15990694288143,
+          "upper": 205.1319111948724,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1002,
+      "calls": 4346,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 55.36238100420363,
+          "lower": 18.0,
+          "upper": 92.72476200840727,
+          "calls": 336
+        },
+        "Federal-gov": {
+          "estimate": 187.1354117252489,
+          "lower": 171.0,
+          "upper": 203.27082345049783,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 318.82444352985704,
+          "lower": 279.74917854907676,
+          "upper": 357.8997085106373,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2703.7153489509433,
+          "lower": 2257.8959326218514,
+          "upper": 3149.534765280035,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 321.6256588927346,
+          "lower": 299.79345234369805,
+          "upper": 343.457865441771,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 366.6711168795844,
+          "lower": 316.08251200668764,
+          "upper": 417.2597217524812,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 178.4932742591204,
+          "lower": 153.72593750247063,
+          "upper": 203.2606110157702,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1002,
+      "calls": 4346,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 55.89335548023579,
+          "lower": 18.0,
+          "upper": 93.78671096047158,
+          "calls": 336
+        },
+        "Federal-gov": {
+          "estimate": 187.05582923223727,
+          "lower": 171.0,
+          "upper": 203.11165846447457,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 318.3685785618428,
+          "lower": 279.27199569190077,
+          "upper": 357.46516143178485,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2703.7153489509433,
+          "lower": 2257.8959326218514,
+          "upper": 3149.534765280035,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 321.1284780667012,
+          "lower": 298.664901864841,
+          "upper": 343.59205426856136,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 367.8987695595982,
+          "lower": 316.56930809292396,
+          "upper": 419.2282310262724,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 179.49151349429795,
+          "lower": 154.4234004782568,
+          "upper": 204.5596265103391,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1003,
+      "calls": 4250,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 54.41237721253211,
+          "lower": 16.0,
+          "upper": 92.8247544250642,
+          "calls": 304
+        },
+        "Federal-gov": {
+          "estimate": 190.56600740473678,
+          "lower": 174.0,
+          "upper": 207.1320148094735,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 304.0194858957279,
+          "lower": 262.72612925735746,
+          "upper": 345.3128425340983,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2195.251289979873,
+          "lower": 1748.7223323805208,
+          "upper": 2641.7802475792255,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 317.09928076828845,
+          "lower": 294.58638185334127,
+          "upper": 339.61217968323564,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 363.38860488816255,
+          "lower": 312.0991245244095,
+          "upper": 414.6780852519156,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 177.63896261674512,
+          "lower": 152.51934426421215,
+          "upper": 202.7585809692781,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1003,
+      "calls": 4282,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 57.36835274649654,
+          "lower": 20.0,
+          "upper": 94.73670549299307,
+          "calls": 336
+        },
+        "Federal-gov": {
+          "estimate": 190.47035683762698,
+          "lower": 174.0,
+          "upper": 206.9407136752539,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 302.4863479259826,
+          "lower": 261.1744350967592,
+          "upper": 343.79826075520606,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2206.9360318817007,
+          "lower": 1760.6807710866212,
+          "upper": 2653.1912926767804,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 315.17272147249787,
+          "lower": 293.7329656164634,
+          "upper": 336.61247732853235,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 359.8643537275664,
+          "lower": 308.5556324424447,
+          "upper": 411.17307501268823,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 176.74807153280085,
+          "lower": 151.53787630779968,
+          "upper": 201.95826675780205,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1003,
+      "calls": 4282,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 57.66542197525477,
+          "lower": 20.0,
+          "upper": 95.33084395050953,
+          "calls": 336
+        },
+        "Federal-gov": {
+          "estimate": 190.6258705260659,
+          "lower": 174.0,
+          "upper": 207.25174105213182,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 304.24030260553707,
+          "lower": 263.0800463877705,
+          "upper": 345.4005588233036,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2206.9360318817007,
+          "lower": 1760.6807710866212,
+          "upper": 2653.1912926767804,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 315.92447138538756,
+          "lower": 293.5672623568078,
+          "upper": 338.2816804139673,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 359.6421105934992,
+          "lower": 308.3482601244838,
+          "upper": 410.9359610625147,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 176.74807153280085,
+          "lower": 151.53787630779968,
+          "upper": 201.95826675780205,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1004,
+      "calls": 4474,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 66.16784115643475,
+          "lower": 29.89956947487761,
+          "upper": 102.4361128379919,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 191.90142315422366,
+          "lower": 176.0,
+          "upper": 207.80284630844739,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 320.78666453785013,
+          "lower": 280.98654775691296,
+          "upper": 360.5867813187873,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2482.808279577379,
+          "lower": 2034.5101261122866,
+          "upper": 2931.1064330424715,
+          "calls": 1200
+        },
+        "Self-emp-inc": {
+          "estimate": 304.85693644957564,
+          "lower": 282.29205946737585,
+          "upper": 327.42181343177543,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 352.4035308030115,
+          "lower": 299.6273316328409,
+          "upper": 405.17972997318213,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 166.2774277253718,
+          "lower": 142.3445929068634,
+          "upper": 190.21026254388022,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1004,
+      "calls": 4506,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 69.41078559691907,
+          "lower": 31.128776200367742,
+          "upper": 107.69279499347041,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 191.8414906869218,
+          "lower": 176.0,
+          "upper": 207.68298137384357,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 320.6970649340343,
+          "lower": 280.8922346232673,
+          "upper": 360.5018952448014,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2485.125871347344,
+          "lower": 2044.2817379523965,
+          "upper": 2925.9700047422916,
+          "calls": 1232
+        },
+        "Self-emp-inc": {
+          "estimate": 306.9917234426204,
+          "lower": 285.31564379533546,
+          "upper": 328.6678030899054,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 352.65630001596713,
+          "lower": 299.94995483273334,
+          "upper": 405.362645199201,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 166.20201995387959,
+          "lower": 142.22742572780825,
+          "upper": 190.17661417995092,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1004,
+      "calls": 4474,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 71.05170128867718,
+          "lower": 32.55318328585991,
+          "upper": 109.55021929149444,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 191.72003356977382,
+          "lower": 176.0,
+          "upper": 207.44006713954758,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 320.6970649340343,
+          "lower": 280.8922346232673,
+          "upper": 360.5018952448014,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2469.381564808258,
+          "lower": 2021.7643625770645,
+          "upper": 2916.9987670394516,
+          "calls": 1200
+        },
+        "Self-emp-inc": {
+          "estimate": 305.6359756033789,
+          "lower": 283.1383795896727,
+          "upper": 328.1335716170851,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 352.41309609235407,
+          "lower": 299.57714799361435,
+          "upper": 405.24904419109384,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 166.20201995387959,
+          "lower": 142.22742572780825,
+          "upper": 190.17661417995092,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1005,
+      "calls": 4218,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 64.43464568561065,
+          "lower": 26.16641465338496,
+          "upper": 102.70287671783632,
+          "calls": 368
+        },
+        "Federal-gov": {
+          "estimate": 188.87206758814085,
+          "lower": 172.04814175330606,
+          "upper": 205.69599342297568,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 307.77947108087767,
+          "lower": 268.1829346584478,
+          "upper": 347.3760075033076,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2465.5567640269865,
+          "lower": 2020.6111411800632,
+          "upper": 2910.50238687391,
+          "calls": 944
+        },
+        "Self-emp-inc": {
+          "estimate": 306.7129873651744,
+          "lower": 284.08248265953046,
+          "upper": 329.34349207081834,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 351.45054502400455,
+          "lower": 299.2351633756003,
+          "upper": 403.6659266724089,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 185.27391529758614,
+          "lower": 159.643975925201,
+          "upper": 210.90385466997128,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1005,
+      "calls": 4250,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 70.34726857579228,
+          "lower": 31.84201848318301,
+          "upper": 108.85251866840157,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 188.87733306813743,
+          "lower": 172.20856707651507,
+          "upper": 205.5460990597598,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 307.9289241860961,
+          "lower": 268.33923253640944,
+          "upper": 347.51861583578267,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2464.3027017401405,
+          "lower": 2017.7607336284725,
+          "upper": 2910.8446698518087,
+          "calls": 944
+        },
+        "Self-emp-inc": {
+          "estimate": 308.2285832527873,
+          "lower": 286.92058762818084,
+          "upper": 329.53657887739365,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 351.6715924063077,
+          "lower": 301.42486507963315,
+          "upper": 401.91831973298224,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 187.39235379236712,
+          "lower": 162.50794091785923,
+          "upper": 212.27676666687498,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1005,
+      "calls": 4250,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 65.51510837678676,
+          "lower": 30.395815523186204,
+          "upper": 100.6344012303873,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 189.217026400795,
+          "lower": 172.4129264444773,
+          "upper": 206.02112635711273,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 308.10037901241043,
+          "lower": 268.53701539384,
+          "upper": 347.66374263098083,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2464.3027017401405,
+          "lower": 2017.7607336284725,
+          "upper": 2910.8446698518087,
+          "calls": 944
+        },
+        "Self-emp-inc": {
+          "estimate": 306.70603548656453,
+          "lower": 284.43697715099665,
+          "upper": 328.9750938221324,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 351.5881907036068,
+          "lower": 300.4832034649038,
+          "upper": 402.69317794230994,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 189.79730906241812,
+          "lower": 162.61497138574555,
+          "upper": 216.97964673909064,
+          "calls": 496
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1006,
+      "calls": 4506,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 76.41417953858772,
+          "lower": 40.70966736141211,
+          "upper": 112.11869171576332,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 187.68383797198553,
+          "lower": 171.0,
+          "upper": 204.36767594397108,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 322.5129336646366,
+          "lower": 282.45715311192714,
+          "upper": 362.56871421734604,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2298.108696032173,
+          "lower": 1850.0163874134203,
+          "upper": 2746.201004650926,
+          "calls": 1168
+        },
+        "Self-emp-inc": {
+          "estimate": 310.26110723746126,
+          "lower": 287.47327605496884,
+          "upper": 333.0489384199537,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 370.407336285745,
+          "lower": 319.78996539911697,
+          "upper": 421.02470717237304,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 178.1212336309937,
+          "lower": 152.61869532669712,
+          "upper": 203.6237719352902,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1006,
+      "calls": 4506,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 73.32595356041354,
+          "lower": 35.29406632372666,
+          "upper": 111.35784079710042,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 187.66915868226909,
+          "lower": 171.0,
+          "upper": 204.33831736453814,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 324.202682886711,
+          "lower": 284.42711596658984,
+          "upper": 363.97824980683214,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2308.893428970107,
+          "lower": 1862.6334139362712,
+          "upper": 2755.1534440039422,
+          "calls": 1168
+        },
+        "Self-emp-inc": {
+          "estimate": 311.1342090887799,
+          "lower": 289.79290478768144,
+          "upper": 332.47551338987836,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 370.9264823271457,
+          "lower": 320.5039302061486,
+          "upper": 421.3490344481429,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 178.83401090238686,
+          "lower": 153.49629451304205,
+          "upper": 204.17172729173177,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1006,
+      "calls": 4506,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 71.89010922511277,
+          "lower": 34.83764568327247,
+          "upper": 108.94257276695305,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 187.66915868226909,
+          "lower": 171.0,
+          "upper": 204.33831736453814,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 323.7125549099435,
+          "lower": 283.82181299290806,
+          "upper": 363.6032968269789,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2303.0246727688605,
+          "lower": 1855.0311649775376,
+          "upper": 2751.0181805601833,
+          "calls": 1168
+        },
+        "Self-emp-inc": {
+          "estimate": 309.9526870969284,
+          "lower": 287.69144345541963,
+          "upper": 332.2139307384372,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 370.3998244619981,
+          "lower": 319.5375591757005,
+          "upper": 421.2620897482956,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 178.83401090238686,
+          "lower": 153.49629451304205,
+          "upper": 204.17172729173177,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1007,
+      "calls": 4346,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 71.13899001366642,
+          "lower": 32.968426457789214,
+          "upper": 109.30955356954362,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 195.91382512514267,
+          "lower": 178.8296409634037,
+          "upper": 212.99800928688165,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 316.1814708732353,
+          "lower": 275.54405583904423,
+          "upper": 356.81888590742636,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2478.6490958413474,
+          "lower": 2033.3440097931523,
+          "upper": 2923.9541818895423,
+          "calls": 1168
+        },
+        "Self-emp-inc": {
+          "estimate": 313.1804161483704,
+          "lower": 290.5683675602141,
+          "upper": 335.7924647365267,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 331.5523254787264,
+          "lower": 278.7491300908655,
+          "upper": 384.35552086658726,
+          "calls": 656
+        },
+        "State-gov": {
+          "estimate": 169.04282527025902,
+          "lower": 142.90093829603254,
+          "upper": 195.1847122444855,
+          "calls": 496
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1007,
+      "calls": 4378,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 74.03362535342977,
+          "lower": 36.60792245674081,
+          "upper": 111.45932825011873,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 195.1442682862868,
+          "lower": 178.6688169919737,
+          "upper": 211.6197195805999,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 313.29907548968225,
+          "lower": 273.2959283512642,
+          "upper": 353.30222262810037,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2475.3973172124274,
+          "lower": 2030.2120528274415,
+          "upper": 2920.582581597413,
+          "calls": 1168
+        },
+        "Self-emp-inc": {
+          "estimate": 313.8123777657512,
+          "lower": 292.0099943922486,
+          "upper": 335.6147611392538,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 333.5025821996703,
+          "lower": 280.9070393592863,
+          "upper": 386.09812504005436,
+          "calls": 656
+        },
+        "State-gov": {
+          "estimate": 169.6468342936374,
+          "lower": 142.88567035923433,
+          "upper": 196.4079982280405,
+          "calls": 496
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1007,
+      "calls": 4378,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 73.51546362415317,
+          "lower": 36.383193267021305,
+          "upper": 110.64773398128501,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 194.96902500200605,
+          "lower": 178.19126553356423,
+          "upper": 211.74678447044784,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 314.46433993916827,
+          "lower": 273.94516280255266,
+          "upper": 354.9835170757838,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2475.3973172124274,
+          "lower": 2030.2120528274415,
+          "upper": 2920.582581597413,
+          "calls": 1168
+        },
+        "Self-emp-inc": {
+          "estimate": 313.75878277425454,
+          "lower": 291.3675547724441,
+          "upper": 336.1500107760649,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 333.3279304070626,
+          "lower": 280.55773577407075,
+          "upper": 386.09812504005436,
+          "calls": 656
+        },
+        "State-gov": {
+          "estimate": 170.1715718895409,
+          "lower": 144.0109067404915,
+          "upper": 196.33223703859028,
+          "calls": 496
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1008,
+      "calls": 4346,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 61.431052343180575,
+          "lower": 23.0,
+          "upper": 99.86210468636115,
+          "calls": 368
+        },
+        "Federal-gov": {
+          "estimate": 192.80370067353684,
+          "lower": 175.89614176789547,
+          "upper": 209.71125957917815,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 304.4014659784957,
+          "lower": 263.556343531077,
+          "upper": 345.24658842591435,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2454.561771373073,
+          "lower": 2007.5477732307472,
+          "upper": 2901.5757695153993,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 311.45759615148455,
+          "lower": 288.8196050074727,
+          "upper": 334.0955872954964,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 360.57420059737206,
+          "lower": 308.1486014338434,
+          "upper": 412.9997997609008,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 174.33716308041485,
+          "lower": 148.72274881530745,
+          "upper": 199.95157734552228,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1008,
+      "calls": 4346,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 65.01140452139104,
+          "lower": 27.75260411730294,
+          "upper": 102.27020492547915,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 193.1852345235959,
+          "lower": 176.21424905078234,
+          "upper": 210.15621999640942,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 305.20991300937294,
+          "lower": 264.75356986328575,
+          "upper": 345.6662561554601,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2478.412930039583,
+          "lower": 2035.667092095012,
+          "upper": 2921.158767984154,
+          "calls": 1072
+        },
+        "Self-emp-inc": {
+          "estimate": 311.50395168536977,
+          "lower": 290.07101279571054,
+          "upper": 332.936890575029,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 360.6222911806181,
+          "lower": 308.5622159965422,
+          "upper": 412.68236636469396,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 174.2771342807052,
+          "lower": 148.93404335190328,
+          "upper": 199.62022520950717,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1008,
+      "calls": 4410,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 65.91256545217855,
+          "lower": 28.40692760532989,
+          "upper": 103.41820329902718,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 193.1852345235959,
+          "lower": 176.21424905078234,
+          "upper": 210.15621999640942,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 305.075357535837,
+          "lower": 264.6438346995564,
+          "upper": 345.50688037211756,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2457.7583157229687,
+          "lower": 2012.1800602743826,
+          "upper": 2903.336571171554,
+          "calls": 1136
+        },
+        "Self-emp-inc": {
+          "estimate": 310.72385433625595,
+          "lower": 288.6101294914786,
+          "upper": 332.8375791810333,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 360.9929203053483,
+          "lower": 308.5784603797072,
+          "upper": 413.40738023098953,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 174.25081365804766,
+          "lower": 148.91487741210346,
+          "upper": 199.58674990399186,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1009,
+      "calls": 4378,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 75.94722628077375,
+          "lower": 37.76692313758425,
+          "upper": 114.12752942396322,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 190.5422695736778,
+          "lower": 174.0,
+          "upper": 207.08453914735557,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 302.39611530056413,
+          "lower": 263.1231530748037,
+          "upper": 341.6690775263246,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2398.894470806156,
+          "lower": 1952.8277629955173,
+          "upper": 2844.961178616794,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 313.30840732438423,
+          "lower": 290.7610975935627,
+          "upper": 335.8557170552058,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 345.76375985207625,
+          "lower": 293.1598398490096,
+          "upper": 398.36767985514285,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 176.55800498028717,
+          "lower": 151.36776208017048,
+          "upper": 201.7482478804038,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1009,
+      "calls": 4410,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 75.59021342319376,
+          "lower": 37.754281160665414,
+          "upper": 113.4261456857221,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 190.69941309731604,
+          "lower": 174.0,
+          "upper": 207.39882619463202,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 301.5746522804592,
+          "lower": 262.6035053957687,
+          "upper": 340.5457991651497,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2381.0086053180394,
+          "lower": 1934.6235133807145,
+          "upper": 2827.3936972553647,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 314.68831386705006,
+          "lower": 293.2262440851778,
+          "upper": 336.1503836489223,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 343.99346052270204,
+          "lower": 291.3563925696716,
+          "upper": 396.63052847573255,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 173.92883884265595,
+          "lower": 148.52072004842938,
+          "upper": 199.33695763688254,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1009,
+      "calls": 4442,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 76.4877110158896,
+          "lower": 39.05753932148608,
+          "upper": 113.91788271029314,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 190.69941309731604,
+          "lower": 174.0,
+          "upper": 207.39882619463202,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 300.8569784379253,
+          "lower": 261.4546512418913,
+          "upper": 340.2593056339593,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2381.0086053180394,
+          "lower": 1934.6235133807145,
+          "upper": 2827.3936972553647,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 314.6483311964744,
+          "lower": 292.5834361512516,
+          "upper": 336.7132262416972,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 342.0503657419373,
+          "lower": 291.03301023128785,
+          "upper": 393.0677212525868,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 173.94402260956997,
+          "lower": 148.24648687515045,
+          "upper": 199.64155834398952,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1010,
+      "calls": 4282,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 77.84925596018024,
+          "lower": 41.85840419033967,
+          "upper": 113.84010773002082,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 189.19455385317843,
+          "lower": 172.37115379560532,
+          "upper": 206.01795391075152,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 321.42911217839713,
+          "lower": 282.41095380081555,
+          "upper": 360.44727055597866,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2354.1402847536806,
+          "lower": 1917.1678839382582,
+          "upper": 2791.112685569103,
+          "calls": 944
+        },
+        "Self-emp-inc": {
+          "estimate": 331.20861785473414,
+          "lower": 308.7648000203151,
+          "upper": 353.6524356891533,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 346.53766262393873,
+          "lower": 294.20272894099014,
+          "upper": 398.8725963068872,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 170.54309808851838,
+          "lower": 145.57797493350796,
+          "upper": 195.5082212435288,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1010,
+      "calls": 4250,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 80.67452988973821,
+          "lower": 44.46959108787825,
+          "upper": 116.87946869159818,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 190.14678746969895,
+          "lower": 173.447214909986,
+          "upper": 206.84636002941193,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 320.4060977014837,
+          "lower": 281.4394576444187,
+          "upper": 359.37273775854874,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2349.9445073593038,
+          "lower": 1911.962262354289,
+          "upper": 2787.926752364319,
+          "calls": 944
+        },
+        "Self-emp-inc": {
+          "estimate": 331.0401576655001,
+          "lower": 309.8603480881639,
+          "upper": 352.2199672428363,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 343.49682463328145,
+          "lower": 290.78785555695896,
+          "upper": 396.2057937096038,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 171.50941232982743,
+          "lower": 144.50591117833474,
+          "upper": 198.51291348132014,
+          "calls": 496
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1010,
+      "calls": 4250,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 78.14825253509105,
+          "lower": 41.9610334664563,
+          "upper": 114.33547160372578,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 189.80671974987587,
+          "lower": 172.99214961314215,
+          "upper": 206.62128988660953,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 320.6509988683986,
+          "lower": 281.66317170866915,
+          "upper": 359.63882602812794,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2349.9445073593038,
+          "lower": 1911.962262354289,
+          "upper": 2787.926752364319,
+          "calls": 944
+        },
+        "Self-emp-inc": {
+          "estimate": 330.5533324135158,
+          "lower": 308.529798305766,
+          "upper": 352.5768665212657,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 343.11250583099064,
+          "lower": 290.43849297335447,
+          "upper": 395.78651868862676,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 170.72657846374332,
+          "lower": 143.62521452975312,
+          "upper": 197.82794239773355,
+          "calls": 496
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1011,
+      "calls": 4250,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 56.659500204516384,
+          "lower": 19.0,
+          "upper": 94.31900040903278,
+          "calls": 304
+        },
+        "Federal-gov": {
+          "estimate": 190.23228072982386,
+          "lower": 175.0,
+          "upper": 205.46456145964768,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 304.5228670038054,
+          "lower": 262.9201382858978,
+          "upper": 346.12559572171307,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2562.898989917533,
+          "lower": 2120.7790279463966,
+          "upper": 3005.018951888669,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 324.9117884710397,
+          "lower": 302.37306513368117,
+          "upper": 347.4505118083982,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 339.77644418175896,
+          "lower": 287.4121708455515,
+          "upper": 392.1407175179665,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 181.74156605154897,
+          "lower": 156.87019405877888,
+          "upper": 206.61293804431907,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1011,
+      "calls": 4250,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 59.59101189192448,
+          "lower": 22.0,
+          "upper": 97.18202378384898,
+          "calls": 336
+        },
+        "Federal-gov": {
+          "estimate": 190.19729481837587,
+          "lower": 175.0,
+          "upper": 205.39458963675173,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 303.3705067282218,
+          "lower": 261.72513543041276,
+          "upper": 345.01587802603086,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2561.008093402945,
+          "lower": 2117.520308153087,
+          "upper": 3004.4958786528027,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 324.57271310423664,
+          "lower": 302.28955649066813,
+          "upper": 346.85586971780515,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 339.6825481779104,
+          "lower": 286.87505875212287,
+          "upper": 392.49003760369794,
+          "calls": 688
+        },
+        "State-gov": {
+          "estimate": 180.03369472364514,
+          "lower": 155.12109966843147,
+          "upper": 204.9462897788588,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1011,
+      "calls": 4282,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 59.59101189192448,
+          "lower": 22.0,
+          "upper": 97.18202378384898,
+          "calls": 336
+        },
+        "Federal-gov": {
+          "estimate": 190.19659866359876,
+          "lower": 175.0,
+          "upper": 205.3931973271975,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 303.1327784600195,
+          "lower": 261.48479241716126,
+          "upper": 344.78076450287773,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2561.008093402945,
+          "lower": 2117.520308153087,
+          "upper": 3004.4958786528027,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 324.7154288822623,
+          "lower": 302.07822202361666,
+          "upper": 347.352635740908,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 342.0355724435114,
+          "lower": 290.1622399205961,
+          "upper": 393.90890496642686,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 180.03369472364514,
+          "lower": 155.12109966843147,
+          "upper": 204.9462897788588,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1012,
+      "calls": 4410,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 59.02542303927112,
+          "lower": 22.0,
+          "upper": 96.05084607854222,
+          "calls": 368
+        },
+        "Federal-gov": {
+          "estimate": 188.27228503290095,
+          "lower": 173.0,
+          "upper": 203.54457006580193,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 322.47385234514405,
+          "lower": 281.8177462344649,
+          "upper": 363.1299584558232,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2464.4819894503057,
+          "lower": 2036.768860112411,
+          "upper": 2892.1951187882005,
+          "calls": 1136
+        },
+        "Self-emp-inc": {
+          "estimate": 313.1849947208205,
+          "lower": 290.45951729822553,
+          "upper": 335.9104721434155,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 372.43821897500993,
+          "lower": 319.9239310066052,
+          "upper": 424.9525069434146,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 179.2693516894654,
+          "lower": 153.60247362443658,
+          "upper": 204.9362297544942,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1012,
+      "calls": 4442,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 64.81812730819394,
+          "lower": 28.178678285738403,
+          "upper": 101.45757633064949,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 188.1398450415975,
+          "lower": 173.0,
+          "upper": 203.279690083195,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 322.6720648135149,
+          "lower": 282.32298471994307,
+          "upper": 363.0211449070868,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2465.4952490376936,
+          "lower": 2033.725290506387,
+          "upper": 2897.2652075690003,
+          "calls": 1136
+        },
+        "Self-emp-inc": {
+          "estimate": 312.9313716526404,
+          "lower": 291.1370252886664,
+          "upper": 334.7257180166144,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 373.8940603485034,
+          "lower": 322.65006421190003,
+          "upper": 425.1380564851068,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 180.1447808133216,
+          "lower": 154.98848976501526,
+          "upper": 205.301071861628,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1012,
+      "calls": 4442,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 63.63740097619835,
+          "lower": 27.41801192696808,
+          "upper": 99.85679002542862,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 188.23987190869045,
+          "lower": 173.0,
+          "upper": 203.47974381738086,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 323.63966005909214,
+          "lower": 282.8612203273352,
+          "upper": 364.41809979084906,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2465.4952490376936,
+          "lower": 2033.725290506387,
+          "upper": 2897.2652075690003,
+          "calls": 1136
+        },
+        "Self-emp-inc": {
+          "estimate": 312.7207003928958,
+          "lower": 290.22566894145,
+          "upper": 335.21573184434163,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 374.83448559644046,
+          "lower": 322.77949034235894,
+          "upper": 426.889480850522,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 179.78106791646204,
+          "lower": 154.6809244322458,
+          "upper": 204.88121140067827,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1013,
+      "calls": 4346,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 68.44398728077344,
+          "lower": 31.194883678930143,
+          "upper": 105.69309088261673,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 193.99118182799845,
+          "lower": 177.41348051607287,
+          "upper": 210.56888313992405,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 325.45025878226784,
+          "lower": 284.45547258712327,
+          "upper": 366.4450449774124,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2603.6518539157605,
+          "lower": 2158.259495809366,
+          "upper": 3049.044212022155,
+          "calls": 1072
+        },
+        "Self-emp-inc": {
+          "estimate": 316.52316554029557,
+          "lower": 294.1221451939068,
+          "upper": 338.92418588668437,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 354.04557739494965,
+          "lower": 304.5725734058445,
+          "upper": 403.51858138405487,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 158.39467743444496,
+          "lower": 131.91028167924995,
+          "upper": 184.87907318963997,
+          "calls": 496
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1013,
+      "calls": 4346,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 70.30461872081626,
+          "lower": 32.74814003063888,
+          "upper": 107.86109741099366,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 196.135512658161,
+          "lower": 180.33056576486894,
+          "upper": 211.94045955145302,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 324.8312798519571,
+          "lower": 284.290477103806,
+          "upper": 365.37208260010823,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2611.3981075051815,
+          "lower": 2164.9320207507917,
+          "upper": 3057.864194259572,
+          "calls": 1072
+        },
+        "Self-emp-inc": {
+          "estimate": 314.0981035678697,
+          "lower": 292.8002688063061,
+          "upper": 335.3959383294334,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 351.7603859819475,
+          "lower": 300.47230868275005,
+          "upper": 403.04846328114485,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 159.97587168122854,
+          "lower": 132.73666175648978,
+          "upper": 187.2150816059673,
+          "calls": 496
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1013,
+      "calls": 4346,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 69.26144985765808,
+          "lower": 31.650575123550933,
+          "upper": 106.87232459176522,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 195.38166815347643,
+          "lower": 179.05177283010093,
+          "upper": 211.71156347685195,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 324.8312798519571,
+          "lower": 284.290477103806,
+          "upper": 365.37208260010823,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2611.3981075051815,
+          "lower": 2164.9320207507917,
+          "upper": 3057.864194259572,
+          "calls": 1072
+        },
+        "Self-emp-inc": {
+          "estimate": 315.01775369270854,
+          "lower": 293.2033742270766,
+          "upper": 336.8321331583404,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 352.52910677671866,
+          "lower": 300.0283961345535,
+          "upper": 405.0298174188839,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 159.97587168122854,
+          "lower": 132.73666175648978,
+          "upper": 187.2150816059673,
+          "calls": 496
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1014,
+      "calls": 4314,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 79.08856967082228,
+          "lower": 41.02708231699527,
+          "upper": 117.15005702464929,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 193.13093450090443,
+          "lower": 176.22822675440133,
+          "upper": 210.03364224740753,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 292.78401274994434,
+          "lower": 252.64333455983828,
+          "upper": 332.9246909400504,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2484.1003386202583,
+          "lower": 2052.2647741884866,
+          "upper": 2915.9359030520295,
+          "calls": 1040
+        },
+        "Self-emp-inc": {
+          "estimate": 317.28848757908946,
+          "lower": 294.8612291409455,
+          "upper": 339.71574601723336,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 334.89499372980157,
+          "lower": 283.6075434220082,
+          "upper": 386.1824440375949,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 181.69621773734144,
+          "lower": 155.92194764560693,
+          "upper": 207.4704878290759,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1014,
+      "calls": 4346,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 80.35065277573987,
+          "lower": 43.512205881393996,
+          "upper": 117.18909967008575,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 193.71761569324465,
+          "lower": 176.92135894631878,
+          "upper": 210.5138724401705,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 294.4027135556386,
+          "lower": 254.3682652788722,
+          "upper": 334.4371618324051,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2476.488861398287,
+          "lower": 2048.1008784330916,
+          "upper": 2904.876844363483,
+          "calls": 1040
+        },
+        "Self-emp-inc": {
+          "estimate": 316.0748194129931,
+          "lower": 294.55291763814233,
+          "upper": 337.596721187844,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 336.68131518034,
+          "lower": 286.0235791040603,
+          "upper": 387.33905125661965,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 181.09528428757778,
+          "lower": 155.69261377649963,
+          "upper": 206.497954798656,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1014,
+      "calls": 4346,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 81.74249447952182,
+          "lower": 44.51832764435118,
+          "upper": 118.96666131469246,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 193.75549205687906,
+          "lower": 176.93881147692213,
+          "upper": 210.57217263683606,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 294.545439516479,
+          "lower": 254.59008784461005,
+          "upper": 334.50079118834793,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2476.488861398287,
+          "lower": 2048.1008784330916,
+          "upper": 2904.876844363483,
+          "calls": 1040
+        },
+        "Self-emp-inc": {
+          "estimate": 316.5546885528518,
+          "lower": 294.3258914280482,
+          "upper": 338.7834856776554,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 336.7166956927131,
+          "lower": 286.0405621257974,
+          "upper": 387.39282925962874,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 181.0188973492288,
+          "lower": 155.63932034185544,
+          "upper": 206.3984743566022,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1015,
+      "calls": 4218,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 66.20854507880499,
+          "lower": 31.02309662591614,
+          "upper": 101.39399353169385,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 193.16418308486058,
+          "lower": 176.41267959187405,
+          "upper": 209.91568657784714,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 298.74011592352366,
+          "lower": 257.3885837944911,
+          "upper": 340.0916480525562,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2257.2338065253066,
+          "lower": 1813.579959646392,
+          "upper": 2700.887653404221,
+          "calls": 976
+        },
+        "Self-emp-inc": {
+          "estimate": 320.4587612812292,
+          "lower": 298.04990792304704,
+          "upper": 342.86761463941144,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 357.9380598941268,
+          "lower": 305.13005157816497,
+          "upper": 410.7460682100886,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 172.21462562615676,
+          "lower": 147.17345263435013,
+          "upper": 197.25579861796336,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1015,
+      "calls": 4186,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 62.85144732832348,
+          "lower": 26.0,
+          "upper": 99.70289465664695,
+          "calls": 368
+        },
+        "Federal-gov": {
+          "estimate": 193.17827924653088,
+          "lower": 176.89846955735499,
+          "upper": 209.4580889357068,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 296.94436252980114,
+          "lower": 256.83185886180377,
+          "upper": 337.05686619779846,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2257.8255472692845,
+          "lower": 1816.5521083989267,
+          "upper": 2699.0989861396424,
+          "calls": 976
+        },
+        "Self-emp-inc": {
+          "estimate": 318.1877787287292,
+          "lower": 297.13664357996873,
+          "upper": 339.2389138774897,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 360.0491574659733,
+          "lower": 307.9737937357406,
+          "upper": 412.12452119620593,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 172.39341225491884,
+          "lower": 147.79222777261938,
+          "upper": 196.99459673721827,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1015,
+      "calls": 4218,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 64.4871296294184,
+          "lower": 29.0,
+          "upper": 99.97425925883681,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 193.42884596740635,
+          "lower": 176.85769193481275,
+          "upper": 210.0,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 297.04282217967904,
+          "lower": 256.20590231566865,
+          "upper": 337.8797420436894,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2257.8255472692845,
+          "lower": 1816.5521083989267,
+          "upper": 2699.0989861396424,
+          "calls": 976
+        },
+        "Self-emp-inc": {
+          "estimate": 318.97071441409486,
+          "lower": 297.2366374651323,
+          "upper": 340.70479136305755,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 358.11699354381653,
+          "lower": 305.3736946640323,
+          "upper": 410.8602924236007,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 172.39341225491884,
+          "lower": 147.79222777261938,
+          "upper": 196.99459673721827,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1016,
+      "calls": 4314,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 87.93920771060432,
+          "lower": 51.38658297148882,
+          "upper": 124.49183244971982,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 187.92809169259425,
+          "lower": 172.0,
+          "upper": 203.85618338518853,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 304.5993618696125,
+          "lower": 264.98089379703714,
+          "upper": 344.2178299421878,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2469.9569185705313,
+          "lower": 2033.6850979963478,
+          "upper": 2906.228739144715,
+          "calls": 1008
+        },
+        "Self-emp-inc": {
+          "estimate": 325.43022402452266,
+          "lower": 302.9803360744195,
+          "upper": 347.8801119746259,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 356.897419858897,
+          "lower": 305.4166236337515,
+          "upper": 408.3782160840426,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 172.74161749794683,
+          "lower": 147.62327526389663,
+          "upper": 197.85995973199704,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1016,
+      "calls": 4282,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 92.43401079211472,
+          "lower": 56.07744087897985,
+          "upper": 128.7905807052496,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 188.40515840230952,
+          "lower": 172.0,
+          "upper": 204.81031680461905,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 304.162219092704,
+          "lower": 264.46779722434934,
+          "upper": 343.8566409610586,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2377.521621984569,
+          "lower": 1950.125210474243,
+          "upper": 2804.9180334948946,
+          "calls": 944
+        },
+        "Self-emp-inc": {
+          "estimate": 325.6027123719301,
+          "lower": 303.7006519878643,
+          "upper": 347.50477275599593,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 358.224519119889,
+          "lower": 306.94717763301713,
+          "upper": 409.501860606761,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 172.98256422367496,
+          "lower": 147.83026421752626,
+          "upper": 198.13486422982362,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1016,
+      "calls": 4250,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 89.54275880539919,
+          "lower": 53.20043147864242,
+          "upper": 125.88508613215596,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 188.2499013339456,
+          "lower": 172.0,
+          "upper": 204.49980266789123,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 303.75668787370387,
+          "lower": 264.00608609027563,
+          "upper": 343.5072896571321,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2356.003678518172,
+          "lower": 1912.620253629951,
+          "upper": 2799.3871034063927,
+          "calls": 912
+        },
+        "Self-emp-inc": {
+          "estimate": 326.3572735490446,
+          "lower": 303.85138122099477,
+          "upper": 348.8631658770944,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 357.1353078463652,
+          "lower": 305.5528043034091,
+          "upper": 408.7178113893213,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 172.98256422367496,
+          "lower": 147.83026421752626,
+          "upper": 198.13486422982362,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1017,
+      "calls": 4346,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 83.77649343809153,
+          "lower": 46.161166193402465,
+          "upper": 121.3918206827806,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 187.09287905635455,
+          "lower": 173.0,
+          "upper": 201.18575811270907,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 311.569207028321,
+          "lower": 271.7260744527338,
+          "upper": 351.4123396039081,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2147.1414421549202,
+          "lower": 1714.5384643453267,
+          "upper": 2579.7444199645142,
+          "calls": 1008
+        },
+        "Self-emp-inc": {
+          "estimate": 315.928533677602,
+          "lower": 293.3744527432585,
+          "upper": 338.4826146119455,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 328.9067963155907,
+          "lower": 277.7560762108692,
+          "upper": 380.05751642031225,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 178.47131576148323,
+          "lower": 153.16430736874483,
+          "upper": 203.77832415422162,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1017,
+      "calls": 4314,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 83.16150246323443,
+          "lower": 46.688232256781184,
+          "upper": 119.63477266968766,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 187.46299913807053,
+          "lower": 173.0,
+          "upper": 201.92599827614106,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 309.2968804493012,
+          "lower": 269.7654026193563,
+          "upper": 348.8283582792462,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2097.0686858005693,
+          "lower": 1661.7436829811456,
+          "upper": 2532.3936886199936,
+          "calls": 976
+        },
+        "Self-emp-inc": {
+          "estimate": 316.1824118684348,
+          "lower": 293.84109117217827,
+          "upper": 338.52373256469144,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 326.5519630073785,
+          "lower": 274.2924810649463,
+          "upper": 378.81144494981066,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 177.4055012456382,
+          "lower": 152.68531498648832,
+          "upper": 202.1256875047881,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1017,
+      "calls": 4314,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 82.38921863950928,
+          "lower": 45.81905486252272,
+          "upper": 118.95938241649583,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 187.41128495922138,
+          "lower": 173.0,
+          "upper": 201.82256991844275,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 311.8391423599479,
+          "lower": 272.17310029167015,
+          "upper": 351.5051844282257,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2094.9513190939283,
+          "lower": 1658.715944641847,
+          "upper": 2531.18669354601,
+          "calls": 976
+        },
+        "Self-emp-inc": {
+          "estimate": 316.7052256644089,
+          "lower": 294.0668030876893,
+          "upper": 339.34364824112845,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 328.35251905751016,
+          "lower": 277.60827906322424,
+          "upper": 379.0967590517961,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 179.28547479248053,
+          "lower": 152.036269175183,
+          "upper": 206.53468040977805,
+          "calls": 496
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1018,
+      "calls": 4378,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 63.610914463784844,
+          "lower": 27.40008268139,
+          "upper": 99.82174624617967,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 200.85687262734885,
+          "lower": 183.8204048939838,
+          "upper": 217.89334036071386,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 310.6802356434884,
+          "lower": 270.56562011187236,
+          "upper": 350.79485117510455,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2196.29338334756,
+          "lower": 1750.08383930205,
+          "upper": 2642.50292739307,
+          "calls": 1072
+        },
+        "Self-emp-inc": {
+          "estimate": 316.8054568382585,
+          "lower": 294.2683181893873,
+          "upper": 339.3425954871298,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 371.2840359059874,
+          "lower": 320.1383264617321,
+          "upper": 422.4297453502427,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 167.92809943981896,
+          "lower": 143.21414208700762,
+          "upper": 192.6420567926303,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1018,
+      "calls": 4346,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 61.501226485084295,
+          "lower": 23.0,
+          "upper": 100.00245297016858,
+          "calls": 368
+        },
+        "Federal-gov": {
+          "estimate": 200.9914890338397,
+          "lower": 184.17681261302656,
+          "upper": 217.80616545465293,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 307.9781575949654,
+          "lower": 268.62914078801623,
+          "upper": 347.3271744019146,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2183.6775291163813,
+          "lower": 1738.0821997828425,
+          "upper": 2629.27285844992,
+          "calls": 1072
+        },
+        "Self-emp-inc": {
+          "estimate": 316.75976968134796,
+          "lower": 295.3031789038063,
+          "upper": 338.21636045888954,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 371.00840234272505,
+          "lower": 320.7706431425811,
+          "upper": 421.24616154286906,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 166.61842462864948,
+          "lower": 141.66501383246867,
+          "upper": 191.57183542483025,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1018,
+      "calls": 4346,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 61.34550137849654,
+          "lower": 23.0,
+          "upper": 99.6910027569931,
+          "calls": 368
+        },
+        "Federal-gov": {
+          "estimate": 201.2325365276974,
+          "lower": 184.1200410888376,
+          "upper": 218.3450319665572,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 308.0618319093293,
+          "lower": 268.40016272432496,
+          "upper": 347.7235010943338,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2183.6775291163813,
+          "lower": 1738.0821997828425,
+          "upper": 2629.27285844992,
+          "calls": 1072
+        },
+        "Self-emp-inc": {
+          "estimate": 317.0473271523438,
+          "lower": 294.8805910429505,
+          "upper": 339.21406326173707,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 371.7333424890946,
+          "lower": 321.09727498853795,
+          "upper": 422.36940998965116,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 166.61842462864948,
+          "lower": 141.66501383246867,
+          "upper": 191.57183542483025,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1019,
+      "calls": 4442,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 81.65028370579331,
+          "lower": 44.3198089702927,
+          "upper": 118.98075844129391,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 190.66039013650638,
+          "lower": 174.0,
+          "upper": 207.3207802730128,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 308.1760366055645,
+          "lower": 267.04821290285633,
+          "upper": 349.3038603082726,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2425.461451774816,
+          "lower": 1980.0893491297309,
+          "upper": 2870.8335544199012,
+          "calls": 1168
+        },
+        "Self-emp-inc": {
+          "estimate": 308.46722598795253,
+          "lower": 285.7566752147055,
+          "upper": 331.1777767611996,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 338.75400105323706,
+          "lower": 287.1442885775009,
+          "upper": 390.36371352897334,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 184.54838577638492,
+          "lower": 159.12234859945931,
+          "upper": 209.97442295331058,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1019,
+      "calls": 4474,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 79.6163487388142,
+          "lower": 44.02988563982343,
+          "upper": 115.20281183780496,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 190.7743171589372,
+          "lower": 174.10595816460793,
+          "upper": 207.44267615326646,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 307.25038234454354,
+          "lower": 265.7561497184516,
+          "upper": 348.74461497063544,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2445.135051324274,
+          "lower": 2000.2613824020214,
+          "upper": 2890.008720246527,
+          "calls": 1168
+        },
+        "Self-emp-inc": {
+          "estimate": 307.87206912803754,
+          "lower": 286.27978948283175,
+          "upper": 329.46434877324344,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 337.1440030123894,
+          "lower": 285.5645423978299,
+          "upper": 388.723463626949,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 185.0450914404188,
+          "lower": 159.30769833781102,
+          "upper": 210.78248454302656,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1019,
+      "calls": 4602,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 80.3425034864417,
+          "lower": 43.82400546806941,
+          "upper": 116.86100150481397,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 190.82527180615836,
+          "lower": 174.0,
+          "upper": 207.65054361231668,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 307.2889647966732,
+          "lower": 265.7949163182718,
+          "upper": 348.78301327507455,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2420.0207270204446,
+          "lower": 1974.6521207448181,
+          "upper": 2865.389333296071,
+          "calls": 1296
+        },
+        "Self-emp-inc": {
+          "estimate": 308.11288963145637,
+          "lower": 285.96433471810707,
+          "upper": 330.2614445448056,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 337.13744569184786,
+          "lower": 285.55142775674676,
+          "upper": 388.723463626949,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 185.0450914404188,
+          "lower": 159.30769833781102,
+          "upper": 210.78248454302656,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1020,
+      "calls": 4282,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 58.4765757140468,
+          "lower": 22.0,
+          "upper": 94.95315142809359,
+          "calls": 368
+        },
+        "Federal-gov": {
+          "estimate": 191.59695937553582,
+          "lower": 175.0,
+          "upper": 208.19391875107164,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 299.7398794212918,
+          "lower": 259.0632954832013,
+          "upper": 340.4164633593823,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2453.2044897387236,
+          "lower": 2025.60305616532,
+          "upper": 2880.805923312128,
+          "calls": 1040
+        },
+        "Self-emp-inc": {
+          "estimate": 327.92754417072996,
+          "lower": 305.68547159181634,
+          "upper": 350.1696167496435,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 345.7360015528233,
+          "lower": 295.1833204413214,
+          "upper": 396.28868266432517,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 176.18147597519726,
+          "lower": 151.01386932478343,
+          "upper": 201.349082625611,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1020,
+      "calls": 4282,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 62.30207797622135,
+          "lower": 24.48494749526879,
+          "upper": 100.11920845717391,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 191.5306425712297,
+          "lower": 175.0,
+          "upper": 208.06128514245938,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 303.8613348799711,
+          "lower": 263.3220316674283,
+          "upper": 344.4006380925139,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2448.7566123896772,
+          "lower": 2018.7133869159195,
+          "upper": 2878.7998378634347,
+          "calls": 1040
+        },
+        "Self-emp-inc": {
+          "estimate": 326.81661898268675,
+          "lower": 305.15201236813317,
+          "upper": 348.4812255972403,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 345.6897104961515,
+          "lower": 293.7431211442641,
+          "upper": 397.6362998480389,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 176.01913756329427,
+          "lower": 151.0671116639994,
+          "upper": 200.97116346258912,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1020,
+      "calls": 4282,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 63.478159651605054,
+          "lower": 25.571380647917444,
+          "upper": 101.38493865529266,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 191.59615124971558,
+          "lower": 175.0,
+          "upper": 208.19230249943112,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 303.8613348799711,
+          "lower": 263.3220316674283,
+          "upper": 344.4006380925139,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2448.7566123896772,
+          "lower": 2018.7133869159195,
+          "upper": 2878.7998378634347,
+          "calls": 1040
+        },
+        "Self-emp-inc": {
+          "estimate": 327.2806589722921,
+          "lower": 305.13103303928045,
+          "upper": 349.43028490530367,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 344.6019024361666,
+          "lower": 292.08431152296475,
+          "upper": 397.11949334936844,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 175.98942883355764,
+          "lower": 150.86533196092483,
+          "upper": 201.11352570619044,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1021,
+      "calls": 4218,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 62.233468742965975,
+          "lower": 24.0,
+          "upper": 100.46693748593195,
+          "calls": 368
+        },
+        "Federal-gov": {
+          "estimate": 192.5181984211308,
+          "lower": 179.0,
+          "upper": 206.03639684226158,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 319.7928004980522,
+          "lower": 279.90973777366713,
+          "upper": 359.6758632224373,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2295.5042820383296,
+          "lower": 1867.5345395697354,
+          "upper": 2723.4740245069243,
+          "calls": 1008
+        },
+        "Self-emp-inc": {
+          "estimate": 321.361547518472,
+          "lower": 298.9485404003898,
+          "upper": 343.77455463655417,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 358.6398214213393,
+          "lower": 307.8450622166032,
+          "upper": 409.4345806260755,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 168.1126963656438,
+          "lower": 141.03669139468036,
+          "upper": 195.18870133660727,
+          "calls": 496
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1021,
+      "calls": 4186,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 66.56417161335608,
+          "lower": 28.27216759167396,
+          "upper": 104.85617563503823,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 192.58975063723906,
+          "lower": 179.0,
+          "upper": 206.17950127447816,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 319.65737861882405,
+          "lower": 279.7717548135373,
+          "upper": 359.5430024241108,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2270.2375881276466,
+          "lower": 1824.2110233115577,
+          "upper": 2716.2641529437356,
+          "calls": 944
+        },
+        "Self-emp-inc": {
+          "estimate": 323.43976939276627,
+          "lower": 302.34393923174804,
+          "upper": 344.5355995537844,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 359.04225134576745,
+          "lower": 309.33002726881597,
+          "upper": 408.75447542271894,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 168.8032092780948,
+          "lower": 141.6483965813182,
+          "upper": 195.9580219748714,
+          "calls": 496
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1021,
+      "calls": 4186,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 66.18665760580664,
+          "lower": 28.0,
+          "upper": 104.37331521161329,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 192.5740107111269,
+          "lower": 179.0,
+          "upper": 206.14802142225383,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 319.3948859677601,
+          "lower": 279.4423671426654,
+          "upper": 359.34740479285483,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2270.2375881276466,
+          "lower": 1824.2110233115577,
+          "upper": 2716.2641529437356,
+          "calls": 944
+        },
+        "Self-emp-inc": {
+          "estimate": 321.6011822821988,
+          "lower": 299.65065964587524,
+          "upper": 343.55170491852243,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 361.3251021574646,
+          "lower": 310.6224056546066,
+          "upper": 412.0277986603225,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 168.8032092780948,
+          "lower": 141.6483965813182,
+          "upper": 195.9580219748714,
+          "calls": 496
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1022,
+      "calls": 4346,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 69.61859956439031,
+          "lower": 33.53166514994979,
+          "upper": 105.70553397883084,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 191.8643483585735,
+          "lower": 176.0,
+          "upper": 207.72869671714702,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 294.33740007360524,
+          "lower": 254.70126004326116,
+          "upper": 333.97354010394923,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2388.597748450506,
+          "lower": 1941.2531131676144,
+          "upper": 2835.942383733398,
+          "calls": 1040
+        },
+        "Self-emp-inc": {
+          "estimate": 312.96832794882255,
+          "lower": 290.3630461529345,
+          "upper": 335.57360974471067,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 333.18059190732873,
+          "lower": 280.73685222540183,
+          "upper": 385.6243315892557,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 175.85608220604698,
+          "lower": 150.77956692531117,
+          "upper": 200.93259748678275,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1022,
+      "calls": 4250,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 69.25743477927318,
+          "lower": 32.08583155417824,
+          "upper": 106.42903800436815,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 191.74114064684449,
+          "lower": 176.0,
+          "upper": 207.48228129368897,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 291.97954603677306,
+          "lower": 250.48146021050832,
+          "upper": 333.47763186303774,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2361.333809260389,
+          "lower": 1913.5309961402602,
+          "upper": 2809.136622380517,
+          "calls": 976
+        },
+        "Self-emp-inc": {
+          "estimate": 312.9641564399278,
+          "lower": 291.25203051074817,
+          "upper": 334.6762823691074,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 335.930214567108,
+          "lower": 283.6722772684844,
+          "upper": 388.1881518657317,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 175.84880769188857,
+          "lower": 151.1280872793952,
+          "upper": 200.5695281043819,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1022,
+      "calls": 4250,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 72.20940784567911,
+          "lower": 34.73672848747419,
+          "upper": 109.68208720388401,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 191.7641015321213,
+          "lower": 176.0,
+          "upper": 207.52820306424258,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 291.97954603677306,
+          "lower": 250.48146021050832,
+          "upper": 333.47763186303774,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2361.333809260389,
+          "lower": 1913.5309961402602,
+          "upper": 2809.136622380517,
+          "calls": 976
+        },
+        "Self-emp-inc": {
+          "estimate": 312.60101589886386,
+          "lower": 290.33295812932903,
+          "upper": 334.86907366839864,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 337.9937219657801,
+          "lower": 285.3409280490638,
+          "upper": 390.6465158824964,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 175.84880769188857,
+          "lower": 151.1280872793952,
+          "upper": 200.5695281043819,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1023,
+      "calls": 4378,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 80.67171555552856,
+          "lower": 43.47246337025079,
+          "upper": 117.87096774080635,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 187.2356581598724,
+          "lower": 172.0,
+          "upper": 202.4713163197448,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 315.69027575804836,
+          "lower": 276.38185132337424,
+          "upper": 354.99870019272254,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2339.4102685863195,
+          "lower": 1896.639348386628,
+          "upper": 2782.1811887860113,
+          "calls": 1040
+        },
+        "Self-emp-inc": {
+          "estimate": 308.25854293032086,
+          "lower": 285.68605373239757,
+          "upper": 330.8310321282442,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 383.63872487400596,
+          "lower": 330.9570410232725,
+          "upper": 436.32040872473937,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 177.0398516225957,
+          "lower": 150.3474890192277,
+          "upper": 203.73221422596373,
+          "calls": 496
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1023,
+      "calls": 4378,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 77.95024943807965,
+          "lower": 41.15876575720432,
+          "upper": 114.74173311895498,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 187.57161085394378,
+          "lower": 172.0,
+          "upper": 203.1432217078876,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 315.50230809190305,
+          "lower": 273.90211389676125,
+          "upper": 357.1025022870449,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2330.3771496059812,
+          "lower": 1882.4258859019135,
+          "upper": 2778.328413310049,
+          "calls": 1040
+        },
+        "Self-emp-inc": {
+          "estimate": 309.15322411425285,
+          "lower": 287.72256390992874,
+          "upper": 330.58388431857685,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 387.6176919169067,
+          "lower": 337.2647326357674,
+          "upper": 437.9706511980461,
+          "calls": 784
+        },
+        "State-gov": {
+          "estimate": 176.900925846758,
+          "lower": 150.37314908427334,
+          "upper": 203.42870260924272,
+          "calls": 496
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1023,
+      "calls": 4410,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 80.13976475328535,
+          "lower": 42.40332295666184,
+          "upper": 117.87620654990887,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 187.58949000444673,
+          "lower": 172.0,
+          "upper": 203.17898000889346,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 316.67498629049396,
+          "lower": 277.3635627430651,
+          "upper": 355.98640983792285,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2330.3771496059812,
+          "lower": 1882.4258859019135,
+          "upper": 2778.328413310049,
+          "calls": 1040
+        },
+        "Self-emp-inc": {
+          "estimate": 308.0742827754621,
+          "lower": 285.73168084024354,
+          "upper": 330.4168847106807,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 387.92271136178397,
+          "lower": 336.2141127054228,
+          "upper": 439.63131001814503,
+          "calls": 784
+        },
+        "State-gov": {
+          "estimate": 176.97826011204143,
+          "lower": 150.29145354351294,
+          "upper": 203.66506668056994,
+          "calls": 496
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1024,
+      "calls": 4186,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 73.53921874734621,
+          "lower": 37.13031923186048,
+          "upper": 109.94811826283193,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 198.13222803049734,
+          "lower": 181.11596283057196,
+          "upper": 215.1484932304227,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 299.33323355589664,
+          "lower": 258.60106620081166,
+          "upper": 340.0654009109816,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2077.322896024441,
+          "lower": 1641.2439872880664,
+          "upper": 2513.4018047608156,
+          "calls": 912
+        },
+        "Self-emp-inc": {
+          "estimate": 311.9256377084923,
+          "lower": 289.5074353441132,
+          "upper": 334.3438400728713,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 343.91652256845515,
+          "lower": 291.809973175921,
+          "upper": 396.02307196098934,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 186.95020419217786,
+          "lower": 161.3204199048162,
+          "upper": 212.57998847953954,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1024,
+      "calls": 4186,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 72.38134098899475,
+          "lower": 34.39800654690865,
+          "upper": 110.36467543108084,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 198.7261120365526,
+          "lower": 182.1121625256991,
+          "upper": 215.34006154740612,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 300.27117251856663,
+          "lower": 259.8373518278835,
+          "upper": 340.70499320924984,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2045.8293712733162,
+          "lower": 1602.0048171365358,
+          "upper": 2489.653925410097,
+          "calls": 912
+        },
+        "Self-emp-inc": {
+          "estimate": 312.97602844038033,
+          "lower": 291.41802296575577,
+          "upper": 334.53403391500484,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 342.0465690466933,
+          "lower": 290.3414621980134,
+          "upper": 393.7516758953732,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 187.50041772797525,
+          "lower": 162.13302485897427,
+          "upper": 212.86781059697626,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1024,
+      "calls": 4186,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 72.97942019674365,
+          "lower": 35.96813885607759,
+          "upper": 109.9907015374097,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 198.5087344142962,
+          "lower": 181.59446277204876,
+          "upper": 215.4230060565437,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 300.22545924437986,
+          "lower": 259.56441283027044,
+          "upper": 340.88650565848934,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2047.7856277058047,
+          "lower": 1603.935389431646,
+          "upper": 2491.635865979964,
+          "calls": 912
+        },
+        "Self-emp-inc": {
+          "estimate": 312.2887501527808,
+          "lower": 289.9808587450857,
+          "upper": 334.5966415604759,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 341.3962974755178,
+          "lower": 289.21589931024357,
+          "upper": 393.576695640792,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 187.29656880570263,
+          "lower": 161.70862755181446,
+          "upper": 212.8845100595908,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1025,
+      "calls": 4314,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 59.33409146704656,
+          "lower": 22.0,
+          "upper": 96.66818293409314,
+          "calls": 368
+        },
+        "Federal-gov": {
+          "estimate": 192.86321533626113,
+          "lower": 176.0,
+          "upper": 209.72643067252227,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 283.9155643664661,
+          "lower": 244.72792741958537,
+          "upper": 323.1032013133469,
+          "calls": 624
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2452.1882617433143,
+          "lower": 2004.268596579705,
+          "upper": 2900.107926906924,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 310.69252758823853,
+          "lower": 288.05546747565984,
+          "upper": 333.3295877008172,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 355.6711841735017,
+          "lower": 305.6015888684319,
+          "upper": 405.7407794785715,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 178.9892947137416,
+          "lower": 154.3586406344036,
+          "upper": 203.61994879307966,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1025,
+      "calls": 4314,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 61.20220380323144,
+          "lower": 23.534787965996454,
+          "upper": 98.86961964046642,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 192.6486789869258,
+          "lower": 176.0,
+          "upper": 209.29735797385163,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 285.34039187007636,
+          "lower": 246.178024979779,
+          "upper": 324.50275876037375,
+          "calls": 624
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2479.6630838173955,
+          "lower": 2035.4200969596757,
+          "upper": 2923.906070675116,
+          "calls": 1072
+        },
+        "Self-emp-inc": {
+          "estimate": 310.5456252673838,
+          "lower": 288.96216254332575,
+          "upper": 332.12908799144185,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 358.2574012471076,
+          "lower": 308.3489249385517,
+          "upper": 408.16587755566354,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 180.42627264045367,
+          "lower": 156.01177264587508,
+          "upper": 204.84077263503227,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1025,
+      "calls": 4314,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 60.84993264526597,
+          "lower": 23.0,
+          "upper": 98.69986529053193,
+          "calls": 400
+        },
+        "Federal-gov": {
+          "estimate": 192.709251443699,
+          "lower": 176.0,
+          "upper": 209.418502887398,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 285.34039187007636,
+          "lower": 246.178024979779,
+          "upper": 324.50275876037375,
+          "calls": 624
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2490.695688014796,
+          "lower": 2044.5403925213525,
+          "upper": 2936.85098350824,
+          "calls": 1072
+        },
+        "Self-emp-inc": {
+          "estimate": 311.2992102849556,
+          "lower": 288.98047429176887,
+          "upper": 333.61794627814237,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 356.96819926739954,
+          "lower": 306.7083572492929,
+          "upper": 407.22804128550615,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 180.74706312188633,
+          "lower": 155.90421450781758,
+          "upper": 205.5899117359551,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1026,
+      "calls": 4410,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 86.00279975799339,
+          "lower": 48.55957825877347,
+          "upper": 123.44602125721329,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 186.71696638016982,
+          "lower": 170.0,
+          "upper": 203.43393276033964,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 304.8498679603409,
+          "lower": 266.04878023840007,
+          "upper": 343.6509556822817,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2521.614574525684,
+          "lower": 2073.2256081098867,
+          "upper": 2970.003540941482,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 320.2117709436642,
+          "lower": 297.9069425731368,
+          "upper": 342.5165993141916,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 329.80159810608825,
+          "lower": 278.8439041003161,
+          "upper": 380.75929211186036,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 167.8794021805948,
+          "lower": 143.32882245048015,
+          "upper": 192.4299819107095,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1026,
+      "calls": 4442,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 84.70170065630165,
+          "lower": 46.8676609543105,
+          "upper": 122.53574035829283,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 186.94284363628134,
+          "lower": 170.59808729630333,
+          "upper": 203.28759997625934,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 306.66319006942507,
+          "lower": 265.4686581038024,
+          "upper": 347.85772203504774,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2512.5621462908334,
+          "lower": 2070.675722572588,
+          "upper": 2954.448570009079,
+          "calls": 1168
+        },
+        "Self-emp-inc": {
+          "estimate": 321.6436957041406,
+          "lower": 299.69858749026474,
+          "upper": 343.58880391801654,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 330.25825971079325,
+          "lower": 279.09014403692584,
+          "upper": 381.4263753846607,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 170.19905546107816,
+          "lower": 142.9857718671784,
+          "upper": 197.41233905497793,
+          "calls": 496
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1026,
+      "calls": 4506,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 83.49234188948827,
+          "lower": 45.495098583463964,
+          "upper": 121.48958519551259,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 187.2380711707005,
+          "lower": 170.4828921765708,
+          "upper": 203.99325016483021,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 304.3919506121028,
+          "lower": 265.74398985008844,
+          "upper": 343.03991137411714,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2512.5621462908334,
+          "lower": 2070.675722572588,
+          "upper": 2954.448570009079,
+          "calls": 1168
+        },
+        "Self-emp-inc": {
+          "estimate": 321.09057320045144,
+          "lower": 298.70935953719896,
+          "upper": 343.47178686370404,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 329.41680494514657,
+          "lower": 278.31426912500166,
+          "upper": 380.51934076529153,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 168.4600996218987,
+          "lower": 144.02685633680719,
+          "upper": 192.8933429069902,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1027,
+      "calls": 4442,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 85.23774485387746,
+          "lower": 48.183507587454294,
+          "upper": 122.29198212030062,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 188.9790226097998,
+          "lower": 173.0,
+          "upper": 204.95804521959963,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 301.403845077441,
+          "lower": 260.3365680084117,
+          "upper": 342.47112214647035,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2511.092581894121,
+          "lower": 2064.824194651062,
+          "upper": 2957.36096913718,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 314.8398659444738,
+          "lower": 292.2298797837298,
+          "upper": 337.44985210521776,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 344.8596072124164,
+          "lower": 294.13812134922034,
+          "upper": 395.5810930756125,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 177.90267691090753,
+          "lower": 153.15965062261822,
+          "upper": 202.6457031991968,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1027,
+      "calls": 4410,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 85.06946885736771,
+          "lower": 47.122768575976075,
+          "upper": 123.01616913875931,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 189.5121243002165,
+          "lower": 173.0,
+          "upper": 206.02424860043303,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 302.27112905755007,
+          "lower": 261.53714680509256,
+          "upper": 343.0051113100075,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2503.959302735756,
+          "lower": 2055.909951410764,
+          "upper": 2952.0086540607476,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 316.0680756673992,
+          "lower": 294.31242041471063,
+          "upper": 337.82373092008794,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 346.4782744019397,
+          "lower": 294.29794606298816,
+          "upper": 398.65860274089124,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 176.9299771609282,
+          "lower": 152.23424429524601,
+          "upper": 201.62571002661034,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1027,
+      "calls": 4410,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 83.68391444071297,
+          "lower": 46.06486263886786,
+          "upper": 121.30296624255807,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 189.58618073538761,
+          "lower": 173.0,
+          "upper": 206.17236147077523,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 302.2986076858051,
+          "lower": 261.19508141427303,
+          "upper": 343.40213395733724,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2503.959302735756,
+          "lower": 2055.909951410764,
+          "upper": 2952.0086540607476,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 316.5570677538581,
+          "lower": 294.04444510447354,
+          "upper": 339.0696904032427,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 346.32202198087646,
+          "lower": 293.5676335691421,
+          "upper": 399.0764103926108,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 177.02832235908784,
+          "lower": 152.31774565548017,
+          "upper": 201.73889906269548,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1028,
+      "calls": 4314,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 76.5227319596273,
+          "lower": 38.58029521197797,
+          "upper": 114.46516870727662,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 188.2201892874476,
+          "lower": 173.0,
+          "upper": 203.44037857489516,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 326.3372039861897,
+          "lower": 287.18628816421386,
+          "upper": 365.4881198081656,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2737.059818195033,
+          "lower": 2291.664613647956,
+          "upper": 3182.455022742111,
+          "calls": 1040
+        },
+        "Self-emp-inc": {
+          "estimate": 316.987956856279,
+          "lower": 294.68418992107956,
+          "upper": 339.29172379147843,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 360.78495491844006,
+          "lower": 308.0443882150272,
+          "upper": 413.52552162185293,
+          "calls": 688
+        },
+        "State-gov": {
+          "estimate": 170.28230978684104,
+          "lower": 145.00617716821105,
+          "upper": 195.55844240547106,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1028,
+      "calls": 4346,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 76.80218995313167,
+          "lower": 39.8384298681233,
+          "upper": 113.76595003814003,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 188.34117828128927,
+          "lower": 173.0,
+          "upper": 203.68235656257855,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 329.47114628769293,
+          "lower": 287.81503435217996,
+          "upper": 371.1272582232059,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2731.538867992998,
+          "lower": 2285.0875312276803,
+          "upper": 3177.9902047583155,
+          "calls": 1040
+        },
+        "Self-emp-inc": {
+          "estimate": 317.41161091640566,
+          "lower": 296.1341440126115,
+          "upper": 338.68907782019977,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 364.1873325207111,
+          "lower": 312.47545515823805,
+          "upper": 415.8992098831842,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 171.2146732670324,
+          "lower": 145.95005598558797,
+          "upper": 196.47929054847683,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1028,
+      "calls": 4378,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 78.0612680314049,
+          "lower": 41.36217145677522,
+          "upper": 114.76036460603454,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 188.26372022182926,
+          "lower": 173.0,
+          "upper": 203.5274404436585,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 325.68936453576924,
+          "lower": 286.8229019487117,
+          "upper": 364.55582712282677,
+          "calls": 688
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2731.538867992998,
+          "lower": 2285.0875312276803,
+          "upper": 3177.9902047583155,
+          "calls": 1040
+        },
+        "Self-emp-inc": {
+          "estimate": 317.06373728900064,
+          "lower": 294.9393410414678,
+          "upper": 339.1881335365336,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 364.1510681219963,
+          "lower": 312.45052019534063,
+          "upper": 415.851616048652,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 171.46354888852952,
+          "lower": 146.43654238879645,
+          "upper": 196.49055538826264,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "no_proxy",
+      "seed": 1029,
+      "calls": 4410,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 85.71015923808743,
+          "lower": 48.67498079782085,
+          "upper": 122.745337678354,
+          "calls": 432
+        },
+        "Federal-gov": {
+          "estimate": 193.28911656164357,
+          "lower": 177.0,
+          "upper": 209.57823312328713,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 297.28738774229555,
+          "lower": 256.0884162439487,
+          "upper": 338.48635924064234,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2414.4138353156254,
+          "lower": 1979.9678872986244,
+          "upper": 2848.8597833326266,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 331.0628407689894,
+          "lower": 308.70298676289866,
+          "upper": 353.42269477508023,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 376.11640216574887,
+          "lower": 326.67682618182903,
+          "upper": 425.55597814966876,
+          "calls": 752
+        },
+        "State-gov": {
+          "estimate": 178.11976978693173,
+          "lower": 152.8768605215535,
+          "upper": 203.36267905230991,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_only",
+      "seed": 1029,
+      "calls": 4346,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 87.12334182338992,
+          "lower": 49.96202562840356,
+          "upper": 124.28465801837625,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 193.39921899884274,
+          "lower": 177.0,
+          "upper": 209.79843799768545,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 296.60712269857413,
+          "lower": 255.36862520762256,
+          "upper": 337.84562018952573,
+          "calls": 624
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2413.1436617293903,
+          "lower": 1977.1143021346552,
+          "upper": 2849.173021324126,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 328.11063038981223,
+          "lower": 306.74102951268736,
+          "upper": 349.48023126693704,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 379.52498702954904,
+          "lower": 327.276328550934,
+          "upper": 431.773645508164,
+          "calls": 688
+        },
+        "State-gov": {
+          "estimate": 179.06105246176227,
+          "lower": 153.79400254099218,
+          "upper": 204.32810238253236,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "mode": "proxy_covariates",
+      "seed": 1029,
+      "calls": 4410,
+      "covered": true,
+      "target_met": true,
+      "groups": {
+        "?": {
+          "estimate": 81.11944800425117,
+          "lower": 44.71914305441458,
+          "upper": 117.51975295408775,
+          "calls": 464
+        },
+        "Federal-gov": {
+          "estimate": 193.4843624197796,
+          "lower": 177.0,
+          "upper": 209.96872483955914,
+          "calls": 432
+        },
+        "Local-gov": {
+          "estimate": 297.98391219389055,
+          "lower": 257.29420595438944,
+          "upper": 338.6736184333916,
+          "calls": 656
+        },
+        "Never-worked": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "calls": 3
+        },
+        "Private": {
+          "estimate": 2413.1436617293903,
+          "lower": 1977.1143021346552,
+          "upper": 2849.173021324126,
+          "calls": 1104
+        },
+        "Self-emp-inc": {
+          "estimate": 329.70844161066896,
+          "lower": 307.725855179755,
+          "upper": 351.69102804158285,
+          "calls": 496
+        },
+        "Self-emp-not-inc": {
+          "estimate": 380.78159505109824,
+          "lower": 328.1932537449464,
+          "upper": 433.3699363572502,
+          "calls": 720
+        },
+        "State-gov": {
+          "estimate": 179.06105246176227,
+          "lower": 153.79400254099218,
+          "upper": 204.32810238253236,
+          "calls": 528
+        },
+        "Without-pay": {
+          "estimate": 2.0,
+          "lower": 2.0,
+          "upper": 2.0,
+          "calls": 7
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,476 @@
+{
+  "generated_at_utc": "2026-11-26T01:57:50.028231+00:00",
+  "total_checks": 88,
+  "passed": 88,
+  "failed": 0,
+  "inputs": {
+    "4_LaTeX_Source\\vldb_template\\stratq.tex": "sha256:9fd72ab153ae3c04bf1219df3edf58d35256e1bcf139261ac195e6d67533dfce",
+    "4_LaTeX_Source\\vldb_template\\stratq_discussion.tex": "sha256:afd1d6c088ea5f56d3e70984b4c7b8a4bcbebb1ef29e8f3e0ac1e3a240b63df3",
+    "4_LaTeX_Source\\vldb_template\\stratq_evaluation.tex": "sha256:02b34942b12717a29d6d311dfab7233c4c76989902a7c13bc26c2cd63a6162ec",
+    "4_LaTeX_Source\\vldb_template\\stratq_method.tex": "sha256:55c3ad7bc5583ab05e41650c81ac019411561f1c593536a9172e8227d9cb5061",
+    "4_LaTeX_Source\\vldb_template\\stratq_problem.tex": "sha256:ad78807c5250bde3a89f6593b6be63b10ad5e391c29f78eafba87d1d0b1efe7f",
+    "4_LaTeX_Source\\vldb_template\\stratq_system.tex": "sha256:72d805829ec06b5d3309f2451c7fa7ff2dd268a13e2186d6ca6f6ef3d8462668",
+    "results\\sprint1_safe_gating_ablation.json": "sha256:713296c594942c5fc8e45d543860703206c11f3df9a7108f3430a5a4fba86999",
+    "results\\sprint2_gpu_workloads.json": "sha256:2be6c08b5891f8f7b8597ce959a2b7eb0f220f06b8266acb20b10782f45c1592",
+    "results\\sprint2_systems.json": "sha256:a68cfafb3992ffc2c0f86d5dfe178cf399034c52835dd81f89544c6a320d9966",
+    "results\\sprint2_memory_10m.json": "sha256:e906cc8152b76560199d4468fb5d620b321b8b039226670d6cca6a5d3a309c56",
+    "results\\adult_fixed_budget.json": "sha256:5436e53285c1d329c9970d7ce2daa8ab565a5d1b7012319a5093c9c582757010",
+    "results\\adult_blazeit.json": "sha256:474beccbd75dd738fc33d70c9cbec6a83882a86411ade0308c4f37046c20be98",
+    "results\\adult_senate.json": "sha256:f400adb82bf3bbafc56fdb860ea73ab0fd4005694168860ab01f9fac79723ac7",
+    "results\\adult_online_aggregation.json": "sha256:42086a91533f64a4c54101ac0bd1ef0791bc0c3c88b7bd07a03f37dee48a3f30",
+    "results\\adult_lws.json": "sha256:e79c907157f57d716baec6799e495bdeac6236af5865258447dfbb653d456fe5",
+    "results\\adult_verdict.json": "sha256:12723c878c0c0e208eb3ee80a93a67080b65e6a57ef88d642bcd226c38a8f0b7",
+    "results\\adult_hypergeom.json": "sha256:cc32503933f128f319e5e478cdfc065e7e5c56d579736b8bebda25147cf2eda1",
+    "results\\decision_boundaries.json": "sha256:8d7b410c57c4a979fbce76fd3f757b36bbcfb83a62b99f58dbb48dfdd4176aad",
+    "results\\adult_routing_capped.json": "sha256:18bacaa7cc34d2938abeb24f5909a489f0c3c789a49dd600d574b42831cc664a",
+    "results\\sprint4_summary_statistics.json": "sha256:c22ccbbbb088474a0871371fe2a820fc46699af42e565eef40f11949bb6384d7",
+    "results\\sprint4_yelp_gate_diagnostic.json": "sha256:5a0f63464c4f5441374e00c5b3f5bc73a9d9fb4440af8510708cd071c7da14d0",
+    "results\\sprint4_code_change_validation.json": "sha256:ed55b0f96fa26b6fb40c3be1f99f36102bee87ca9f6ac73ce41135588d01dbf6",
+    "results\\bibliography_static_sprint4.json": "sha256:eb75bdf0444b239b8338edbc502ca5f30f6c7950186ace3d4ec0c1c3baf4f2c3",
+    "results\\submission_consistency_sprint4.json": "sha256:f3916e795b1669660225518e8e6f9da29d8c24c56037d783219b2e0a1132b8bc",
+    "PROOF_PACKAGE.md": "sha256:4c195e4555b764fad248e2a9d01fce3842db828e55ace5a9198b53f66ba6d901",
+    "4_LaTeX_Source\\vldb_template\\stratq.bbl": "sha256:e728a7cf454a83f74a45b5aff5ee49a1a934c7f58523909c3ff8414018edeb7e"
+  },
+  "checks": [
+    {
+      "claim": "Fashion safe_loo mean calls = 1360.0",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Fashion safe_loo delta = -61.26%",
+      "status": "match",
+      "detail": "-61.2580%"
+    },
+    {
+      "claim": "Fashion safe_loo calls in prose/table (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '1,360.0'"
+    },
+    {
+      "claim": "Fashion -61.26% in prose/table (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '61.26\\\\%'"
+    },
+    {
+      "claim": "SMS COUNT safe_loo = 702.4 (-14.01%)",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "SMS HAVING safe_loo = 848.7 (-1.67%)",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "SMS TOP-2 safe_loo = 858.1 (-0.90%)",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "SMS COUNT 702.4 in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '702.4'"
+    },
+    {
+      "claim": "SMS COUNT -14.01% in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '14.01\\\\%'"
+    },
+    {
+      "claim": "Adult safe_loo = 4378.0 (+0.93%)",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Adult safe_loo calls in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '4,378.0'"
+    },
+    {
+      "claim": "Adult +0.93% honest disclosure in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '+0.93\\\\%'"
+    },
+    {
+      "claim": "Yelp fresh/reused speedups = 3.61x / 3.67x",
+      "status": "match",
+      "detail": "3.607x / 3.672x"
+    },
+    {
+      "claim": "CIFAR-10 fresh/reused speedups = 4.58x / 4.78x",
+      "status": "match",
+      "detail": "4.578x / 4.785x"
+    },
+    {
+      "claim": "GPU speedup range in abstract (stratq.tex)",
+      "status": "match",
+      "detail": "expected fragment: '3.61\\\\times$--$4.78\\\\times'"
+    },
+    {
+      "claim": "Yelp exact 77.99s in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '77.99'"
+    },
+    {
+      "claim": "CIFAR exact 18.22s in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '18.22'"
+    },
+    {
+      "claim": "Yelp StratQ TOP-2 mean calls = 594.7 (3.0%)",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "CIFAR StratQ COUNT = 1936.0 and TOP-2 = 4186.7 (3/3 cert)",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Yelp TOP-2 calls in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '594.7'"
+    },
+    {
+      "claim": "CIFAR COUNT calls in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '1,936.0'"
+    },
+    {
+      "claim": "CIFAR TOP-2 calls in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '4,186.7'"
+    },
+    {
+      "claim": "Proxy sweep AUC 0.95 safe_loo=4064 vs no_proxy=5152",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Proxy sweep AUC 0.50 safe_loo=5163 (+0.21%) vs CELEUS=9579",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Proxy sweep 4,064 in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '4,064'"
+    },
+    {
+      "claim": "Proxy sweep 5,163 in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '5,163'"
+    },
+    {
+      "claim": "CELEUS 9,579 in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '9,579'"
+    },
+    {
+      "claim": "Zipf 30-run coverage StratQ-safe_loo = 30/30",
+      "status": "match",
+      "detail": "actual=30/30"
+    },
+    {
+      "claim": "Zipf 30-run coverage BARGAIN-Global = 0/30",
+      "status": "match",
+      "detail": "actual=0/30"
+    },
+    {
+      "claim": "Zipf 30-run coverage PilotDB-Asymp = 16/30",
+      "status": "match",
+      "detail": "actual=16/30"
+    },
+    {
+      "claim": "PilotDB-Asymp G=100 coverage = 0/6",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "10M profile=8.47s, warm=2.83s, Q*=2",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "10M online query delta RSS = +21.69 MB",
+      "status": "match",
+      "detail": "21.69 MB"
+    },
+    {
+      "claim": "10M +21.69 MB in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '21.69'"
+    },
+    {
+      "claim": "Adult StratQ 4096 = 5.29pp",
+      "status": "match",
+      "detail": "actual=5.29"
+    },
+    {
+      "claim": "Adult BlazeIt 4096 = 11.92pp",
+      "status": "match",
+      "detail": "actual=11.92"
+    },
+    {
+      "claim": "Adult ABae-insp 4096 = 12.62pp",
+      "status": "match",
+      "detail": "actual=12.62"
+    },
+    {
+      "claim": "Adult Senate 4096 = 4.19pp",
+      "status": "match",
+      "detail": "actual=4.19"
+    },
+    {
+      "claim": "Adult OLA 4096 = 44.52pp",
+      "status": "match",
+      "detail": "actual=44.52"
+    },
+    {
+      "claim": "Adult LWS 4096 = 4.45pp",
+      "status": "match",
+      "detail": "actual=4.45"
+    },
+    {
+      "claim": "Adult VerdictDB 4096 = 3.88pp",
+      "status": "match",
+      "detail": "actual=3.88"
+    },
+    {
+      "claim": "Decision boundaries total runs = 960",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Adult capped routing runs = 360 (180 pairs)",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Yelp COUNT mean/sample SD matches raw runs",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Yelp COUNT sample SD in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '4{,}349\\\\pm74'"
+    },
+    {
+      "claim": "Yelp gate trace reproduces frozen call means",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Yelp range-penalty explanation rejected by trace",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Yelp mechanism correction in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: 'range-penalty explanation is therefore unsupported'"
+    },
+    {
+      "claim": "Yelp proxy-scan and first-query sensitivity match JSON",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Yelp proxy-scan sensitivity in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '3.05$\\\\times$/3.09$\\\\times$'"
+    },
+    {
+      "claim": "Yelp first-query setup sensitivity in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '2.41$\\\\times$'"
+    },
+    {
+      "claim": "Aligned CPU timing exact/fresh/reused values match JSON",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Aligned Fashion exact timing in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '1,430.5'"
+    },
+    {
+      "claim": "Aligned SMS exact timing in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '519.2'"
+    },
+    {
+      "claim": "Zipf design is 15 configurations x 2 seeds = 30 runs",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "PilotDB optional-stop tail coverage = 215/222",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Correct PilotDB tail coverage in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '215/222=96.85'"
+    },
+    {
+      "claim": "BARGAIN global guarantee is not evaluated by per-group JSON",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Decision-boundary audit finds zero wrong certificates",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Decision-boundary positive-gap and tie denominators match JSON",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Tie census denominator in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '40/40'"
+    },
+    {
+      "claim": "Capped routing improves 180/180 matched pairs",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "10M query stage wall and query-only wall are distinct",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "10M immediate and final RSS deltas have opposite signs",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Query subprocess wall in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '187.85'"
+    },
+    {
+      "claim": "Final RSS delta in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '$-0.68$'"
+    },
+    {
+      "claim": "Query traced-allocation peak in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '85.6'"
+    },
+    {
+      "claim": "SMS legacy arm is reported and does not beat safe_loo claim",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "SMS legacy COUNT calls in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '689.6'"
+    },
+    {
+      "claim": "SMS legacy caveat in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: 'beat the legacy selector'"
+    },
+    {
+      "claim": "Independent hypergeometric CS statistics match raw runs",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Hypergeometric SD in tex (stratq_evaluation.tex)",
+      "status": "match",
+      "detail": "expected fragment: '4{,}581.7\\\\pm178.8'"
+    },
+    {
+      "claim": "Comparator inventory states 11 adaptations plus independent CS",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Proof lower endpoint subtracts log upper bound",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Higham feature-total bound has correct N scaling",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Safe restart rule matches Theorem 2 and code",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "PilotDB GROUP BY limitation is accurately scoped",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "BlazeIt local arm is labeled inspired fixed-look",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Safe-LOO no longer claims worst-case elimination",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Sprint 4 code replay preserves calls/decisions and widens outward",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Bibliography static gate passes",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "CMT title/abstract/SAR and placeholders pass",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "PVLDB body <= 12 pages (references excluded)",
+      "status": "match",
+      "detail": "body_pages=12, total=14, refs_page=13"
+    },
+    {
+      "claim": "Bibliography cites all 62 verified references",
+      "status": "match",
+      "detail": "cited=62"
+    },
+    {
+      "claim": "Zero markdown ** residue in stratq*.tex",
+      "status": "match",
+      "detail": ""
+    },
+    {
+      "claim": "Zero Overfull hbox >= 5pt",
+      "status": "match",
+      "detail": "count=0"
+    },
+    {
+      "claim": "Zero LaTeX errors",
+      "status": "match",
+      "detail": "count=0"
+    },
+    {
+      "claim": "Zero undefined citations/references",
+      "status": "match",
+      "detail": "count=0"
+    }
+  ]
+}
