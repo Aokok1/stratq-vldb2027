@@ -1,0 +1,4 @@
+#artifact_tools.py verifies every file against ARTIFACT_SHA256.json, and the
+#claim audit hashes the shipped PDF/bbl/log. Any end-of-line conversion on
+#checkout would change those bytes, so disable text conversion for all paths.
+* -text
