@@ -9,7 +9,7 @@ centering with a predictable, analytically cross-validated Ridge control variate
 computes all group intervals through directed binary64 outward rounding, and shares
 a single simultaneous coverage event across all groups and data-dependent reveal
 times. That one event directly certifies `COUNT` tolerances, `HAVING` thresholds,
-and top-$k$ membership, while still allowing explicit abstention under budget caps.
+and top-`k` membership, while still allowing explicit abstention under budget caps.
 The engine runs over DuckDB and Apache Arrow.
 
 This repository holds **code, tests, experiment scripts, frozen result JSON, figure
@@ -29,6 +29,9 @@ demand and checked against a pinned SHA-256 by `artifact_tools.py`. See
 | `figures/` | Vector PDFs, PNG previews, and the metrics manifest |
 | `4_LaTeX_Source/vldb_template/` | Manuscript source, bibliography, compiled PDF, and the official PVLDB template files |
 | `ARTIFACT_SHA256.json` | SHA-256 manifest over all 134 artifact payload files |
+
+`README.md`, `LICENSE`, and `.gitattributes` were added when publishing and are
+therefore outside the manifest, which pins the RC1 payload set only.
 
 Audit records: [PROOF_PACKAGE.md](PROOF_PACKAGE.md), [PROOF_AUDIT.md](PROOF_AUDIT.md),
 [BASELINE_AUDIT.md](BASELINE_AUDIT.md), [BIBLIOGRAPHY_AUDIT.md](BIBLIOGRAPHY_AUDIT.md),
