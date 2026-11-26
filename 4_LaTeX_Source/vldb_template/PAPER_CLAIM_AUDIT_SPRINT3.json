@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-26T01:57:50.028231+00:00",
+  "generated_at_utc": "2026-11-25T17:59:22.948134+00:00",
   "total_checks": 88,
   "passed": 88,
   "failed": 0,
@@ -26,8 +26,8 @@
     "results\\sprint4_summary_statistics.json": "sha256:c22ccbbbb088474a0871371fe2a820fc46699af42e565eef40f11949bb6384d7",
     "results\\sprint4_yelp_gate_diagnostic.json": "sha256:5a0f63464c4f5441374e00c5b3f5bc73a9d9fb4440af8510708cd071c7da14d0",
     "results\\sprint4_code_change_validation.json": "sha256:ed55b0f96fa26b6fb40c3be1f99f36102bee87ca9f6ac73ce41135588d01dbf6",
-    "results\\bibliography_static_sprint4.json": "sha256:eb75bdf0444b239b8338edbc502ca5f30f6c7950186ace3d4ec0c1c3baf4f2c3",
-    "results\\submission_consistency_sprint4.json": "sha256:f3916e795b1669660225518e8e6f9da29d8c24c56037d783219b2e0a1132b8bc",
+    "results\\bibliography_static_sprint4.json": "sha256:ca12120abb1ebc6c3e815730e9a9797366432cee760b68b040dd4794cd2a7ad5",
+    "results\\submission_consistency_sprint4.json": "sha256:576cb472c3f97e2171ecd52bd43e17c5fa71b578672ed6f446ec273910ab4818",
     "PROOF_PACKAGE.md": "sha256:4c195e4555b764fad248e2a9d01fce3842db828e55ace5a9198b53f66ba6d901",
     "4_LaTeX_Source\\vldb_template\\stratq.bbl": "sha256:e728a7cf454a83f74a45b5aff5ee49a1a934c7f58523909c3ff8414018edeb7e"
   },
